@@ -1,0 +1,100 @@
+body{
+    background-color: #F7FDFF;
+}
+
+.header{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+#logo{
+    margin-left: 75px;
+    margin-top: 25px;
+}
+
+#logo a{
+    float: left;
+    text-decoration: none;
+    border-radius: .5rem;
+}
+#logo a:hover{
+    box-shadow: 1px 1px 2px 0px rgba(46,61,73,0.1);
+    transition: all 2s ease;
+}
+#logo img{
+    float: left;
+    height: 35px;
+    width: 38px;
+    margin-right: 20px;
+}
+#logo p{
+    display: inline;
+    color: #525c65;
+    fill: rgb(46, 61, 73);
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.8rem;
+    font-size: 22px;
+    letter-spacing: 6px;
+}
+#navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: #525c65;
+}
+nav #myClassroom {
+    height: 32px;
+    width: 104px;
+    padding: 0 8px 0;
+    border:2px solid transparent;
+    background-color: #02b3e4;
+    color: #fff;
+    text-align: center;
+    line-height: 250%;
+    border-radius: .25rem;
+    box-shadow: 8px 10px 20px 0px rgba(46,61,73,0.2);
+    font-size: .875rem;
+    font-weight: 400;
+    font-family: 'Muli', sans-serif;
+    letter-spacing: .8px;
+    margin-right: 75px;
+    margin-top: 25px;
+}
+#myClassroom:hover {
+    box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.3);
+    background-color: #02b7e9;
+    transition: all 0.3s ease;
+}
+
+#blog {
+    margin-right: 40px;
+    margin-left: 20px;
+    padding-left: 40px;
+    border-left: 1px solid #748290;
+    font-family: 'Muli', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-shadow: 0px 3px 2px rgba(46,61,73,0.3);
+    background-color: transparent;
+}
+.leftNav{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: 'Muli', sans-serif;
+    font-weight: 500;
+    background-color: transparent;
+    text-shadow: 0px 3px 2px rgba(46,61,73,0.3);
+}
+.leftNav:hover, #blog:hover{
+    text-shadow: 0px 5px 2px rgba(46,61,73,0.3);
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
