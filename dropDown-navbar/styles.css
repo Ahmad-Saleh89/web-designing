@@ -1,0 +1,87 @@
+body, html{
+  margin: 0;
+  padding: 0;
+
+}
+
+nav{
+  width: 100%;
+  margin: auto;
+  background-color: rgba(44, 45, 48, 0.9);
+  height: 70px;
+}
+#right-nav{
+  float: right;
+}
+#left-nav{
+  float: left;
+}
+
+#right-nav > ul > li, #left-nav > ul > li{
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 15px 20px 15px 1px;
+}
+
+#right-nav > ul > li > a, #left-nav > ul > li > a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  line-height: 40px;
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+#right-nav > ul, #left-nav > ul{
+  float: left;
+  margin: 0;
+  padding: 0;
+  padding-left: 40px;
+}
+input[type=text]{
+  display: inline;
+  float: right;
+  margin: 20px;
+  margin-right: 40px;
+  border-radius: 4px;
+  height: 22px;
+}
+.nav-content{
+  position: absolute;
+  top: 70px;
+  overflow: hidden;
+  background-color: rgba(44, 45, 48, 0.6);
+  max-height: 0;
+  padding-left: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.sub-content > ul{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.sub-content > ul > li{
+  list-style: none;
+}
+.sub-content > ul > li > a{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 30px 10px 20px;
+}
+
+
+#left-nav > ul > li:hover, #right-nav > ul > li:hover{
+  background-color: rgba(79, 79, 79, 0.91);
+}
+#left-nav > ul > li:hover .nav-content{
+  max-height: 400px;
+  transition: 0.7s ease-in;
+}
+
+.sub-content li:hover{
+  background-color: rgba(79, 79, 79, 0.4);
+}
