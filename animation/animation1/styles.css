@@ -1,0 +1,155 @@
+
+/* Hello World button (container-1) */
+#container-1{
+  height: 200px;
+  width: calc(100% - 30px);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#button{
+  padding: 20px 50px;
+  border-radius: 10px;
+  background-color: rgb(255, 142, 0);
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 17px 10px -10px rgba(134, 124, 114, 0.7);
+  transition: all ease-in-out 300ms;
+};
+
+#button-wrapper{
+    box-shadow: 10px 20px;
+}
+#button-wrapper:hover #button{
+  box-shadow: 0px 33px 20px -20px rgba(134, 124, 114, 0.5);
+  transform: translate(0px, -5px);
+  background-color: rgb(255, 162, 47);
+}
+
+
+/* -------    container-2 -------- */
+ #container-2{
+  display: flex;
+  justify-content: center;
+}
+
+/* -------    ORIENTTION BOX -------- */
+.orientation{
+  width: 50%;
+  min-width: 550px;
+  margin: 30px;
+}
+
+.orientation-wrapper{
+  margin: 20px;
+  padding: 30px;
+  border: 2px solid rgb(175, 0, 0);
+    border-radius: 10px;
+}
+
+/* ---- ORIENTATION TOP -----*/
+
+#orientation-top{
+  padding: 10px;
+  border-bottom: 2px solid black;
+  margin-bottom: 20px;
+}
+
+#orientation-top h1{
+  letter-spacing: 2px;
+  font-size: 3rem;
+  margin: 5px auto;
+  font-family: sans-serif;
+  color: rgb(175, 0, 0);
+}
+
+#orientation-top div{
+  color: rgb(175, 0, 0);
+  font-size: 1.4rem;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+
+/* ---- ORIENTATION BOTTOM -----*/
+#orientation-bottom{
+  position: relative;
+  height: 400px;
+  perspective: 1000px;
+  perspective-origin: left;
+  transition: all ease-in-out 1s;
+  overflow: hidden;
+}
+.orientation-content{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 410px;
+}
+.orientation-content input{
+  letter-spacing: 1px;
+  width: 50%;
+  height: 50px;
+  font-size: 1.2rem;
+  margin: 20px;
+  padding: 2px 20px 2px;
+}
+ .orient-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 30px;
+  padding: 2px 22px 2px;
+  height: 50px;
+  width: 50%;
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  font-family: sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: rgba(198, 8, 8, 0.7);
+  filter: contrast();
+  box-shadow: 0px 17px 10px -10px rgb(42, 42, 42);
+  transition: all ease-in-out 300ms;
+}
+.orient-btn:hover {
+  box-shadow: 0px 33px 20px -20px rgb(42, 42, 42);
+  transform: translate(0px, -3px);
+  background-color: rgb(198, 8, 8);
+}
+
+#orientation-bottom.clicked{
+  transform: translateX(-50%);
+}
+#orient-content-1{
+  background-color: rgb(199, 9, 89);
+  transition: all ease-in-out 1s;
+  transform-origin: left;
+}
+#orient-content-1.clicked{
+  transform: rotateY(-90deg) translateX(-1px) scale(.3);
+
+}
+
+#orient-content-2{
+  background-color: rgba(199, 9, 89, 0.9);
+  transform: translateX(100%) ;
+  transform-origin: left;
+  transition: all ease-in-out 1s;
+
+}
+#orient-content-2.clicked{
+  transform: translateX(1px);
+}
+#next-btn{
+  transition: all linear 200ms;
+}
