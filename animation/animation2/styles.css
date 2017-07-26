@@ -1,6 +1,8 @@
 .container{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 95%;
   margin: auto;
 }
@@ -126,4 +128,83 @@
   height: 150px;
   margin-top: 20px;
   font-size: 2rem;
+}
+
+
+/* Pulse Effect */
+#pulse-container{
+  position: relative;
+  display: flex;
+  justify-content:space-between;
+  width: 80%;
+  height:200px;
+  margin: auto;
+}
+.pulse-wrapper{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+}
+
+.pulse{
+  width: 120px;
+  height: 120px;
+  background-color: rgb(219, 125, 37);
+  border-radius: 40%;
+  animation: scaling 2s ease-in-out 0s infinite normal forwards;
+}
+
+@keyframes scaling {
+  0%{
+    transform: scale(1);
+    background-color: rgb(219, 125, 37);
+  }
+  50%{
+    background-color: rgba(219, 125, 37, 0.3);
+  }
+
+  100%{
+    transform: scale(2);
+    background-color: rgba(204, 129, 58, 0.1);
+  }
+}
+
+.fixed-circle{
+  position: absolute;
+  text-align: center;
+  line-height: 130px;
+  color: #fff;
+  font-size: 20px;
+  font-family: verdana;
+  text-transform: uppercase;
+  text-shadow: 2px 2px rgb(56, 56, 52);
+  letter-spacing: 1px;
+  width: 130px;
+  height: 130px;
+  background-color: rgb(219, 125, 37);
+  border-radius: 40%;
+  filter: blur(.5px);
+  animation: shadowing 2s linear 0s infinite normal forwards;
+}
+
+@keyframes shadowing {
+  0%{
+    box-shadow:2px 6px 15px -1px rgba(93, 93, 92, 0.7),
+    2px -3px 10px 2px rgba(255, 255, 249, 0.3) inset,
+    2px 4px 15px 2px rgba(255, 255, 249, 0.5) inset;
+  }
+
+  90%{
+    box-shadow: 0 0 0 0,2px -3px 10px 2px rgba(255, 255, 249, 0.3) inset,
+    2px 4px 15px 2px rgba(255, 255, 249, 0.5) inset;
+  }
+
+  100%{
+    box-shadow:2px 6px 15px -1px rgba(93, 93, 92, 0.7),
+    2px -3px 10px 2px rgba(255, 255, 249, 0.3) inset,
+    2px 4px 15px 2px rgba(255, 255, 249, 0.5) inset;
+  }
 }
