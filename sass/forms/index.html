@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Form style</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <section>
+      <div class="form-container">
+        <div class="form-header">
+          <span class="is-active"></span><span></span><span></span>
+        </div>
+        <div class="modals">
+          <div class="modal-wrapper step-1-wrapper is-showing ">
+            <h1>step 1</h1>
+            <p>Please fill the form bellow:</p>
+            <form>
+              <input type="text" placeholder="Name">
+              <input type="email" placeholder="Email">
+            </form>
+            <div class="button-block">
+              <div class="btn">Start</div>
+            </div>
+          </div>
+          <div class="modal-wrapper step-2-wrapper ">
+            <h1>Step 2</h1>
+            <p>Choose one of these options:</p>
+            <form>
+              <label>
+                <input type="radio" name="radio" id="radio1">
+                live one life that lasts 1,000 years?
+              </label>
+              <label>
+                <input type="radio" name="radio" id="radio2">
+                live 10 lives that last 100 years each?
+              </label>
+            </form>
+            <div class="button-block">
+              <div class="btn">next</div>
+            </div>
+          </div>
+          <div class="modal-wrapper step-3-wrapper ">
+            <h1>Step 3</h1>
+            <p>Awsome! thanks for filling the form.</p>
+            <hr>
+            <div class="button-block">
+              <div class="btn">DONE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rerun-wrapper">
+        <div class="rerun-btn">Rerun the form</div>
+      </div>
+
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

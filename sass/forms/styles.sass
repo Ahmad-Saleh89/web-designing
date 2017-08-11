@@ -1,0 +1,208 @@
+body
+  font-family: 'Roboto', sans-serif
+  margin: 0
+  padding: 0
+  background: radial-gradient(rgb(194, 242, 255),rgb(3, 155, 221))
+html
+  min-height: 100%
+section
+  position: relative
+  min-height: 100%
+  overflow: hidden
+
+
+
+  .form-container
+    max-width: 600px
+    margin: 100px auto
+    transition: transform 300ms ease-in-out
+
+
+    .form-header
+      max-width: 600px
+      background: white
+      display: flex
+      justify-content: center
+      align-items: center
+      border-bottom: 1px solid #838383
+
+      span
+        display: block
+        height: 15px
+        width: 15px
+        background: #a7a7a7
+        border-radius: 50%
+        margin: 20px 10px
+
+        &.is-active
+          background: rgba(0,0,0,0.4)
+          background: #FF8F00
+
+    .modals
+      position: relative
+      perspective: 1000px
+      height: 600px
+
+
+      .modal-wrapper
+        width: 100%
+        height: auto
+        position: absolute
+        top: 0
+        box-sizing: border-box
+        display: none
+        max-width: 600px
+        background: white
+        margin-bottom: 20px
+        box-shadow: 0 15px 22px -10px #949494
+        transform-origin: bottom
+
+        &.is-showing
+          display: block
+
+        h1
+          margin: 0 auto 30px
+          padding-top: 30px
+          text-align: center
+          text-transform: uppercase
+          color: rgb(255, 132, 0)
+          font-weight: 200
+          font-size: 1.8em
+          display: block
+        p
+          text-align: center
+          color: rgb(3, 111, 47)
+          font-size: 1.3em
+          letter-spacing: 1.2px
+          width: 100%
+          display: block
+
+        .button-block
+          width: 100%
+          display: flex
+          justify-content: center
+          align-items: center
+
+          .btn
+            padding: 15px 25px
+            background: radial-gradient(rgb(255, 111, 111),rgb(255, 0, 0))
+            font-size: 1.2em
+            text-transform: uppercase
+            letter-spacing: 1px
+            margin-bottom: 30px
+            color: white
+            cursor: pointer
+            box-sizing: border-box
+            border-radius: 10px
+            box-shadow: 0 12px 20px -10px rgb(119, 119, 119)
+            transition: all 100ms ease-in-out
+
+            &:hover
+              box-shadow: 0 20px 25px -15px rgb(119, 119, 119)
+              letter-spacing: 1.4px
+              transform: translateY(-3px)
+
+    .step-1-wrapper
+      form
+        display: flex
+        flex-direction: column
+        margin: 20px auto
+
+        input
+          display: block
+          margin: 10px auto
+          padding: 10px
+          width: 60%
+          font-size: 1.1em
+          outline: none
+          box-sizing: border-box
+          border-radius: 3px
+          border: 1px solid rgb(191, 191, 191)
+
+          &:focus
+            border-color: #FF6F00
+
+    .step-2-wrapper
+      form
+        display: flex
+        flex-direction: column
+        padding: 20px
+        margin: auto 50px
+
+        label
+          padding: 20px
+          font-size: 1.2em
+          color: rgb(142, 45, 133)
+          border-top: 1px solid rgb(159, 159, 159)
+
+          input
+            height: 30px
+            width: 30px
+            vertical-align: middle
+            cursor: pointer
+
+    .step-3-wrapper
+      hr
+        width: 70%
+        margin: 30px auto
+
+  .rerun-wrapper
+    position: absolute
+    width: 100%
+    top: 100px
+    margin-bottom: 100px
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .rerun-btn
+      display: none
+      padding: 20px
+      color: rgb(255, 250, 244)
+      background: radial-gradient(rgb(255, 180, 180),rgb(255, 0, 0))
+      margin: auto
+      font-size: 1.3em
+      letter-spacing: 2px
+      border-radius: 20px
+      text-transform: uppercase
+      cursor: pointer
+      box-shadow: 0 18px 20px -10px rgb(144, 144, 144)
+      transition: all 100ms ease-in-out
+
+      &:hover
+        transform: translateY(-3px)
+
+
+.animate-out
+  animation: out 600ms ease-in-out forwards
+
+.animate-in
+  transform-origin: top
+  animation: in 500ms ease-in-out forwards
+
+  // display: block
+
+.animate-up
+  transform: translateY(-700px) rotate(30deg)
+
+
+
+@keyframes out
+  0%
+    transform: rotateX(0) translateY(0)
+    opacity: 1
+  60%
+    transform: rotateX(70deg) translateY(0)
+    opacity: 1
+  100%
+    transform: rotateX(70deg) translateY(-700px)
+    opacity: 0
+
+
+@keyframes in
+  0%
+    opacity: 0
+    transform: rotateX(-90deg)
+  100%
+    opacity: 1
+    transform: rotateX(0deg)
