@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.img-slider {
+  position: relative;
+  width: 100vw; }
+  .img-slider .next-icon {
+    left: 30px; }
+  .img-slider .prev-icon {
+    right: 30px; }
+  .img-slider .next-icon, .img-slider .prev-icon {
+    position: absolute;
+    top: 30vh;
+    z-index: 100;
+    cursor: pointer; }
+    .img-slider .next-icon svg, .img-slider .prev-icon svg {
+      transform: scale(3);
+      color: #c6c6c6;
+      opacity: 0.5;
+      transition: all 100ms ease-in; }
+      .img-slider .next-icon svg:hover, .img-slider .prev-icon svg:hover {
+        transform: scale(3.2);
+        opacity: 0.8; }
+  .img-slider .slides-wrapper {
+    width: 100%; }
+    .img-slider .slides-wrapper .slides {
+      position: relative;
+      width: 4000px;
+      height: 600px;
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      .img-slider .slides-wrapper .slides li {
+        position: absolute;
+        display: inline-block;
+        left: 100vw;
+        float: left;
+        width: 100vw;
+        min-height: 300px;
+        max-height: 550px;
+        height: 70vh; }
+        .img-slider .slides-wrapper .slides li img {
+          width: 100%;
+          height: 100%; }
+        .img-slider .slides-wrapper .slides li.current {
+          z-index: 10;
+          left: 0; }
+        .img-slider .slides-wrapper .slides li.slide-current-left {
+          z-index: -10;
+          animation: slideCurrentLeft 1000ms ease-in-out forwards normal; }
+        .img-slider .slides-wrapper .slides li.slide-left {
+          z-index: 11;
+          left: 100vw;
+          animation: slideLeft 1000ms ease-in-out forwards normal; }
+        .img-slider .slides-wrapper .slides li.slide-current-right {
+          z-index: -10;
+          animation: slideCurrentRight 1000ms ease-in-out forwards normal; }
+        .img-slider .slides-wrapper .slides li.slide-right {
+          z-index: 11;
+          left: -100vw;
+          animation: slideRight 1000ms ease-in-out forwards normal; }
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0.5;
+    left: 100vw; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+@keyframes slideCurrentLeft {
+  0% {
+    left: 0;
+    opacity: 1; }
+  40% {
+    opacity: 1; }
+  99% {
+    left: -100vw;
+    opacity: 0.5; }
+  100% {
+    left: 95vw;
+    opacity: 0; } }
+@keyframes slideRight {
+  0% {
+    opacity: 0.5;
+    left: -100vw; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+@keyframes slideCurrentRight {
+  0% {
+    left: 0;
+    opacity: 1; }
+  40% {
+    opacity: 1; }
+  99% {
+    left: 100vw;
+    opacity: 0.5; }
+  100% {
+    left: 100vw;
+    opacity: 0; } }
+
+/*# sourceMappingURL=styles.css.map */

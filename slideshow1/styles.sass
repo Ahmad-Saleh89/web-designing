@@ -1,0 +1,120 @@
+body
+  margin: 0
+  padding: 0
+
+.img-slider
+  position: relative
+  width: 100vw
+
+  .next-icon
+    left: 30px
+  .prev-icon
+    right: 30px
+
+  .next-icon, .prev-icon
+    position: absolute
+    top: 30vh
+    z-index: 100
+    cursor: pointer
+
+    svg
+      transform: scale(3)
+      color: rgb(198, 198, 198)
+      opacity: .5
+      transition: all 100ms ease-in
+
+      &:hover
+        transform: scale(3.2)
+        opacity: .8
+
+  .slides-wrapper
+    width: 100%
+    // overflow: hidden
+
+    .slides
+      position: relative
+      width: 4000px
+      height: 600px
+      margin: 0
+      padding: 0
+      list-style: none
+
+      li
+        position: absolute
+        display: inline-block
+        left: 100vw
+        float: left
+        width: 100vw
+        min-height: 300px
+        max-height: 550px
+        height: 70vh
+
+        img
+          width: 100%
+          height: 100%
+
+        &.current
+          z-index: 10
+          left: 0
+
+
+        &.slide-current-left
+          z-index: -10
+          animation: slideCurrentLeft 1000ms ease-in-out forwards normal
+
+        &.slide-left
+          z-index: 11
+          left: 100vw
+          animation: slideLeft 1000ms ease-in-out forwards normal
+
+
+        &.slide-current-right
+          z-index: -10
+          animation: slideCurrentRight 1000ms ease-in-out forwards normal
+
+        &.slide-right
+          z-index: 11
+          left: -100vw
+          animation: slideRight 1000ms ease-in-out forwards normal
+
+@keyframes slideLeft
+  0%
+    opacity: .5
+    left: 100vw
+  100%
+    opacity: 1
+    left: 0
+
+@keyframes slideCurrentLeft
+  0%
+    left: 0
+    opacity: 1
+  40%
+    opacity: 1
+  99%
+    left: -100vw
+    opacity: .5
+  100%
+    left: 95vw
+    opacity: 0
+
+@keyframes slideRight
+  0%
+    opacity: .5
+    left: -100vw
+  100%
+    opacity: 1
+    left: 0
+
+@keyframes slideCurrentRight
+  0%
+    left: 0
+    opacity: 1
+  40%
+    opacity: 1
+  99%
+    left: 100vw
+    opacity: .5
+  100%
+    left: 100vw
+    opacity: 0
