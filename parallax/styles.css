@@ -1,0 +1,65 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  color: #ccc;
+  font-weight: 300;
+  font-size: 30px; }
+
+hr {
+  width: 80%;
+  margin: auto; }
+
+p {
+  font-size: 18px;
+  color: #7c1d35;
+  margin: 20px 40px; }
+
+section.content article {
+  padding: 100px 0;
+  max-width: 640px;
+  margin: 0 auto;
+    margin-text-align: center; }
+
+header.bird-box {
+  position: relative;
+  height: 600px;
+  background-image: url(/images/bird-bg.jpg);
+  background-size: contain;
+  background-position: top center;
+  background-attachment: fixed;
+  overflow: hidden; }
+  header.bird-box .logo {
+    height: 100px;
+    width: 100%;
+    background-image: url(/images/logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px; }
+  header.bird-box .fore-bird {
+    width: 960px;
+    height: 733px;
+    background-image: url(/images/fore-bird.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: absolute;
+    right: 5%;
+    top: 380px; }
+  header.bird-box .back-bird {
+    width: 960px;
+    height: 298px;
+    background-image: url(/images/back-bird.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    left: 50%;
+    margin-left: -480px; }
+
+.clothes-pics {
+  display: grid; }
+
+/*# sourceMappingURL=styles.css.map */
