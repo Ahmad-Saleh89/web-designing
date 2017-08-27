@@ -34,5 +34,11 @@
     flex: 0 1 150px; }
   .container .nine {
     flex: 2 1 150px; }
+  .container .ten {
+    flex: 0 0 150px; }
+  .container .eleven {
+    flex: 1 0 250px; }
+  .container .twelve {
+    flex: 0 1 250px; }
 
 /*# sourceMappingURL=styles.css.map */
