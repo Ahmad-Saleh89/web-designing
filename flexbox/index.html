@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box1</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- First container -->
+    <div class="container">
+      <div class="item one">Flex box 1
+      <p>this box will shrink <em>EVEN SLOWER</em> than box 2 when
+        the available space is smaller than 250px</p></div>
+      <div class="item two">Flex box 2
+        <p>this box will shrink <em>SLOWER</em> than box 3 when
+          the available space is smaller than 250px</p></div>
+      <div class="item three">Flex box 3
+        <p>this box will shrink <em>FIRST</em> when
+          the available space is smaller than 250px</p></div>
+    </div>
+    <!-- Second container -->
+    <div class="container">
+      <div class="item four">Flex box 4
+      <p>this box will grow <em>LAST</em> when
+        the available space is BIGGER than 150px</p></div>
+      <div class="item five">Flex box 5
+        <p>this box will grow <em>FASTER</em> than box 4 when
+          the available space is BIGGER than 150px</p></div>
+      <div class="item six">Flex box 6
+        <p>this box will grow <em>MUCH FASTER</em> when
+          the available space is BIGGER than 150px</p></div>
+    </div>
+    <!-- Third container -->
+    <div class="container">
+      <div class="item seven">Flex box 7
+      <p>this box will grow <em>SLOWER</em> than box 9,
+      however, it will shrink at the same pace.</p></div>
+      <div class="item eight">Flex box 8
+        <p>this box will <em>NOT GROW</em> at all,
+        however it will shrink at the same pace.</p></div>
+      <div class="item nine">Flex box 9
+        <p>this box will grow <em>FASTER</em> than the others when
+          the available space is BIGGER than 150px,
+        and it will shrink at the same pace</p></div>
+    </div>
+  </body>
+</html>
