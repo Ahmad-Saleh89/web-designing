@@ -55,4 +55,73 @@ header {
       letter-spacing: 2px;
       background: #9fa18c; }
 
+.body-sec {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 3em; }
+  .body-sec div {
+    position: relative; }
+    .body-sec div span {
+      position: absolute;
+      bottom: 20px;
+      left: 100px; }
+  .body-sec h2 {
+    grid-column: 1/5;
+    text-align: center;
+    margin-bottom: 0; }
+  .body-sec .usage {
+    grid-column: 1/5;
+    text-align: center;
+    margin: 0; }
+  .body-sec .text1 {
+    grid-column: 1/3;
+    grid-row: 3/5;
+    text-align: justify;
+    padding-left: 10vw;
+    padding-right: 4vw;
+    line-height: 3em;
+    font-weight: 500;
+    letter-spacing: 1.5px; }
+  .body-sec .img1, .body-sec .img2 {
+    grid-column: 3/5;
+    display: flex;
+    justify-content: center; }
+  .body-sec .text2 {
+    grid-column: 1/3;
+    padding: 50px;
+    font-size: 22px;
+    color: red; }
+  .body-sec .img3 {
+    grid-column: 3/5; }
+  .body-sec .img4 {
+    grid-column: 1/2; }
+  .body-sec .text3 {
+    grid-column: 2/4; }
+  .body-sec .img5 {
+    grid-column: 4/5; }
+  .body-sec .img6 {
+    grid-column: 1/3;
+    grid-row: 7/8;
+    opacity: 0.4; }
+  .body-sec .text4 {
+    grid-column: 2/5;
+    grid-row: 7/8;
+    font-size: 1.5em;
+    text-align: justify;
+    padding-right: 50px;
+    z-index: 10; }
+
+footer {
+  border-top: 1px solid gray; }
+  footer .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    footer .footer-container .made-with span {
+      font-style: italic; }
+    footer .footer-container ul li {
+      margin: 10px; }
+
 /*# sourceMappingURL=styles.css.map */
