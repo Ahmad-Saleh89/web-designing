@@ -71,7 +71,13 @@ header.bird-box {
     background-size: cover;
     background-position: top;
     background-color: #8e8e8e;
-    background-blend-mode: multiply; }
+    background-blend-mode: multiply;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 300ms ease-in-out; }
+    .clothes-pics figure.is-showing {
+      opacity: 1;
+      transform: translateX(0); }
   .clothes-pics figure:nth-child(1) {
     background-image: url(/images/model1.jpg);
     grid-column: 2; }
