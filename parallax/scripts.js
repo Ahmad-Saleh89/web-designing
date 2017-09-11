@@ -33,4 +33,8 @@ $(document).ready(function(){
       $('.window-tint').css('opacity', opacity);
     }
   });
+  
+  $('.read-more-trigger').click(function(){
+    $(this).parents().toggleClass(' clicked');
+  });
 });

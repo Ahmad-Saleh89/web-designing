@@ -176,15 +176,23 @@ header.bird-box {
 .leather-jackets {
   width: 100%;
   display: grid;
+  grid-gap: 1em;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1em; }
+  grid-template-rows: auto auto; }
   .leather-jackets .jacket {
     border: 1px solid #ccc;
     padding: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; }
+    justify-content: flex-start;
+    align-items: center;
+    max-height: 520px; }
+    .leather-jackets .jacket.clicked {
+      grid-row: span 2;
+      max-height: 1000px; }
+    .leather-jackets .jacket h3 {
+      color: #757575;
+      margin-top: 5px; }
     .leather-jackets .jacket p {
       color: #8b8b8b; }
       .leather-jackets .jacket p .read-more-target {
@@ -192,25 +200,26 @@ header.bird-box {
         font-size: 0;
         max-height: 0;
         transition: all 300ms ease-in-out; }
+    .leather-jackets .jacket .read-more-trigger {
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      border: 1px solid black;
+      background-color: #c9c9c9;
+      cursor: pointer;
+      transition: all 200ms ease-in-out; }
+      .leather-jackets .jacket .read-more-trigger:hover {
+        color: white;
+        background-color: black; }
+      .leather-jackets .jacket .read-more-trigger::before {
+        content: "Read more"; }
     .leather-jackets .jacket .read-more-state {
       display: none; }
       .leather-jackets .jacket .read-more-state:checked ~ p .read-more-target {
         opacity: 1;
         font-size: inherit;
         max-height: 100em; }
-    .leather-jackets .jacket h3 {
-      color: #757575;
-      margin-top: 5px; }
-    .leather-jackets .jacket label {
-      padding: 10px 20px;
-      border: 1px solid black;
-      background-color: #c9c9c9;
-      margin-bottom: 5px;
-      cursor: pointer;
-      transition: all 200ms ease-in-out; }
-      .leather-jackets .jacket label:hover {
-        color: white;
-        background-color: black; }
+      .leather-jackets .jacket .read-more-state:checked ~ .read-more-trigger::before {
+        content: "Read less"; }
   .leather-jackets #jacket-1 {
     grid-column: 2; }
   .leather-jackets #jacket-2 {
