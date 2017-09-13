@@ -1,7 +1,8 @@
 body {
   font-family: sans-serif;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  position: relative; }
 
 h1 {
   color: #ccc;
@@ -17,11 +18,17 @@ p {
   color: #7c1d35;
   margin: 20px 40px; }
 
-section.content article {
-  padding: 30px 0;
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center; }
+section.content {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 320px;
+  z-index: 10;
+  background-color: white; }
+  section.content article {
+    padding: 30px 0;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center; }
 
 header.bird-box {
   position: relative;
@@ -30,7 +37,8 @@ header.bird-box {
   background-size: contain;
   background-position: top center;
   background-attachment: fixed;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 3; }
   header.bird-box .logo {
     height: 100px;
     width: 100%;
@@ -225,9 +233,56 @@ header.bird-box {
   .leather-jackets #jacket-1 {
     grid-column: 2; }
   .leather-jackets #jacket-2 {
-    grid-column: 3;
-    z-index: 2; }
+    grid-column: 3; }
   .leather-jackets #jacket-3 {
     grid-column: 4; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  background: black;
+  height: 250px; }
+  footer .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    width: 80%;
+    margin: auto; }
+    footer .footer-content ul {
+      list-style: none;
+      margin-top: 20px; }
+      footer .footer-content ul li {
+        color: white;
+        margin: 10px;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+        font-weight: 100; }
+        footer .footer-content ul li i {
+          color: white;
+          font-size: 1.5em;
+          vertical-align: middle; }
+        footer .footer-content ul li strong {
+          font-size: 1.3em;
+          font-style: italic; }
+    footer .footer-content form .form-text {
+      color: white;
+      margin: 5px;
+      margin-top: 30px;
+      font-size: 1.2em; }
+    footer .footer-content form div {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      margin-top: 3em; }
+      footer .footer-content form div input {
+        margin: 10px;
+        padding: 10px; }
+      footer .footer-content form div input:first-child {
+        flex: 2 1 80%;
+        font-size: 1.2em; }
+      footer .footer-content form div input:nth-child(2) {
+        display: block;
+        flex-basis: 30%;
+        font-size: 25px; }
 
 /*# sourceMappingURL=styles.css.map */

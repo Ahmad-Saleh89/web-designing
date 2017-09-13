@@ -2,6 +2,7 @@ body
   font-family: sans-serif
   margin: 0
   padding: 0
+  position: relative
 
 h1
   color: #ccc
@@ -16,6 +17,11 @@ p
   margin: 20px 40px
 
 section.content
+  position: relative
+  overflow: hidden
+  margin-bottom: 320px
+  z-index: 10
+  background-color: white
   article
     padding: 30px 0
     max-width: 640px
@@ -31,6 +37,7 @@ header.bird-box
   background-position: top center
   background-attachment: fixed
   overflow: hidden
+  z-index: 3
 
   .logo
     height: 100px
@@ -242,6 +249,54 @@ header.bird-box
     grid-column: 2
   #jacket-2
     grid-column: 3
-    z-index: 2
   #jacket-3
     grid-column: 4
+
+footer
+  position: fixed
+  bottom: 0
+  z-index: 1
+  background: black
+  height: 250px
+  .footer-content
+    display: grid
+    grid-template-columns: 1fr 1fr 2fr
+    width: 80%
+    margin: auto
+    ul
+      list-style: none
+      margin-top: 20px
+      li
+        color: white
+        margin: 10px
+        font-size: 1.2em
+        letter-spacing: 2px
+        font-weight: 100
+        i
+          color: white
+          font-size: 1.5em
+          vertical-align: middle
+        strong
+          font-size: 1.3em
+          font-style: italic
+    form
+      .form-text
+        color: white
+        margin: 5px
+        margin-top: 30px
+        font-size: 1.2em
+      div
+        display: flex
+        justify-content: flex-start
+        align-items: flex-end
+        margin-top: 3em
+        input
+          margin: 10px
+          padding: 10px
+        input:first-child
+          flex: 2 1 80%
+          font-size: 1.2em
+        input:nth-child(2)
+          display: block
+          flex-basis: 30%
+          font-size: 25px
