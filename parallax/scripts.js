@@ -1,7 +1,10 @@
 $(document).ready(function(){
+  var navbarOffset = $('.navbar').offset().top;
+  console.log(navbarOffset);
   $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
     console.log(wScroll);
+    // Header and Logo:
     $('.logo').css({
       'transform' : 'translateY('+wScroll/2+'%)'
     });
@@ -13,6 +16,15 @@ $(document).ready(function(){
     $('.fore-bird').css({
       'transform' : 'translateY(-'+wScroll/30+'%)'
     });
+
+    // Sticky navbar:
+    if(wScroll > navbarOffset){
+      $('.navbar').addClass('fixed-nav');
+      $('header').css('margin-bottom','68px');
+    }else {
+      $('.navbar').removeClass('fixed-nav');
+      $('header').css('margin-bottom','0');
+    }
 
     if(wScroll > $('.clothes-pics').offset().top - $(window).height() / 1.4){
       $('.clothes-pics figure').each(function(i){
