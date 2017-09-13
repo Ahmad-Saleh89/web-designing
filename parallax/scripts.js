@@ -1,6 +1,17 @@
 $(document).ready(function(){
+  // smooth scrolling:
+  var $scrollLink = $('.scroll');
+  $scrollLink.click(function(e){
+    e.preventDefault();
+    $('body,html').animate({
+      // scroll to the top of this hash #
+      scrollTop: $(this.hash).offset().top
+    }, 700);
+  });
+  // for sticky navbar:
   var navbarOffset = $('.navbar').offset().top;
   console.log(navbarOffset);
+
   $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
     console.log(wScroll);
@@ -15,6 +26,15 @@ $(document).ready(function(){
 
     $('.fore-bird').css({
       'transform' : 'translateY(-'+wScroll/30+'%)'
+    });
+
+    // smooth scrolling: switching the active button:
+    $scrollLink.each(function(){
+      var articleOffset = $(this.hash).offset().top;
+      if(wScroll >= articleOffset){
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+      }
     });
 
     // Sticky navbar:
