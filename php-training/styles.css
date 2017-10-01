@@ -1,0 +1,18 @@
+h1{
+  text-align: center;
+  color: red;
+}
+h2{
+  color: blue;
+}
+h3{
+  color: green;
+}
+
+hr{
+  width: 30%;
+  margin-left: 0;
+}
+.wrapper{
+  padding-left: 50px;
+}
