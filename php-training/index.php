@@ -18,6 +18,7 @@
                       hobby => "swimming"
                     );
 
+  // Multidimensional Array:
   $countriesArr = array(
                     array(
                       countryName => "Syria",
@@ -105,7 +106,7 @@
         <h4><?php echo $countriesArr[2][countryName]; ?></h4>
         <p>The capital city is <strong><?php echo $countriesArr[2][capitalCity]; ?></strong>
         , and you have to visit <strong><?php echo $countriesArr[2][attraction]; ?></strong>.</p>
-      <hr>  
+      <hr>
     </div>
   </body>
 </html>
