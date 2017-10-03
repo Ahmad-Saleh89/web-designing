@@ -3,7 +3,7 @@ h1{
   color: red;
 }
 h2{
-  color: blue;
+  color: red;
 }
 h3{
   color: green;
@@ -15,4 +15,9 @@ hr{
 }
 .wrapper{
   padding-left: 50px;
+}
+
+li > span{
+  color: rgb(130, 0, 122);
+  background-color: yellow;
 }
