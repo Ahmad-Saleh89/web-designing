@@ -134,6 +134,7 @@
 
     <div class="wrapper">
       <h3>2- Custom Functions:</h3>
+      <h4>I- Custom function with no argument:</h4>
       <?php
         function countToTen(){
           for ($i=1; $i <=10 ; $i++) {
@@ -147,6 +148,25 @@
           echo "I'm not in the mood today!";
         }
        ?>
+
+       <h4>II- Custom function with one argumentt:</h4>
+       <?php
+        function locate($location){
+          echo "Locations I have visited in USA: $location. <br>";
+        }
+        locate("Chicago");
+        locate("San Diego");
+        locate("Colorado");
+        ?>
+
+        <h4>III- Custom function with multiple arguments:</h4>
+        <?php
+          function sumIt($val1, $val2){
+            $sum = $val1 + $val2;
+            echo "The sum of $val1 and $val2 is $sum";
+          }
+          sumIt(44, 50);
+         ?>
     </div>
 
 
