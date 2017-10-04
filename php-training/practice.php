@@ -95,5 +95,60 @@
       </div>
     </div>
     <hr>
+
+    <h2>Php functions:</h2>
+    <div class="wrapper">
+      <h3>1- Built in functions:</h3>
+      <h4>* sort() function</h4>
+      <?php
+        $foodArr = array("Beef", "Tomato", "Beans", "Rice");
+        sort($foodArr);
+        foreach ($foodArr as $ingredient) {
+          echo "$ingredient <br>";
+        }
+       ?>
+
+       <h4>* rsort() function:</h4>
+       <?php
+          rsort($foodArr);
+          foreach ($foodArr as $ingredient){
+            echo "$ingredient <br>";
+          }
+        ?>
+
+        <h4>* strtolower() function:</h4>
+        <?php
+          $text = "Ahmad IS an AweSome Guy!";
+          echo strtolower($text);
+        ?>
+
+        <h4>* sha1() function:</h4>
+        <?php
+          $password = "MyPassword";
+          echo "Before: $password <br>";
+          $password = sha1($password);
+          echo "Encrypted password: $password";
+        ?>
+        <hr>
+    </div>
+
+    <div class="wrapper">
+      <h3>2- Custom Functions:</h3>
+      <?php
+        function countToTen(){
+          for ($i=1; $i <=10 ; $i++) {
+            echo $i . " - ";
+          }
+        }
+        $countToTen = true;
+        if($countToTen){
+          countToTen();
+        }else {
+          echo "I'm not in the mood today!";
+        }
+       ?>
+    </div>
+
+
   </body>
 </html>

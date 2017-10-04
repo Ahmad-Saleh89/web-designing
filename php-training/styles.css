@@ -8,7 +8,9 @@ h2{
 h3{
   color: green;
 }
-
+h4{
+  color: rgb(79, 0, 149);
+}
 hr{
   width: 30%;
   margin-left: 0;
