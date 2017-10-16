@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw; }
+  .slider-wrapper ul.slider {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    .slider-wrapper ul.slider li {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      list-style: none;
+      display: none; }
+      .slider-wrapper ul.slider li.showing {
+        display: block; }
+      .slider-wrapper ul.slider li.disappear {
+        transform-origin: right;
+        animation: disappear 1200ms ease-in-out forwards normal; }
+      .slider-wrapper ul.slider li .back-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        filter: blur(1.5px);
+        transform-origin: right;
+        animation: showImg 5000ms ease-in-out forwards normal; }
+      .slider-wrapper ul.slider li .slide-content {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        .slider-wrapper ul.slider li .slide-content .slide-item {
+          height: 70%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .slider-wrapper ul.slider li .slide-content .slide-item img {
+            opacity: 0.8;
+            max-height: 350px;
+            max-width: 350px; }
+          .slider-wrapper ul.slider li .slide-content .slide-item figcaption {
+            font-size: 4em; }
+  .slider-wrapper .slider-dots {
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    background: rgba(129, 129, 129, 0.72);
+    bottom: 0; }
+    .slider-wrapper .slider-dots span {
+      float: left;
+      vertical-align: middle;
+      display: inline-block;
+      height: 10px;
+      width: 15px;
+      border-radius: 25%;
+      border: 2px solid #787878;
+      margin: 10px;
+      margin-top: 6px;
+      transition: all 200ms ease-in-out; }
+      .slider-wrapper .slider-dots span:hover {
+        background: #ff917e;
+        border-radius: 35%; }
+      .slider-wrapper .slider-dots span.is-active {
+        background: #d2391f;
+        border-radius: 35%; }
+
+@keyframes showImg {
+  0% {
+    opacity: 0.3;
+    transform: scale(1); }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.1); } }
+@keyframes disappear {
+  0% {
+    opacity: 0.8;
+    padding-left: 0;
+    transform: scale(1); }
+  100% {
+    opacity: 0.1;
+    padding-left: 25px;
+    transform: scale(0.9); } }
+
+/*# sourceMappingURL=styles.css.map */
