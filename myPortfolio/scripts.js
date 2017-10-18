@@ -1,10 +1,11 @@
 $(document).ready(function(){
+  // Slider:
   var $slider = $('.slider-wrapper').find('.slider');
     counter = 1;
     var interval;
 
   function startSlider(){
-    interval = setInterval(showUp, 7000);
+    interval = setInterval(showUp, 10000);
   }
   function stopSlider(){
     clearInterval(interval);
@@ -23,7 +24,7 @@ $(document).ready(function(){
       setTimeout(function(){
         $currentSlide.removeClass('showing disappear');
         $nextSlide.addClass('showing');
-      },1000);
+      },1100);
       counter++;
     }else{
       // first remove class .is-active from all dots:
@@ -49,9 +50,23 @@ $(document).ready(function(){
     $(this).addClass('is-active');
     // then store the index of the clicked dot:
     var dotIndex = $('.is-active').index();
-    // then clear all slides from .current class:
+    // then clear all slides from .showing class:
     $('.slider li').removeClass('showing');
-    //  finally add .current to the matched slide:
+    //  finally add .showing to the matched slide:
     $('.slider li:nth-child('+(dotIndex+1)+')').addClass('showing');
+  });
+
+  // Sticky navbar:
+  var navOffset = $('.nav-section').offset().top;
+  // console.log(navOffset);
+  $(window).scroll(function(){
+    var scrollPos = $(this).scrollTop();
+    if(scrollPos > navOffset){
+      $('.nav-section').addClass('fixed-nav');
+      $('header').css({'margin-bottom': '100px'});
+    }else {
+      $('.nav-section').removeClass('fixed-nav');
+      $('header').css({'margin-bottom': '0'});
+    }
   });
 });
