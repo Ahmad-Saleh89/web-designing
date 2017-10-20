@@ -96,16 +96,31 @@ body {
         background: #5c0000;
         border-radius: 35%; }
 
+header {
+  overflow: hidden; }
+
+.header-img {
+  width: 100vw;
+  height: 100vh; }
+  .header-img img {
+    width: 100%;
+    height: 100%; }
+
 .nav-section {
-  width: 100%; }
+  width: 100%;
+  z-index: 10; }
   .nav-section.fixed-nav {
     position: fixed;
     top: 0; }
 
 .navbar {
-  background: linear-gradient(rgba(119, 119, 119, 0.6), rgba(119, 119, 119, 0.3), transparent); }
+  height: 100px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: linear-gradient(rgba(154, 0, 0, 0.8), rgba(154, 0, 0, 0.4), rgba(154, 0, 0, 0));
+  transition: all 300ms ease-in-out; }
   .navbar .navbar-brand img {
-    max-height: 70px;
+    max-height: 65px;
     margin-left: 50px; }
   .navbar .collapse {
     margin-right: 100px;
@@ -113,7 +128,8 @@ body {
     .navbar .collapse .navbar-nav {
       font-size: 1.5em;
       font-weight: 200;
-      font-family: verdana; }
+      font-family: "Shadows Into Light", cursive;
+      letter-spacing: 2px; }
       .navbar .collapse .navbar-nav a {
         transition: all 200ms ease-in-out; }
         .navbar .collapse .navbar-nav a:hover {
@@ -152,5 +168,188 @@ body {
     transform: translateX(-200px) scaleX(0); }
   100% {
     transform: translateX(0) scaleX(1); } }
+#greeting-sec {
+  margin: 0;
+  margin-top: 50px;
+  width: 100vw;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  font-family: "Shadows Into Light", cursive;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  z-index: 1;
+  background: linear-gradient(transparent, transparent, rgba(154, 0, 0, 0.2)); }
+  #greeting-sec span {
+    height: 100px; }
+
+.parallax-bg {
+  height: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; }
+  .parallax-bg div {
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    background-image: url(images/ahmad1.jpg);
+    background-position: top center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-color: #3d3d3d;
+    background-blend-mode: multiply;
+    filter: blur(2px); }
+  .parallax-bg h3, .parallax-bg h4 {
+    color: white;
+    z-index: 5;
+    font-family: "Shadows Into Light", cursive;
+    letter-spacing: 2px;
+    font-size: 4em;
+    font-weight: 200; }
+
+.about-container {
+  width: 80vw;
+  margin: auto;
+  position: relative;
+  border: 1px dashed gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .about-container .about-sign {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .about-container .about-sign img {
+      height: 170px;
+      width: 300px;
+      transform-origin: left;
+      perspective: 1000px;
+      transform: rotateY(-89deg) skewY(-10deg);
+      transition: all 1000ms ease-in-out; }
+    .about-container .about-sign.show-sign img {
+      transform: rotateY(-40deg) skewY(-7deg); }
+  .about-container .education {
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px; }
+    .about-container .education .edu-tag {
+      position: absolute;
+      top: 0;
+      left: -40px;
+      padding: 5px;
+      background: #f000d8;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      box-shadow: 5px 8px 10px -2px #b6b6b6; }
+      .about-container .education .edu-tag h4 {
+        margin: 0;
+        background: #f000d8;
+        padding: 15px 80px;
+        vertical-align: middle;
+        border: 2px dashed white;
+        color: white;
+        font-family: "Shadows Into Light", cursive;
+        letter-spacing: 2px;
+        font-size: 2em;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px; }
+    .about-container .education .edu-content {
+      margin-top: 150px; }
+      .about-container .education .edu-content ul {
+        position: relative;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        grid-template-rows: repeat(4, 140px);
+        grid-gap: 2em;
+        font-family: "Shadows Into Light", cursive;
+        letter-spacing: 3px; }
+        .about-container .education .edu-content ul li:nth-child(7) {
+          grid-row: 3/5; }
+        .about-container .education .edu-content ul li:nth-child(8) {
+          grid-column: 3/4;
+          grid-row: 3/5; }
+        .about-container .education .edu-content ul li {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 30px;
+          background: white;
+          margin: 4px;
+          box-shadow: 0px 0px 2px 2px #b4b4b4 inset;
+          transition: all 500ms ease-in-out;
+          left: -100%;
+          opacity: 0; }
+          .about-container .education .edu-content ul li.is-showing {
+            opacity: 1;
+            left: 0; }
+          .about-container .education .edu-content ul li h5 {
+            margin-top: 20px;
+            text-align: center;
+            line-height: 1.5em;
+            font-weight: 800;
+            color: #f000d8;
+            font-size: 1.7em; }
+          .about-container .education .edu-content ul li p {
+            position: relative;
+            font-size: 1.1em;
+            padding-bottom: 10px; }
+            .about-container .education .edu-content ul li p::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              border-radius: 1px;
+              width: 20%;
+              padding: 2px;
+              background: #f000d8;
+              opacity: 0;
+              transition: all 500ms linear; }
+          .about-container .education .edu-content ul li:hover p::after {
+            animation: slide-underline 1.3s ease-in-out 200ms infinite normal; }
+          .about-container .education .edu-content ul li::before {
+            content: "";
+            position: absolute;
+            right: -4px;
+            bottom: 6px;
+            width: 50%;
+            height: 50px;
+            background: transparent;
+            box-shadow: 0px 12px 5px -6px rgba(0, 0, 0, 0.3);
+            transform: rotate(4deg);
+            z-index: -1;
+            border: transparent; }
+          .about-container .education .edu-content ul li::after {
+            content: "";
+            position: absolute;
+            left: 2px;
+            bottom: 6px;
+            width: 45%;
+            height: 50px;
+            background: transparent;
+            box-shadow: 0px 12px 5px -6px rgba(0, 0, 0, 0.3);
+            transform: rotate(-4deg);
+            z-index: -1;
+            border: transparent; }
+
+@keyframes slide-underline {
+  0%, 19% {
+    opacity: 0;
+    transform: translateX(0); }
+  20%, 80% {
+    opacity: 0.5; }
+  81%, 100% {
+    opacity: 0;
+    transform: translateX(400%); } }
 
 /*# sourceMappingURL=styles.css.map */

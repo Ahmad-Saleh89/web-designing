@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  /*
   // Slider:
   var $slider = $('.slider-wrapper').find('.slider');
     counter = 1;
@@ -55,6 +56,7 @@ $(document).ready(function(){
     //  finally add .showing to the matched slide:
     $('.slider li:nth-child('+(dotIndex+1)+')').addClass('showing');
   });
+  */
 
   // Sticky navbar:
   var navOffset = $('.nav-section').offset().top;
@@ -63,10 +65,38 @@ $(document).ready(function(){
     var scrollPos = $(this).scrollTop();
     if(scrollPos > navOffset){
       $('.nav-section').addClass('fixed-nav');
-      $('header').css({'margin-bottom': '100px'});
+      $('header').css({'margin-bottom': '50px'});
+      $('.navbar').css({'height': '50px'});
     }else {
       $('.nav-section').removeClass('fixed-nav');
+      $('.navbar').css({'height': '100px'});
       $('header').css({'margin-bottom': '0'});
     }
+
+    // Slide in effect when scrolling
+    if(scrollPos > $('.education').offset().top - $(window).height() / 1.4){
+      $('.education li').each(function(i){
+        setTimeout(function(){
+          $('.education li').eq(i).addClass('is-showing');
+        }, 150 * (i+1));
+      });
+    }
+
   });
+
+
+
+
+  /*
+  parallax effect
+  $(window).scroll(function(){
+    var wScroll = $(this).scrollTop();
+    console.log(wScroll);
+    if (wScroll > $('.parallax-bg').offset().top - $(window).height()/2) {
+      $('.parallax-img').css({
+        'transform': 'translateY('+wScroll/40+'%)'
+      });
+    }
+  });
+  */
 });
