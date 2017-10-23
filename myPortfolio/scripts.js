@@ -58,11 +58,15 @@ $(document).ready(function(){
   });
   */
 
-  // Sticky navbar:
+  // nav-section offset variable:
   var navOffset = $('.nav-section').offset().top;
-  // console.log(navOffset);
+  // education section offset variable:
+  var $eduOffset = $('.education').offset().top;
+
+  // window scrolling effects:
   $(window).scroll(function(){
     var scrollPos = $(this).scrollTop();
+    // sticky navbar effect:
     if(scrollPos > navOffset){
       $('.nav-section').addClass('fixed-nav');
       $('header').css({'margin-bottom': '50px'});
@@ -73,8 +77,8 @@ $(document).ready(function(){
       $('header').css({'margin-bottom': '0'});
     }
 
-    // Slide in effect when scrolling
-    if(scrollPos > $('.education').offset().top - $(window).height() / 1.4){
+    // Slide in effect when scrolling (education section):
+    if(scrollPos > $eduOffset - $(window).height() / 1.4){
       $('.education li').each(function(i){
         setTimeout(function(){
           $('.education li').eq(i).addClass('is-showing');
@@ -84,6 +88,15 @@ $(document).ready(function(){
 
   });
 
+
+  var $corresTitle = $('.corresponded-win h3');
+  var $corresPar = $('.corresponded-win div');
+  $('.skills li').click(function(){
+    var liTitle = $(this).find('h3').text();
+    var liPar = $(this).find('.about-skill').text();
+    $corresTitle.html(liTitle);
+    $corresPar.html(liPar);
+  });
 
 
 
