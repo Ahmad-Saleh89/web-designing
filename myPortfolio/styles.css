@@ -223,7 +223,7 @@ header {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 5px 8px 10px -2px #b6b6b6; }
-  .side-tag h4 {
+  .side-tag h2 {
     margin: 0;
     background: #f000d8;
     padding: 15px 80px;
@@ -238,6 +238,7 @@ header {
 
 .about-container {
   width: 80vw;
+  max-width: 1200px;
   margin: auto;
   position: relative;
   border: 1px dashed gray;
@@ -357,7 +358,6 @@ header {
             z-index: -1;
             border: transparent; }
   .about-container .skills {
-    border: 1px solid green;
     position: relative;
     height: 1000px;
     max-height: 1000px;
@@ -365,92 +365,135 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    box-sizing: border-box; }
+    .about-container .skills #skills-intro {
+      height: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
     .about-container .skills .corresponded-win {
       position: absolute;
-      height: 500px;
-      width: 500px;
-      border: 1px solid black;
+      height: 450px;
+      width: 450px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       border-radius: 50%;
-      top: 300px;
+      top: 350px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center; }
-    .about-container .skills .skills-items {
+      text-align: center;
+      background: rgba(136, 200, 232, 0.3); }
+      .about-container .skills .corresponded-win div {
+        padding: 3% 10%; }
+    .about-container .skills .skills-wrapper {
+      box-sizing: border-box;
       padding: 30px;
       list-style: none;
       width: 100%;
+      height: 85%;
       position: relative;
       display: grid;
       grid-template-columns: repeat(15, 1fr);
       grid-template-rows: repeat(15, 1fr); }
-      .about-container .skills .skills-items li {
+      .about-container .skills .skills-wrapper li {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; }
-        .about-container .skills .skills-items li .skill-content {
-          border: 1px solid blue;
-          border-radius: 50%;
+        align-items: center;
+        z-index: 5; }
+        .about-container .skills .skills-wrapper li .skill-content {
+          border-radius: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
           height: 100%;
-          width: 100%; }
-          .about-container .skills .skills-items li .skill-content h3 {
-            text-align: center; }
-          .about-container .skills .skills-items li .skill-content .level, .about-container .skills .skills-items li .skill-content .about-skill {
+          width: 100%;
+          box-shadow: 0 0 40px 8px rgba(0, 0, 0, 0.5) inset, 0 0 2px rgba(0, 0, 0, 0.5);
+          font-family: "Shadows Into Light", cursive;
+          letter-spacing: 2px;
+          font-weight: 800;
+          cursor: pointer; }
+          .about-container .skills .skills-wrapper li .skill-content.bubble-l {
+            animation: bubble-l 8s ease-in-out infinite normal; }
+          .about-container .skills .skills-wrapper li .skill-content.bubble-r {
+            animation: bubble-r 10s ease-in-out infinite normal; }
+          .about-container .skills .skills-wrapper li .skill-content.clicked-skill {
+            background: rgba(255, 8, 245, 0.1); }
+          .about-container .skills .skills-wrapper li .skill-content h3 {
+            text-align: center;
+            transform: rotate(-5deg); }
+          .about-container .skills .skills-wrapper li .skill-content .medium-h3 {
+            font-size: 1.3em; }
+          .about-container .skills .skills-wrapper li .skill-content .small-h3 {
+            font-size: 1em; }
+          .about-container .skills .skills-wrapper li .skill-content .level, .about-container .skills .skills-wrapper li .skill-content .about-skill {
             display: none; }
-      .about-container .skills .skills-items #html-css {
-        grid-column: 3/7;
-        grid-row: 2/6; }
-        .about-container .skills .skills-items #html-css div {
-          height: 95%;
-          width: 80%; }
-      .about-container .skills .skills-items #js {
-        grid-column: 10/14;
-        grid-row: 3/7; }
-        .about-container .skills .skills-items #js div {
-          width: 80%; }
-      .about-container .skills .skills-items #sass {
-        grid-column: 7/9;
-        grid-row: 1/4; }
-      .about-container .skills .skills-items #responsive {
-        grid-column: 13/15;
-        grid-row: 9/11; }
-      .about-container .skills .skills-items #bootstrap {
-        grid-column: 8/10;
-        grid-row: 12/14; }
-      .about-container .skills .skills-items #wordpress {
+      .about-container .skills .skills-wrapper #html {
+        grid-column: 4/7;
+        grid-row: 1/5; }
+      .about-container .skills .skills-wrapper #css {
+        grid-column: 10/13;
+        grid-row: 1/5; }
+      .about-container .skills .skills-wrapper #js {
+        grid-column: 2/5;
+        grid-row: 5/9; }
+      .about-container .skills .skills-wrapper #jquery {
         grid-column: 1/4;
-        grid-row: 5/8; }
-        .about-container .skills .skills-items #wordpress div {
+        grid-row: 8/11; }
+        .about-container .skills .skills-wrapper #jquery .skill-content {
+          width: 80%; }
+      .about-container .skills .skills-wrapper #sass {
+        grid-column: 11/14;
+        grid-row: 4/7; }
+        .about-container .skills .skills-wrapper #sass .skill-content {
+          width: 85%; }
+      .about-container .skills .skills-wrapper #responsive {
+        grid-column: 2/5;
+        grid-row: 13/16; }
+        .about-container .skills .skills-wrapper #responsive .skill-content {
+          width: 90%; }
+      .about-container .skills .skills-wrapper #bootstrap {
+        grid-column: 9/11;
+        grid-row: 14/16; }
+        .about-container .skills .skills-wrapper #bootstrap .skill-content {
+          width: 90%; }
+      .about-container .skills .skills-wrapper #wordpress {
+        grid-column: 13/16;
+        grid-row: 7/10; }
+        .about-container .skills .skills-wrapper #wordpress .skill-content {
           height: 80%;
           width: 80%; }
-      .about-container .skills .skills-items #git {
-        grid-column: 3/5;
-        grid-row: 11/13; }
-      .about-container .skills .skills-items #php {
-        grid-column: 1/3;
-        grid-row: 8/10; }
-      .about-container .skills .skills-items #photoshop {
+      .about-container .skills .skills-wrapper #git {
+        grid-column: 8/10;
+        grid-row: 2/4; }
+        .about-container .skills .skills-wrapper #git .skill-content {
+          height: 80%;
+          width: 80%;
+          margin-left: -30%; }
+      .about-container .skills .skills-wrapper #php {
+        grid-column: 12/14;
+        grid-row: 10/12; }
+        .about-container .skills .skills-wrapper #php .skill-content {
+          height: 70%;
+          width: 70%; }
+      .about-container .skills .skills-wrapper #photoshop {
         grid-column: 12/14;
         grid-row: 13/15; }
-      .about-container .skills .skills-items #angular {
+      .about-container .skills .skills-wrapper #angular {
+        grid-column: 6/7;
+        grid-row: 13/14; }
+      .about-container .skills .skills-wrapper #ux {
         grid-column: 4/6;
-        grid-row: 13/15; }
-      .about-container .skills .skills-items #ux {
-        grid-column: 12/14;
-        grid-row: 1/3; }
-        .about-container .skills .skills-items #ux div {
-          width: 80%; }
-      .about-container .skills .skills-items #seo {
-        grid-column: 7/9;
-        grid-row: 14/16; }
+        grid-row: 11/13; }
+        .about-container .skills .skills-wrapper #ux .skill-content {
+          width: 75%; }
+      .about-container .skills .skills-wrapper #seo {
+        grid-column: 7/8;
+        grid-row: 15/16; }
 
 @keyframes slide-underline {
   0%, 19% {
@@ -461,5 +504,15 @@ header {
   81%, 100% {
     opacity: 0;
     transform: translateX(400%); } }
+@keyframes bubble-l {
+  0%,100% {
+    transform: translate(0) translateY(0) rotate(0); }
+  50% {
+    transform: translate(-10px) translateY(10px) rotate(10deg); } }
+@keyframes bubble-r {
+  0%,100% {
+    transform: translate(0) translateY(0) rotate(0); }
+  50% {
+    transform: translate(10px) translateY(-10px) rotate(-10deg); } }
 
 /*# sourceMappingURL=styles.css.map */

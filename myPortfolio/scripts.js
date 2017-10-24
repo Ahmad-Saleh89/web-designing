@@ -91,7 +91,7 @@ $(document).ready(function(){
 
   var $corresTitle = $('.corresponded-win h3');
   var $corresPar = $('.corresponded-win div');
-  $('.skills li').click(function(){
+  $('.skills .skill-content').click(function(){
     var liTitle = $(this).find('h3').text();
     var liPar = $(this).find('.about-skill').text();
     $corresTitle.html(liTitle);
