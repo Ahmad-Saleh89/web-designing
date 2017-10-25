@@ -1,4 +1,5 @@
 $myfont: 'Shadows Into Light', cursive
+$myColor: #66fcf1
 body
   margin: 0
   padding: 0
@@ -130,7 +131,9 @@ header
   height: 100px
   padding-top: 0
   padding-bottom: 0
-  background: linear-gradient(rgba(154, 0, 0, 0.8), rgba(154, 0, 0, 0.4), rgba(154, 0, 0, 0))
+  background: $myColor
+  color: white
+  // background: linear-gradient($myColor, rgba(#66fcf1, 0.5), rgba(#66fcf1, 0.1))
   transition: all 300ms ease-in-out
   .navbar-brand
     img
@@ -145,9 +148,15 @@ header
       font-family: 'Shadows Into Light', cursive
       letter-spacing: 2px
       a
+        color: white
+        text-shadow: 1px 1px 2px rgba(96, 96, 96, .6)
         transition: all 200ms ease-in-out
+        &.active
+          color: #2a8b84
+          text-shadow: 1px 1px 3px rgb(96, 96, 96)
         &:hover
-          text-shadow: 1px 1px 2px rgb(96, 96, 96)
+          color: white
+          text-shadow: 1px 1px 3px rgb(96, 96, 96)
 @keyframes showImg
   0%
     opacity: .3
@@ -199,7 +208,7 @@ header
   letter-spacing: 1.5px
   font-weight: 800
   z-index: 1
-  background: linear-gradient(transparent, transparent, rgba(154, 0, 0, 0.2))
+  background: linear-gradient(transparent, transparent, rgba(#66fcf1, 0.2))
   span
     height: 100px
 
@@ -221,7 +230,7 @@ header
     background-repeat: repeat
     background-attachment: fixed
     background-size: contain
-    background-color: rgb(61, 61, 61)
+    background-color: #1f2833
     background-blend-mode: multiply
     filter: blur(2px)
   h3, h4
@@ -238,13 +247,13 @@ header
   top: 0
   left: -40px
   padding: 5px
-  background: rgb(240, 0, 216)
+  background: $myColor
   border-top-right-radius: 15px
   border-bottom-right-radius: 15px
   box-shadow: 5px 8px 10px -2px rgb(182, 182, 182)
   h2
     margin: 0
-    background: rgb(240, 0, 216)
+    background: $myColor
     padding: 15px 80px
     vertical-align: middle
     border: 2px dashed white
@@ -259,7 +268,7 @@ header
   max-width: 1200px
   margin: auto
   position: relative
-  border: 1px dashed rgb(128, 128, 128)
+  // border: 1px dashed rgb(128, 128, 128)
   display: flex
   flex-direction: column
   justify-content: center
@@ -273,10 +282,10 @@ header
       transform-origin: left bottom
       perspective: 1000px
       transform: rotateY(-89deg)
-      transition: all 1000ms ease-in-out
-    &:hover
-      img
-        transform: rotateY(0)
+      transition: all 500ms ease-in-out
+    // &:hover
+    //   img
+    //     transform: rotateY(0)
   .brief
     display: flex
     justify-content: center
@@ -336,7 +345,7 @@ header
             text-align: center
             line-height: 1.5em
             font-weight: 800
-            color: rgb(240, 0, 216)
+            color: $myColor
             font-size: 1.7em
           p
             position: relative
@@ -350,7 +359,7 @@ header
               border-radius: 1px
               width: 20%
               padding: 2px
-              background: rgb(240, 0, 216)
+              background: $myColor
               opacity: 0
               transition: all 500ms linear
           &:hover
@@ -399,23 +408,44 @@ header
       display: flex
       justify-content: center
       align-items: center
-    .corresponded-win
+    #big-circle
       position: absolute
       height: 450px
       width: 450px
-      box-shadow: 0 0 10px rgba(0,0,0,.5)
       border-radius: 50%
       top: 350px
       left: 50%
       transform: translateX(-50%)
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-      text-align: center
-      background: rgba(136, 200, 232, 0.3)
-      div
-        padding: 3% 10%
+      #inner-circle
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        padding-top: 50px
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        text-align: center
+        background: $myColor
+        color: white
+        box-shadow: 0 0 10px rgba(0,0,0,.5)
+        border: 3px solid #1f2833
+        transform-origin: top
+        opacity: 0
+        h3
+          font-size: 2.5em
+          letter-spacing: 5px
+          transform: scaleY(2)
+          border-bottom: 1px solid #1f2833
+          padding: 1px 10px
+          margin-bottom: 20px
+          transition: all 300ms ease-in-out
+        div
+          padding: 3% 10%
+        &.show-cir
+          animation: slide-down 3s ease-in-out 500ms forwards normal
+
+
 
     .skills-wrapper
       box-sizing: border-box
@@ -440,17 +470,21 @@ header
           align-items: center
           height: 100%
           width: 100%
-          box-shadow: 0 0 40px 8px rgba(0,0,0,.5)inset, 0 0 2px rgba(0,0,0,.5)
+          box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, .5)
           font-family: $myfont
           letter-spacing: 2px
           font-weight: 800
+          background: #1f2833
+          color: white
           cursor: pointer
+          transition: all 400ms ease-in-out
           &.bubble-l
-            animation: bubble-l 8s ease-in-out infinite normal
+            animation: bubble-l 6s ease-in-out infinite normal
           &.bubble-r
-            animation: bubble-r 10s ease-in-out infinite normal
+            animation: bubble-r 8s ease-in-out infinite normal
           &.clicked-skill
-            background: rgba(255, 8, 245, 0.1)
+            background: $myColor
+            border: 6px solid #1f2833
 
           h3
             text-align: center
@@ -545,9 +579,28 @@ header
   0%,100%
     transform: translate(0) translateY(0) rotate(0)
   50%
-    transform: translate(-10px) translateY(10px) rotate(10deg)
+    transform: translate(-10px) translateY(10px) rotate(10deg) rotateX(30deg)
 @keyframes bubble-r
   0%,100%
     transform: translate(0) translateY(0) rotate(0)
   50%
-    transform: translate(10px) translateY(-10px) rotate(-10deg)
+    transform: translate(10px) translateY(-10px) rotate(-10deg) rotateX(-30deg)
+@keyframes slide-down
+  0%
+    opacity: .2
+    transform: scale(.9) translateY(-50%)
+  20%
+    opacity: 1
+    transform: scaleX(1.04) scaleY(.97) translateY(8%)
+  50%
+    opacity: 1
+    transform: scale(1) translateY(-10%)
+  70%
+    opacity: 1
+    transform: scaleX(1.03) scaleY(.98) translateY(4%)
+  90%
+    opacity: 1
+    transform: scale(1) translateY(-3%)
+  100%
+    opacity: 1
+    transform: scale(1) translateY(0)

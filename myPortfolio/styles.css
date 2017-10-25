@@ -118,7 +118,8 @@ header {
   height: 100px;
   padding-top: 0;
   padding-bottom: 0;
-  background: linear-gradient(rgba(154, 0, 0, 0.8), rgba(154, 0, 0, 0.4), rgba(154, 0, 0, 0));
+  background: #66fcf1;
+  color: white;
   transition: all 300ms ease-in-out; }
   .navbar .navbar-brand img {
     max-height: 65px;
@@ -132,9 +133,15 @@ header {
       font-family: "Shadows Into Light", cursive;
       letter-spacing: 2px; }
       .navbar .collapse .navbar-nav a {
+        color: white;
+        text-shadow: 1px 1px 2px rgba(96, 96, 96, 0.6);
         transition: all 200ms ease-in-out; }
+        .navbar .collapse .navbar-nav a.active {
+          color: #2a8b84;
+          text-shadow: 1px 1px 3px #606060; }
         .navbar .collapse .navbar-nav a:hover {
-          text-shadow: 1px 1px 2px #606060; }
+          color: white;
+          text-shadow: 1px 1px 3px #606060; }
 
 @keyframes showImg {
   0% {
@@ -182,7 +189,7 @@ header {
   letter-spacing: 1.5px;
   font-weight: 800;
   z-index: 1;
-  background: linear-gradient(transparent, transparent, rgba(154, 0, 0, 0.2)); }
+  background: linear-gradient(transparent, transparent, rgba(102, 252, 241, 0.2)); }
   #greeting-sec span {
     height: 100px; }
 
@@ -203,7 +210,7 @@ header {
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: contain;
-    background-color: #3d3d3d;
+    background-color: #1f2833;
     background-blend-mode: multiply;
     filter: blur(2px); }
   .parallax-bg h3, .parallax-bg h4 {
@@ -219,13 +226,13 @@ header {
   top: 0;
   left: -40px;
   padding: 5px;
-  background: #f000d8;
+  background: #66fcf1;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 5px 8px 10px -2px #b6b6b6; }
   .side-tag h2 {
     margin: 0;
-    background: #f000d8;
+    background: #66fcf1;
     padding: 15px 80px;
     vertical-align: middle;
     border: 2px dashed white;
@@ -241,7 +248,6 @@ header {
   max-width: 1200px;
   margin: auto;
   position: relative;
-  border: 1px dashed gray;
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -255,9 +261,7 @@ header {
       transform-origin: left bottom;
       perspective: 1000px;
       transform: rotateY(-89deg);
-      transition: all 1000ms ease-in-out; }
-    .about-container .about-sign:hover img {
-      transform: rotateY(0); }
+      transition: all 500ms ease-in-out; }
   .about-container .brief {
     display: flex;
     justify-content: center;
@@ -314,7 +318,7 @@ header {
             text-align: center;
             line-height: 1.5em;
             font-weight: 800;
-            color: #f000d8;
+            color: #66fcf1;
             font-size: 1.7em; }
           .about-container .education .edu-content ul li p {
             position: relative;
@@ -328,7 +332,7 @@ header {
               border-radius: 1px;
               width: 20%;
               padding: 2px;
-              background: #f000d8;
+              background: #66fcf1;
               opacity: 0;
               transition: all 500ms linear; }
           .about-container .education .edu-content ul li:hover p::after {
@@ -372,23 +376,42 @@ header {
       display: flex;
       justify-content: center;
       align-items: center; }
-    .about-container .skills .corresponded-win {
+    .about-container .skills #big-circle {
       position: absolute;
       height: 450px;
       width: 450px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       border-radius: 50%;
       top: 350px;
       left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: rgba(136, 200, 232, 0.3); }
-      .about-container .skills .corresponded-win div {
-        padding: 3% 10%; }
+      transform: translateX(-50%); }
+      .about-container .skills #big-circle #inner-circle {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        background: #66fcf1;
+        color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border: 3px solid #1f2833;
+        transform-origin: top;
+        opacity: 0; }
+        .about-container .skills #big-circle #inner-circle h3 {
+          font-size: 2.5em;
+          letter-spacing: 5px;
+          transform: scaleY(2);
+          border-bottom: 1px solid #1f2833;
+          padding: 1px 10px;
+          margin-bottom: 20px;
+          transition: all 300ms ease-in-out; }
+        .about-container .skills #big-circle #inner-circle div {
+          padding: 3% 10%; }
+        .about-container .skills #big-circle #inner-circle.show-cir {
+          animation: slide-down 3s ease-in-out 500ms forwards normal; }
     .about-container .skills .skills-wrapper {
       box-sizing: border-box;
       padding: 30px;
@@ -412,17 +435,21 @@ header {
           align-items: center;
           height: 100%;
           width: 100%;
-          box-shadow: 0 0 40px 8px rgba(0, 0, 0, 0.5) inset, 0 0 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.5);
           font-family: "Shadows Into Light", cursive;
           letter-spacing: 2px;
           font-weight: 800;
-          cursor: pointer; }
+          background: #1f2833;
+          color: white;
+          cursor: pointer;
+          transition: all 400ms ease-in-out; }
           .about-container .skills .skills-wrapper li .skill-content.bubble-l {
-            animation: bubble-l 8s ease-in-out infinite normal; }
+            animation: bubble-l 6s ease-in-out infinite normal; }
           .about-container .skills .skills-wrapper li .skill-content.bubble-r {
-            animation: bubble-r 10s ease-in-out infinite normal; }
+            animation: bubble-r 8s ease-in-out infinite normal; }
           .about-container .skills .skills-wrapper li .skill-content.clicked-skill {
-            background: rgba(255, 8, 245, 0.1); }
+            background: #66fcf1;
+            border: 6px solid #1f2833; }
           .about-container .skills .skills-wrapper li .skill-content h3 {
             text-align: center;
             transform: rotate(-5deg); }
@@ -508,11 +535,30 @@ header {
   0%,100% {
     transform: translate(0) translateY(0) rotate(0); }
   50% {
-    transform: translate(-10px) translateY(10px) rotate(10deg); } }
+    transform: translate(-10px) translateY(10px) rotate(10deg) rotateX(30deg); } }
 @keyframes bubble-r {
   0%,100% {
     transform: translate(0) translateY(0) rotate(0); }
   50% {
-    transform: translate(10px) translateY(-10px) rotate(-10deg); } }
+    transform: translate(10px) translateY(-10px) rotate(-10deg) rotateX(-30deg); } }
+@keyframes slide-down {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.9) translateY(-50%); }
+  20% {
+    opacity: 1;
+    transform: scaleX(1.04) scaleY(0.97) translateY(8%); }
+  50% {
+    opacity: 1;
+    transform: scale(1) translateY(-10%); }
+  70% {
+    opacity: 1;
+    transform: scaleX(1.03) scaleY(0.98) translateY(4%); }
+  90% {
+    opacity: 1;
+    transform: scale(1) translateY(-3%); }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0); } }
 
 /*# sourceMappingURL=styles.css.map */

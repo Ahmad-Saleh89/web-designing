@@ -62,6 +62,10 @@ $(document).ready(function(){
   var navOffset = $('.nav-section').offset().top;
   // education section offset variable:
   var $eduOffset = $('.education').offset().top;
+  // skills section offset variable:
+  var $skillOffset = $('.skills').offset().top;
+  // about-sign offset:
+  var $aboutSignOffset = $('.about-sign').offset().top;
 
   // window scrolling effects:
   $(window).scroll(function(){
@@ -77,6 +81,11 @@ $(document).ready(function(){
       $('header').css({'margin-bottom': '0'});
     }
 
+    // about-sign animation:
+    if(scrollPos > $aboutSignOffset - $(window).height() / 1.4){
+      $('.about-sign img').css({'transform': 'rotateY(0)'});
+    }
+
     // Slide in effect when scrolling (education section):
     if(scrollPos > $eduOffset - $(window).height() / 1.4){
       $('.education li').each(function(i){
@@ -86,12 +95,18 @@ $(document).ready(function(){
       });
     }
 
+    // Show skill main big circle when scrolling:
+    if(scrollPos > $skillOffset - $(window).height() / 2){
+      $('#inner-circle').addClass('show-cir');
+    }
   });
 
-
-  var $corresTitle = $('.corresponded-win h3');
-  var $corresPar = $('.corresponded-win div');
+// Clickable skills items:
+  var $corresTitle = $('#big-circle h3');
+  var $corresPar = $('#big-circle').find('#circle-content');
   $('.skills .skill-content').click(function(){
+    $('.skill-content').removeClass('clicked-skill');
+    $(this).addClass('clicked-skill');
     var liTitle = $(this).find('h3').text();
     var liPar = $(this).find('.about-skill').text();
     $corresTitle.html(liTitle);
