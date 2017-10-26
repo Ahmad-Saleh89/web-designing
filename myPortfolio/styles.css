@@ -68,7 +68,7 @@ body {
             max-width: 350px; }
           .slider-wrapper ul.slider li .slide-content .slide-item figcaption {
             font-size: 3em;
-            font-family: "Modak", cursive;
+            font-family: "Shadows Into Light", cursive;
             color: rgba(70, 70, 70, 0.6);
             text-shadow: 2px 2px 10px white;
             letter-spacing: 1.5px; }
@@ -281,6 +281,19 @@ header {
     justify-content: center;
     align-items: center;
     margin-bottom: 50px; }
+    .about-container .education #edu-intro {
+      margin-top: 6%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .about-container .education #edu-intro p {
+        display: none;
+        margin-top: 20px;
+        width: 80%;
+        font-family: "Shadows Into Light", cursive;
+        letter-spacing: 2px;
+        font-size: 1.7em;
+        text-align: center; }
     .about-container .education .edu-content {
       margin-top: 75px; }
       .about-container .education .edu-content ul {
@@ -363,8 +376,8 @@ header {
             border: transparent; }
   .about-container .skills {
     position: relative;
-    height: 1000px;
-    max-height: 1000px;
+    height: 1050px;
+    max-height: 1200px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -372,17 +385,27 @@ header {
     align-items: center;
     box-sizing: border-box; }
     .about-container .skills #skills-intro {
-      height: 15%;
+      padding-top: 100px;
+      height: 18%;
+      width: 60%;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center; }
+      .about-container .skills #skills-intro p {
+        display: none;
+        font-size: 1.5em;
+        font-family: "Shadows Into Light", cursive;
+        letter-spacing: 2px;
+        text-align: center; }
     .about-container .skills #big-circle {
       position: absolute;
       height: 450px;
       width: 450px;
       border-radius: 50%;
-      top: 350px;
+      top: 400px;
       left: 50%;
+      box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.2);
       transform: translateX(-50%); }
       .about-container .skills #big-circle #inner-circle {
         width: 100%;
@@ -396,7 +419,7 @@ header {
         text-align: center;
         background: #66fcf1;
         color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.5);
         border: 3px solid #1f2833;
         transform-origin: top;
         opacity: 0; }
@@ -417,7 +440,7 @@ header {
       padding: 30px;
       list-style: none;
       width: 100%;
-      height: 85%;
+      height: 80%;
       position: relative;
       display: grid;
       grid-template-columns: repeat(15, 1fr);
@@ -450,6 +473,9 @@ header {
           .about-container .skills .skills-wrapper li .skill-content.clicked-skill {
             background: #66fcf1;
             border: 6px solid #1f2833; }
+          .about-container .skills .skills-wrapper li .skill-content:hover {
+            box-shadow: 0px 30px 20px -10px rgba(0, 0, 0, 0.7);
+            opacity: 0.97; }
           .about-container .skills .skills-wrapper li .skill-content h3 {
             text-align: center;
             transform: rotate(-5deg); }
@@ -468,6 +494,9 @@ header {
       .about-container .skills .skills-wrapper #js {
         grid-column: 2/5;
         grid-row: 5/9; }
+        .about-container .skills .skills-wrapper #js .skill-content {
+          width: 85%;
+          height: 90%; }
       .about-container .skills .skills-wrapper #jquery {
         grid-column: 1/4;
         grid-row: 8/11; }

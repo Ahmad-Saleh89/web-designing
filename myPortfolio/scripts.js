@@ -88,6 +88,7 @@ $(document).ready(function(){
 
     // Slide in effect when scrolling (education section):
     if(scrollPos > $eduOffset - $(window).height() / 1.4){
+      $('#edu-intro p').fadeIn(5000);
       $('.education li').each(function(i){
         setTimeout(function(){
           $('.education li').eq(i).addClass('is-showing');
@@ -96,7 +97,13 @@ $(document).ready(function(){
     }
 
     // Show skill main big circle when scrolling:
-    if(scrollPos > $skillOffset - $(window).height() / 2){
+    // & fadeIn effect on skills-intro p
+    if(scrollPos > $skillOffset - $(window).height() / 2){    
+      $('#skills-intro p').each(function(i){
+        setTimeout(function(){
+          $('#skills-intro p').eq(i).fadeIn(1500);
+        }, 200 * (i+1));
+      });
       $('#inner-circle').addClass('show-cir');
     }
   });
