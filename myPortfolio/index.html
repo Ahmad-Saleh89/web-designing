@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Modak" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <script src="https://use.fontawesome.com/fdaa6575cd.js"></script>
 
   </head>
   <body>
@@ -50,11 +51,12 @@
       <h3>Curious to know more about me??</h3>
       <br>
       <h4>Please keep scrolling down</h4>
+      <div class="arrow-wrapper">
+        <div class="arrow-down"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div>
+      </div>
     </section>
 
-    <div style="height: 1000px">
-
-    </div>
+    <div style="height: 1000px"></div>
 
     <section class="about-container">
       <div class="about-sign">
@@ -127,7 +129,7 @@
               <h3>HTML</h3>
               <div id="circle-content">In addition to developing the current skills, I am working on adding angular4 to my skillset.</div>
             </div>
-          </div>
+          </div>  <!-- big-circle -->
 
           <ul class="skills-wrapper">
             <li id="html">
@@ -256,19 +258,56 @@
                 </div>
               </div>
             </li>
-          </ul>
-
+          </ul> <!-- skills-wrapper -->
         </div> <!-- skills -->
-      </div> <!-- about -->
 
+        <div class="cirtificates">
+          <div class="side-tag">
+            <h2>Certifications</h2>
+          </div>
+          <div id="cirtif-intro">
+            <p>Certifications earned during my web development journey!</p>
+          </div>
+          <div class="cirt-imgs">
+            <figure>
+              <img src="images/certifications/php.jpg">
+              <figcaption><span>Php</span></figcaption>
+            </figure>
+            <figure>
+              <img src="images/certifications/Udemy_wp.jpg">
+              <figcaption><span>Wordpress</span></figcaption>
+            </figure>
+            <figure>
+              <img src="images/certifications/udemy-hosting.jpg">
+              <figcaption><span>Web Hosting</span></figcaption>
+            </figure>
+            <figure>
+              <img src="images/certifications/hopkins.jpg">
+              <figcaption><span>HTML, CSS, JS</span></figcaption>
+            </figure>
+            <figure>
+              <img src="images/certifications/wp_lynda.jpg">
+              <figcaption><span>Wordpress</span></figcaption>
+            </figure>
+          </div>
+          <div class="popup">
+            <div class="overlay"></div>
+            <div class="img-show">
+              <span>X</span>
+              <img src="">
+            </div>
+          </div>
+        </div>
+      </div> <!-- about -->
     </section> <!-- about-container -->
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-    <script src="scripts.js"></script>
+    <!-- <script src="scripts.js"></script> -->
     <script src="typed.js"></script>
     <script>
       var typed = new Typed('#typed', {

@@ -87,8 +87,9 @@ $(document).ready(function(){
     }
 
     // Slide in effect when scrolling (education section):
+    // & fadeIn effect on #edu-intro p
     if(scrollPos > $eduOffset - $(window).height() / 1.4){
-      $('#edu-intro p').fadeIn(5000);
+      $('#edu-intro p').fadeIn(4000);
       $('.education li').each(function(i){
         setTimeout(function(){
           $('.education li').eq(i).addClass('is-showing');
@@ -98,7 +99,7 @@ $(document).ready(function(){
 
     // Show skill main big circle when scrolling:
     // & fadeIn effect on skills-intro p
-    if(scrollPos > $skillOffset - $(window).height() / 2){    
+    if(scrollPos > $skillOffset - $(window).height() / 2){
       $('#skills-intro p').each(function(i){
         setTimeout(function(){
           $('#skills-intro p').eq(i).fadeIn(1500);
@@ -120,18 +121,15 @@ $(document).ready(function(){
     $corresPar.html(liPar);
   });
 
+// Certifications popup image:
+$('.cirt-imgs figure').click(function(){
+  var $src = $(this).children().attr("src");
+  $('.popup').fadeIn();
+  $('.img-show img').attr("src", $src);
+});
+$('.img-show span, .overlay').click(function(){
+  $('.popup').fadeOut();
+});
 
 
-  /*
-  parallax effect
-  $(window).scroll(function(){
-    var wScroll = $(this).scrollTop();
-    console.log(wScroll);
-    if (wScroll > $('.parallax-bg').offset().top - $(window).height()/2) {
-      $('.parallax-img').css({
-        'transform': 'translateY('+wScroll/40+'%)'
-      });
-    }
-  });
-  */
 });
