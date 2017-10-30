@@ -67,10 +67,14 @@ $(document).ready(function(){
   // about-sign offset:
   var $aboutSignOffset = $('.about-sign').offset().top;
 
+  var navOuterHeight = $('.nav-section').outerHeight();
+  var lastScrollPos = 0;
+
   // window scrolling effects:
   $(window).scroll(function(){
     var scrollPos = $(this).scrollTop();
     // sticky navbar effect:
+    /*
     if(scrollPos > navOffset){
       $('.nav-section').addClass('fixed-nav');
       $('header').css({'margin-bottom': '50px'});
@@ -79,6 +83,22 @@ $(document).ready(function(){
       $('.nav-section').removeClass('fixed-nav');
       $('.navbar').css({'height': '100px'});
       $('header').css({'margin-bottom': '0'});
+    }
+    */
+    // if scrollPos > header height:
+    if(scrollPos > $('header').outerHeight()){
+
+      if (scrollPos < lastScrollPos) {
+        $('.nav-section').addClass('fixed-nav');
+        $('header').css({'margin-top':'50px'});
+      }else{
+        $('.nav-section').removeClass('fixed-nav');
+        // $('.header-img').css({'margin-top': '0px'});
+      }
+      lastScrollPos = scrollPos;
+    }else{
+      $('.nav-section').removeClass('fixed-nav');
+      $('header').css({'margin-top': '0px'});
     }
 
     // about-sign animation:
@@ -122,14 +142,15 @@ $(document).ready(function(){
   });
 
 // Certifications popup image:
-$('.cirt-imgs figure').click(function(){
-  var $src = $(this).children().attr("src");
-  $('.popup').fadeIn();
-  $('.img-show img').attr("src", $src);
-});
-$('.img-show span, .overlay').click(function(){
-  $('.popup').fadeOut();
-});
+  $('.cirt-imgs figure').click(function(){
+    var $src = $(this).children().attr("src");
+    $('.popup').fadeIn();
+    $('.img-show img').attr("src", $src);
+  });
+  $('.img-show span, .overlay').click(function(){
+    $('.popup').fadeOut();
+  });
 
 
 });
+
