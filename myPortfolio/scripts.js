@@ -68,6 +68,7 @@ $(document).ready(function(){
   var $aboutSignOffset = $('.about-sign').offset().top;
 
   var navOuterHeight = $('.nav-section').outerHeight();
+  var headerImgHeight = $('.header-img').outerHeight();
   var lastScrollPos = 0;
 
   // window scrolling effects:
@@ -86,11 +87,11 @@ $(document).ready(function(){
     }
     */
     // if scrollPos > header height:
-    if(scrollPos > $('header').outerHeight()){
+    if(scrollPos > navOuterHeight + headerImgHeight){
 
       if (scrollPos < lastScrollPos) {
         $('.nav-section').addClass('fixed-nav');
-        $('header').css({'margin-top':'50px'});
+        $('.header-img').css({'margin-top':'60px'});
       }else{
         $('.nav-section').removeClass('fixed-nav');
         // $('.header-img').css({'margin-top': '0px'});
@@ -98,7 +99,7 @@ $(document).ready(function(){
       lastScrollPos = scrollPos;
     }else{
       $('.nav-section').removeClass('fixed-nav');
-      $('header').css({'margin-top': '0px'});
+      $('.header-img').css({'margin-top': '0px'});
     }
 
     // about-sign animation:
