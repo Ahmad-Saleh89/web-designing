@@ -6,11 +6,15 @@ body
 
 header
   box-sizing: border-box
+  border-bottom-right-radius: 10px
+  border-bottom-left-radius: 10px
   position: relative
   width: 100%
   overflow: hidden
   top: 0
   left: 0
+  box-shadow: 0px 5px 15px -3px rgba(0,0,0,.9)
+
 
 .header-img
   width: 100%
@@ -28,11 +32,14 @@ header
   transform-origin: top
   transition: all 500ms ease-in-out
   &.fixed-nav
-    position: fixed
-    top: 0
+    .navbar-nav
+      position: fixed
+      top: 0
   &.styled-nav
-    box-shadow: 0 10px 15px -10px rgba(0,0,0,.5)
-    background: linear-gradient(to right,$myColor, transparent, transparent, transparent)
+    .navbar-nav
+      border-bottom-right-radius: 10px
+      border-bottom-left-radius: 10px
+      background: linear-gradient(to right, rgba(#66fcf1, 0.2), rgba(#66fcf1, 0.7), rgba(#66fcf1, 0.7), rgba(#66fcf1, 0.2))
 
 
 .navbar
@@ -51,22 +58,24 @@ header
     margin-right: 100px
     justify-content: flex-end
     .navbar-nav
+      padding-left: 40px
+      padding-right: 40px
       font-size: 1.5em
       font-weight: 200
       font-family: $myfont
       letter-spacing: 2px
       a
-        color: $myColor
+        color: white
         text-shadow: 0px 4px 2px rgba(96, 96, 96, .6)
         transition: all 300ms ease-in-out
         transform-origin: bottom left
         &.active
           transform: rotateY(20deg) skewX(6deg) skewY(-6deg)
-          color: $myColor
+          color: white
           letter-spacing: 3px
         &:hover
           transform: rotateY(20deg) skewX(6deg) skewY(-6deg)
-          color: $myColor
+          color: white
           text-shadow: 0px 6px 2px rgba(96, 96, 96, .6)
 
 // Greeting Message:
@@ -91,6 +100,7 @@ header
 .parallax-bg
   height: 500px
   position: relative
+  box-shadow: 0px -3px 15px -3px rgba(0,0,0,.9),0px 5px 15px -3px rgba(0,0,0,.9)
   display: flex
   flex-direction: column
   justify-content: center
@@ -115,36 +125,37 @@ header
     letter-spacing: 2px
     font-size: 4em
     font-weight: 200
-  .arrow-wrapper
-    position: absolute
-    bottom: 5px
-    height: 100px
-    width: 90px
-    background: transparent
-    left: 50%
-    transform: translate(-50%)
-    border-radius: 50%
-    // border: 5px solid white
-    .arrow-down
-      height: 100%
-      width: 100%
-      margin: auto
-      border-radius: 50%
-      display: flex
-      justify-content: center
-      align-items: center
-      overflow: hidden
-      i
-        color: white
-        font-size: 5em
-        animation: scroll-down 2s ease-in-out infinite normal
 
+// scroll down arrow animation:
+.arrow-wrapper
+  position: absolute
+  bottom: 30px
+  height: 100px
+  width: 90px
+  background: transparent
+  left: 50%
+  transform: translate(-50%)
+  border-radius: 50%
+  z-index: 50
+  .arrow-down
+    height: 100%
+    width: 100%
+    margin: auto
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    i
+      color: $myColor
+      font-size: 5em
+      animation: scroll-down 2s ease-in-out infinite normal
 @keyframes scroll-down
   0%, 100%
-    opacity: .3
+    opacity: .7
     transform: translateY(0)
   50%
-    opacity: .9
+    opacity: 1
     transform: translateY(120%)
   51%
     opacity: 0
@@ -463,18 +474,26 @@ header
       .skill-content
         width: 85%
     #responsive
-      grid-column: 2/5
-      grid-row: 13/16
+      // grid-column: 2/5
+      // grid-row: 13/16
+      grid-column: 1/4
+      grid-row: 2/5
+      transform: rotate(-30deg)
       .skill-content
         width: 90%
     #bootstrap
-      grid-column: 9/11
-      grid-row: 14/16
+      // grid-column: 9/11
+      // grid-row: 14/16
+      grid-column: 14/16
+      grid-row: 10/12
       .skill-content
-        width: 90%
+        width: 85%
     #wordpress
+      // grid-column: 13/16
+      // grid-row: 7/10
       grid-column: 13/16
-      grid-row: 7/10
+      grid-row: 2/5
+      transform: rotate(30deg)
       .skill-content
         height: 80%
         width: 80%
@@ -486,25 +505,37 @@ header
         width: 80%
         margin-left: -30%
     #php
+      // grid-column: 12/14
+      // grid-row: 10/12
       grid-column: 12/14
-      grid-row: 10/12
+      grid-row: 9/11
       .skill-content
         height: 70%
         width: 70%
     #photoshop
-      grid-column: 12/14
-      grid-row: 13/15
+      // grid-column: 12/14
+      // grid-row: 13/15
+      grid-column: 13/15
+      grid-row: 7/9
     #angular
-      grid-column: 6/7
-      grid-row: 13/14
+      // grid-column: 6/7
+      // grid-row: 13/14
+      grid-column: 2/3
+      grid-row: 11/12
+      transform: translateY(30px)
     #ux
-      grid-column: 4/6
-      grid-row: 11/13
+      // grid-column: 4/6
+      // grid-row: 11/13
+      grid-column: 3/5
+      grid-row: 10/12
+      transform: translate(20px)
       .skill-content
         width: 75%
     #seo
-      grid-column: 7/8
-      grid-row: 15/16
+      // grid-column: 7/8
+      // grid-row: 15/16
+      grid-column: 12/13
+      grid-row: 11/12
 
 // skills animations:
 @keyframes bubble-l
