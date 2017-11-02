@@ -28,12 +28,21 @@ header {
   transform-origin: top;
   transition: all 500ms ease-in-out; }
   .nav-section.fixed-nav .navbar-nav {
+    height: 55px;
     position: fixed;
-    top: 0; }
+    top: -10px; }
   .nav-section.styled-nav .navbar-nav {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    background: linear-gradient(to right, rgba(102, 252, 241, 0.2), rgba(102, 252, 241, 0.7), rgba(102, 252, 241, 0.7), rgba(102, 252, 241, 0.2)); }
+    background: linear-gradient(to right, rgba(102, 252, 241, 0.2), rgba(102, 252, 241, 0.7), rgba(102, 252, 241, 0.7), rgba(102, 252, 241, 0.2));
+    transition: all 300ms ease-in-out;
+    transition-delay: 50ms;
+    transform: translate(25%); }
+    .nav-section.styled-nav .navbar-nav:hover {
+      top: 5px;
+      border-radius: 10px;
+      background: rgba(102, 252, 241, 0.7);
+      box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.5); }
 
 .navbar {
   height: 60px;
