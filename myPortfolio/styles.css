@@ -1,4 +1,5 @@
 body {
+  background: #f8eee7;
   margin: 0;
   padding: 0; }
 
@@ -30,23 +31,23 @@ header {
   .nav-section.fixed-nav .navbar-nav {
     height: 55px;
     position: fixed;
-    top: -10px; }
+    top: -5px; }
   .nav-section.styled-nav .navbar-nav {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    background: linear-gradient(to right, rgba(102, 252, 241, 0.2), rgba(102, 252, 241, 0.7), rgba(102, 252, 241, 0.7), rgba(102, 252, 241, 0.2));
+    background: linear-gradient(to right, rgba(148, 97, 142, 0.2), rgba(148, 97, 142, 0.7), rgba(148, 97, 142, 0.7), rgba(148, 97, 142, 0.2));
     transition: all 300ms ease-in-out;
     transition-delay: 50ms;
     transform: translate(25%); }
     .nav-section.styled-nav .navbar-nav:hover {
       top: 5px;
       border-radius: 10px;
-      background: rgba(102, 252, 241, 0.7);
+      background: rgba(148, 97, 142, 0.7);
       box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.5); }
 
 .navbar {
   height: 60px;
-  padding-top: 0;
+  padding-top: 10px;
   padding-bottom: 0;
   background: transparent;
   color: white;
@@ -59,12 +60,11 @@ header {
     margin-right: 100px;
     justify-content: flex-end; }
     .navbar .collapse .navbar-nav {
+      padding: 10px;
       padding-left: 40px;
       padding-right: 40px;
-      font-size: 1.5em;
-      font-weight: 200;
-      font-family: "Shadows Into Light", cursive;
-      letter-spacing: 2px; }
+      font-size: 1em;
+      font-family: "Marko One", sans-serif; }
       .navbar .collapse .navbar-nav a {
         color: white;
         text-shadow: 0px 4px 2px rgba(96, 96, 96, 0.6);
@@ -87,12 +87,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5em;
-  font-family: "Shadows Into Light", cursive;
+  font-size: 2em;
+  font-family: "Marko One", sans-serif;
+  color: #49274a;
   letter-spacing: 1.5px;
   font-weight: 800;
   z-index: 1;
-  background: linear-gradient(transparent, transparent, rgba(102, 252, 241, 0.2)); }
+  background: linear-gradient(transparent, transparent, rgba(73, 39, 74, 0.2)); }
   #greeting-sec span {
     height: 100px; }
 
@@ -114,16 +115,15 @@ header {
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: contain;
-    background-color: #1f2833;
+    background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: multiply;
     filter: blur(2px); }
   .parallax-bg h3, .parallax-bg h4 {
     color: white;
     z-index: 5;
-    font-family: "Shadows Into Light", cursive;
+    font-family: "Marko One", sans-serif;
     letter-spacing: 2px;
-    font-size: 4em;
-    font-weight: 200; }
+    font-size: 3em; }
 
 .arrow-wrapper {
   position: absolute;
@@ -145,7 +145,7 @@ header {
     align-items: center;
     overflow: hidden; }
     .arrow-wrapper .arrow-down i {
-      color: #66fcf1;
+      color: #49274a;
       font-size: 5em;
       animation: scroll-down 2s ease-in-out infinite normal; }
 
@@ -164,22 +164,22 @@ header {
 .side-tag {
   position: absolute;
   top: 0;
-  left: -40px;
+  left: -10%;
   padding: 5px;
-  background: #66fcf1;
+  background: #94618e;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 5px 8px 10px -2px #b6b6b6; }
   .side-tag h2 {
     margin: 0;
-    background: #66fcf1;
+    background: #94618e;
     padding: 15px 80px;
     vertical-align: middle;
     border: 2px dashed white;
     color: white;
-    font-family: "Shadows Into Light", cursive;
+    font-family: "Marko One", sans-serif;
     letter-spacing: 2px;
-    font-size: 2em;
+    font-size: 1.7em;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px; }
 
@@ -194,7 +194,7 @@ header {
   .about-container .about-sign {
     position: absolute;
     top: 0;
-    left: 0; }
+    left: -10%; }
     .about-container .about-sign img {
       height: 200px;
       width: 300px;
@@ -208,8 +208,9 @@ header {
     align-items: center;
     margin: 20% 15% 0; }
     .about-container .brief p {
-      font-family: "Shadows Into Light", cursive;
-      font-size: 2em;
+      color: #49274a;
+      font-family: "Marko One", sans-serif;
+      font-size: 1.5em;
       letter-spacing: 2px;
       text-indent: 50px; }
 
@@ -231,9 +232,9 @@ header {
       display: none;
       margin-top: 20px;
       width: 80%;
-      font-family: "Shadows Into Light", cursive;
-      letter-spacing: 2px;
-      font-size: 1.7em;
+      font-family: "Marko One", sans-serif;
+      color: #49274a;
+      font-size: 1.3em;
       text-align: center; }
 
 .edu-content {
@@ -245,8 +246,7 @@ header {
     grid-template-columns: repeat(6, 15%);
     grid-template-rows: repeat(7, 70px);
     grid-gap: 1em;
-    font-family: "Shadows Into Light", cursive;
-    letter-spacing: 3px; }
+    font-family: "Marko One", sans-serif; }
     .edu-content ul li {
       grid-column: span 2;
       grid-row: span 2;
@@ -269,12 +269,11 @@ header {
         margin-top: 20px;
         text-align: center;
         line-height: 1.5em;
-        font-weight: 800;
-        color: #66fcf1;
-        font-size: 1.7em; }
+        color: #94618e;
+        font-size: 1.4em; }
       .edu-content ul li p {
         position: relative;
-        font-size: 1.1em;
+        font-size: 1em;
         padding-bottom: 10px; }
         .edu-content ul li p::after {
           content: "";
@@ -284,7 +283,7 @@ header {
           border-radius: 1px;
           width: 20%;
           padding: 2px;
-          background: #66fcf1;
+          background: #94618e;
           opacity: 0;
           transition: all 500ms linear; }
       .edu-content ul li:hover p::after {
@@ -351,10 +350,10 @@ header {
   justify-content: center;
   align-items: center; }
   #skills-intro p {
+    color: #49274a;
     display: none;
-    font-size: 1.5em;
-    font-family: "Shadows Into Light", cursive;
-    letter-spacing: 2px;
+    font-size: 1.2em;
+    font-family: "Marko One", sans-serif;
     text-align: center; }
 
 #big-circle {
@@ -377,17 +376,18 @@ header {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  background: #66fcf1;
+  background: #94618e;
   color: white;
+  font-family: "Marko One", sans-serif;
   box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.5);
-  border: 3px solid #1f2833;
+  border: 3px solid #49274a;
   transform-origin: top;
   opacity: 0; }
   #inner-circle h3 {
     font-size: 2.5em;
     letter-spacing: 5px;
     transform: scaleY(2);
-    border-bottom: 1px solid #1f2833;
+    border-bottom: 1px solid #49274a;
     padding: 1px 10px;
     margin-bottom: 20px;
     transition: all 300ms ease-in-out; }
@@ -421,10 +421,10 @@ header {
   height: 100%;
   width: 100%;
   box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.5);
-  font-family: "Shadows Into Light", cursive;
+  font-family: "Marko One", sans-serif;
   letter-spacing: 2px;
   font-weight: 800;
-  background: #1f2833;
+  background: #49274a;
   color: white;
   cursor: pointer;
   transition: all 400ms ease-in-out; }
@@ -433,18 +433,19 @@ header {
   .skill-content.bubble-r {
     animation: bubble-r 8s ease-in-out infinite normal; }
   .skill-content.clicked-skill {
-    background: #66fcf1;
-    border: 6px solid #1f2833; }
+    background: #94618e;
+    border: 6px solid #49274a; }
   .skill-content:hover {
     box-shadow: 0px 30px 20px -10px rgba(0, 0, 0, 0.7);
     opacity: 0.97; }
   .skill-content h3 {
+    font-size: 1.4em;
     text-align: center;
     transform: rotate(-5deg); }
   .skill-content .medium-h3 {
-    font-size: 1.3em; }
-  .skill-content .small-h3 {
     font-size: 1em; }
+  .skill-content .small-h3 {
+    font-size: 0.8em; }
   .skill-content .level, .skill-content .about-skill {
     display: none; }
 
@@ -545,6 +546,7 @@ header {
   grid-row: 7/9; }
 
 #angular {
+  font-size: 0.7em;
   grid-column: 2/3;
   grid-row: 11/12;
   transform: translateY(30px); }
@@ -566,13 +568,15 @@ header {
   height: 800px;
   width: 100%; }
   .cirtificates #cirtif-intro {
+    text-transform: uppercase;
     height: 140px;
     display: flex;
     justify-content: center;
     align-items: flex-end; }
     .cirtificates #cirtif-intro p {
-      font-size: 1.5em;
-      font-family: "Shadows Into Light", cursive; }
+      font-size: 1.3em;
+      font-family: "Marko One", sans-serif;
+      color: #49274a; }
   .cirtificates .cirt-imgs {
     width: 100%;
     margin: auto;
@@ -581,6 +585,7 @@ header {
     justify-content: space-around;
     flex-wrap: wrap; }
     .cirtificates .cirt-imgs figure {
+      display: none;
       margin: 1em;
       position: relative;
       width: 30%;
@@ -599,11 +604,11 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: "Shadows Into Light", cursive;
+        font-family: "Marko One", sans-serif;
         color: white;
         font-size: 2em;
         letter-spacing: 2px;
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(148, 97, 142, 0.4);
         transform-origin: bottom left;
         transform: scale(0);
         transition: all 500ms ease-in-out;
@@ -614,12 +619,13 @@ header {
         transform: scale(1); }
 
 .popup {
+  position: relative;
   z-index: 999;
   display: none; }
   .popup .overlay {
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.66);
+    background: rgba(148, 97, 142, 0.3);
     position: fixed;
     top: 0;
     left: 0; }
@@ -627,8 +633,8 @@ header {
     width: 700px;
     height: 500px;
     background: #fff;
-    position: absolute;
-    top: 40%;
+    position: fixed;
+    top: 50%;
     left: 50%;
     border-radius: 10px;
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.3);
@@ -648,9 +654,82 @@ header {
     .popup .img-show img {
       width: 100%;
       height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
       border-radius: 10px; }
+
+.courses-container {
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+#courses-intro {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+  #courses-intro p {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-family: "Marko One", sans-serif;
+    color: #49274a; }
+
+#courses-wrapper {
+  height: 80%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  list-style: none; }
+  #courses-wrapper .course-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    background: #f8eee7;
+    border: 1em solid #49274a;
+    font-family: "Marko One", sans-serif; }
+    #courses-wrapper .course-content h3 {
+      color: #49274a; }
+    #courses-wrapper .course-content:nth-child(1) {
+      padding-right: 70px;
+      justify-content: flex-start;
+      grid-column: 1/span 5;
+      grid-row: 1/4; }
+      #courses-wrapper .course-content:nth-child(1) p {
+        width: 80%; }
+    #courses-wrapper .course-content:nth-child(2) {
+      padding-left: 5px;
+      align-items: flex-end;
+      justify-content: flex-end;
+      transform: translate(80px, 0px);
+      grid-column: 4/span 4;
+      grid-row: 3/6; }
+      #courses-wrapper .course-content:nth-child(2) ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        list-style: none; }
+    #courses-wrapper .course-content:nth-child(3) {
+      justify-content: center;
+      transform: translate(0px, -40px);
+      grid-column: 2/span 3;
+      grid-row: 4/7; }
+    #courses-wrapper .course-content:nth-child(4) {
+      transform: translate(0px, -70px);
+      align-items: flex-end;
+      grid-column: 5/span 3;
+      grid-row: 2/4; }
+      #courses-wrapper .course-content:nth-child(4) ul {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        list-style: none;
+        text-align: right; }
 
 /*# sourceMappingURL=styles.css.map */

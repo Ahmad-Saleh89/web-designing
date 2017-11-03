@@ -2,12 +2,14 @@ $(document).ready(function(){
 
   // nav-section offset variable:
   var navOffset = $('.nav-section').offset().top;
+  // about-sign offset:
+  var $aboutSignOffset = $('.about-sign').offset().top;
   // education section offset variable:
   var $eduOffset = $('.education').offset().top;
   // skills section offset variable:
   var $skillOffset = $('.skills').offset().top;
-  // about-sign offset:
-  var $aboutSignOffset = $('.about-sign').offset().top;
+  // cirtificates section offset variable:
+  var $cirtOffset = $('.cirtificates').offset().top;
 
   var headerImgHeight = $('.header-img').outerHeight();
 
@@ -33,7 +35,7 @@ $(document).ready(function(){
 
     // Slide in effect when scrolling (education section):
     // & fadeIn effect on #edu-intro p
-    if(scrollPos > $eduOffset - $(window).height() / 1.4){
+    if(scrollPos > $eduOffset - $(window).height() / 2){
       $('#edu-intro p').fadeIn(4000);
       $('.education li').each(function(i){
         setTimeout(function(){
@@ -51,6 +53,11 @@ $(document).ready(function(){
         }, 200 * (i+1));
       });
       $('#inner-circle').addClass('show-cir');
+    }
+    
+    // Fade in Cirtifications:
+    if(scrollPos > $cirtOffset - $(window).height() / 2){
+      $('.cirt-imgs figure').fadeIn(2000);
     }
   });
 
