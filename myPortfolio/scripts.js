@@ -1,4 +1,13 @@
 $(document).ready(function(){
+  // smooth scrolling:
+  var $scrollLink = $('.scroll');
+  $scrollLink.click(function(e){
+    e.preventDefault();
+    $('body,html').animate({
+      // scroll to the top of this hash #
+      scrollTop: $(this.hash).offset().top
+    }, 900);
+  });
 
   // nav-section offset variable:
   var navOffset = $('.nav-section').offset().top;
@@ -28,6 +37,15 @@ $(document).ready(function(){
       $('.nav-section').removeClass('fixed-nav');
     }
 
+    // smooth scrolling: switching the active button:
+    $scrollLink.each(function(){
+      var sectionOffset = $(this.hash).offset().top;
+      if(scrollPos >= sectionOffset){
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+      }
+    });
+
     // about-sign animation:
     if(scrollPos > $aboutSignOffset - $(window).height() / 1.4){
       $('.about-sign img').css({'transform': 'rotateY(0)'});
@@ -54,7 +72,7 @@ $(document).ready(function(){
       });
       $('#inner-circle').addClass('show-cir');
     }
-    
+
     // Fade in Cirtifications:
     if(scrollPos > $cirtOffset - $(window).height() / 2){
       $('.cirt-imgs figure').fadeIn(2000);

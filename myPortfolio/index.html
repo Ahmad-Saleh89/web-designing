@@ -13,17 +13,17 @@
   <body>
     <header>
       <!-- Nav-bar -->
-      <section class="nav-section">
+      <section id="nav-sec" class="nav-section">
         <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="images/ahmadLogo.png" alt=""></a>
+          <a class="navbar-brand" href="index.html"><img src="images/ahmadLogo.png" alt=""></a>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link scroll active" href="#nav-sec">Home <span class="sr-only">(current)</span></a>
               <a class="nav-item nav-link" href="#">Portfolio</a>
-              <a class="nav-item nav-link" href="#">About</a>
+              <a class="nav-item nav-link scroll" href="#about">About</a>
               <a class="nav-item nav-link" href="#">Contact</a>
             </div>
           </div>
@@ -33,9 +33,6 @@
         <img src="images/coffee.jpg" alt="">
       </div>
     </header>
-
-
-
 
     <article id="greeting-sec">
       <div id="greeting-msg">
@@ -58,7 +55,7 @@
 
     <div style="height: 1000px"></div>
 
-    <section class="about-container">
+    <section id="about" class="about-container">
       <div class="about-sign">
         <img src="images/about-sign.png" alt="">
       </div>
@@ -356,9 +353,10 @@
             <li class="course-content">
               <h3>Currently Covering</h3>
               <ul>
-                <li>Angular 4 Front to Back <sub>Udemy (currently enrolled)</sub></li>
+                <li>Angular 4 Front to Back <sub>Udemy</sub></li>
                 <li>WordPress <sub>YouTube Tutorials</sub></li>
-                <li>PHP Front to Back course <sub>Traversy Media</sub></li>
+                <li>PHP Front to Back <sub>Traversy Media</sub></li>
+                <li>Photoshop <sub>YouTube Tutorials</sub></li>
               </ul>
             </li>
           </ul>
@@ -366,6 +364,17 @@
       </div> <!-- about -->
     </section> <!-- about-container -->
 
+    <footer>
+      <div class="footer-upper-margin"></div>
+      <div class="footer-content">
+        <div class="contact">
+
+        </div>
+        <div class="follow-me">
+
+        </div>
+      </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
