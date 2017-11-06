@@ -45,9 +45,6 @@ header
       border-bottom-right-radius: 10px
       border-bottom-left-radius: 10px
       background: linear-gradient(to right, rgba($myColor, 0.2), rgba($myColor, 0.7), rgba($myColor, 0.7), rgba($myColor, 0.2))
-      transition: all 300ms ease-in-out
-      transition-delay: 50ms
-      transform: translate(25%)
       &:hover
         top: 5px
         border-radius: 10px
@@ -61,7 +58,6 @@ header
   background: transparent
   color: white
   transform-origin: top
-  transition: all 300ms ease-in-out
   .navbar-brand
     img
       max-height: 65px
@@ -75,19 +71,25 @@ header
       padding-right: 40px
       font-size: 1em
       font-family: $myfont
+      transition: all 300ms ease-in-out
+      transform: translate(25%)
       a
         color: white
         text-shadow: 0px 4px 2px rgba(96, 96, 96, .6)
         transition: all 300ms ease-in-out
         transform-origin: bottom left
-        &.active
-          transform: rotateY(20deg) skewX(6deg) skewY(-6deg)
-          color: white
-          letter-spacing: 3px
         &:hover
           transform: rotateY(20deg) skewX(6deg) skewY(-6deg)
           color: white
           text-shadow: 0px 6px 2px rgba(96, 96, 96, .6)
+        &:visited
+          color: white
+        &:focus
+          color: white
+        &.active
+          transform: rotateY(20deg) skewX(6deg) skewY(-6deg)
+          color: white
+          letter-spacing: 3px
 
 // Greeting Message:
 #greeting-sec
@@ -216,6 +218,7 @@ header
       perspective: 1000px
       transform: rotateY(-89deg)
       transition: all 500ms ease-in-out
+      filter: hue-rotate()
 
   .brief
     display: flex
@@ -271,7 +274,7 @@ header
       justify-content: center
       align-items: center
       padding: 30px
-      background: white
+      background: $bgColor
       margin: 4px
       box-shadow: 0px 0px 2px 2px rgb(180, 180, 180)inset
       transition: all 500ms ease-in-out
@@ -725,16 +728,20 @@ header
       transform: translate(80px,0px)
       grid-column: 4/ span 4
       grid-row: 3/6
+      z-index: 71
       ul
         display: flex
         flex-direction: column
         align-items: flex-end
         list-style: none
+      a
+        color: $myColor
     &:nth-child(3)
       justify-content: center
       transform: translate(0px,-40px)
       grid-column: 2/ span 3
       grid-row: 4/7
+      z-index: 72
       ul
         padding-left: 1.1em
     &:nth-child(4)
@@ -742,6 +749,7 @@ header
       align-items: flex-end
       grid-column: 5/ span 3
       grid-row: 2/4
+      z-index: 72
       ul
         padding-left: 10px
         display: flex
@@ -749,6 +757,13 @@ header
         align-items: flex-end
         list-style: none
         text-align: right
+
+// Added Only for scrolling effect:
+#contact
+  position: absolute
+  bottom: 0
+  right: 0
+  height: 900px
 
 footer
   position: relative
@@ -762,27 +777,94 @@ footer
   flex-direction: column
   overflow: hidden
   z-index: 70
-  .footer-upper-margin
-    height: 300px
-    width: 100%
-    background: transparent
-  .footer-content
-    height: 500px
+.footer-upper-margin
+  height: 300px
+  width: 100%
+  background: transparent
+.footer-content
+  height: 500px
+  display: flex
+  flex-direction: row
+  box-shadow: 0px 0px 15px -1px $myDarkCol
+.contact
+  width: 50%
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  h3
+    font-family: $myfont
+    color: $myDarkCol
+    text-transform: uppercase
+  form
+    color: $myDarkCol
+    width: 80%
+    label
+      font-family: $myfont
+      padding-left: 1em
+      margin-bottom: 0
+      margin-top: 10px
+    input, textarea
+      height: 3em
+      border: none
+      background: transparent
+      box-shadow: 0 0px 2px $myColor
+      &:focus
+        box-shadow: 0 0px 5px $myDarkCol inset
+        background: transparent
+    textarea
+      height: 5em
+      max-height: 8em
+    button
+      background: $myDarkCol
+      font-family: $myfont
+      border: none
+      width: 50%
+      transition: all 300ms ease-in-out
+      cursor: pointer
+      box-shadow: 0 5px 10px rgba(0,0,0,.5)
+      &:hover
+        background: $myColor
+        box-shadow: 0 7px 10px rgba(0,0,0,.6)
+      i
+        padding-left: 1em
+
+
+
+.follow-me
+  position: relative
+  width: 50%
+  height: 100%
+  &::before
+    content: ''
+    position: absolute
+    height: 150%
+    width: 250%
+    background: $myDarkCol
+    transform: translateX(-20%) translateY(15%) rotate(-40deg)
+    box-shadow: 0px 5px 15px rgba(0,0,0, .8)inset
+  ul
+    width: 70%
+    height: 80%
+    margin: auto
     display: flex
-    flex-direction: row
-    box-shadow: 0px 0px 15px -2px rgba(0,0,0, .6)
-    .contact
-      width: 50%
-      height: 100%
-    .follow-me
-      position: relative
-      width: 50%
-      height: 100%
-      &::before
-        content: ''
-        position: absolute
-        height: 150%
-        width: 250%
-        background: $myDarkCol
-        transform: translateX(-20%) translateY(15%) rotate(-40deg)
-        box-shadow: 0px 5px 15px rgba(0,0,0, .8)inset
+    flex-direction: column
+    justify-content: flex-end
+    align-items: flex-end
+    li
+      z-index: 72
+      list-style: none
+      font-family: $myfont
+      font-size: 1em
+      transition: all 200ms ease-in-out
+      a
+        color: white
+        text-decoration: none
+        i
+          font-size: 2em
+          padding: 10px
+          vertical-align: middle
+      &:hover
+        transform: scale(1.1)

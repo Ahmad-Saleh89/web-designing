@@ -6,11 +6,13 @@ $(document).ready(function(){
     $('body,html').animate({
       // scroll to the top of this hash #
       scrollTop: $(this.hash).offset().top
-    }, 900);
+    }, 800);
   });
 
   // nav-section offset variable:
   var navOffset = $('.nav-section').offset().top;
+  // Header image height:
+  var headerImgHeight = $('.header-img').outerHeight();
   // about-sign offset:
   var $aboutSignOffset = $('.about-sign').offset().top;
   // education section offset variable:
@@ -20,7 +22,6 @@ $(document).ready(function(){
   // cirtificates section offset variable:
   var $cirtOffset = $('.cirtificates').offset().top;
 
-  var headerImgHeight = $('.header-img').outerHeight();
 
   // window scrolling effects:
   $(window).scroll(function(){
@@ -40,7 +41,7 @@ $(document).ready(function(){
     // smooth scrolling: switching the active button:
     $scrollLink.each(function(){
       var sectionOffset = $(this.hash).offset().top;
-      if(scrollPos >= sectionOffset){
+      if(scrollPos >= sectionOffset - 20){
         $(this).addClass('active');
         $(this).siblings().removeClass('active');
       }
