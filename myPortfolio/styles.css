@@ -170,11 +170,11 @@ header {
   width: 100%;
   margin: 100px 0; }
   #portfolio .project-sign {
-    top: 0;
-    left: -70px; }
+    position: relative; }
     #portfolio .project-sign img {
-      height: 200px;
-      width: 300px; }
+      height: 220px;
+      transform: scaleX(1.2);
+      transform-origin: left; }
 
 .projects-wrapper {
   position: relative;
@@ -261,11 +261,7 @@ header {
 
 .about-sign img {
   height: 200px;
-  width: 300px;
-  transform-origin: left bottom;
-  perspective: 1000px;
-  transform: rotateY(-89deg);
-  transition: all 500ms ease-in-out; }
+  width: 300px; }
 
 .brief {
   width: 70%;
