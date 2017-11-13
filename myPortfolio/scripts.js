@@ -83,13 +83,16 @@ $(document).ready(function(){
 // Clickable skills items:
   var $corresTitle = $('#big-circle h3');
   var $corresPar = $('#big-circle').find('#circle-content');
+  var $corresLogo = $('#big-circle').find('#circle-logo');
   $('.skills .skill-content').click(function(){
     $('.skill-content').removeClass('clicked-skill');
     $(this).addClass('clicked-skill');
-    var liTitle = $(this).find('h3').text();
-    var liPar = $(this).find('.about-skill').text();
-    $corresTitle.html(liTitle);
-    $corresPar.html(liPar);
+    var skillTitle = $(this).find('h3').text();
+    var aboutSkill = $(this).find('.about-skill').html();
+    var logoSrc = $(this).find('.skill-logo').attr("src");
+    $corresTitle.html(skillTitle);
+    $corresPar.html(aboutSkill);
+    $corresLogo.attr("src", logoSrc);
   });
 
 // Certifications popup image:
