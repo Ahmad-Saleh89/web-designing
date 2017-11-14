@@ -1,0 +1,147 @@
+$myfont: 'Marko One', sans-serif
+$myColor: #94618e
+$myDarkCol: #49274a
+$bgColor: #f8eee7
+
+body, html
+  margin: 0
+  padding: 0
+  font-family: $myfont
+*
+  box-sizing: border-box
+
+.photo-wrapper
+  position: relative
+  height: 70vh
+  width: 100%
+  overflow: hidden
+  box-shadow: 0 0 30px rgba(0,0,0,.5)
+  z-index: -1
+  .my-photo
+    width: 100%
+    height: 100%
+    background-image: url(images/about-imgs/ahmad1.jpg)
+    background-position: top center
+    background-attachment: fixed
+    background-size: contain
+    background-repeat: no-repeat
+
+
+#about-me
+  position: relative
+  background: $bgColor
+  box-shadow: 0 0 30px rgba(0,0,0,.5)
+  padding-bottom: 100px
+.biography
+  transform: translateY(-50px)
+  background: $bgColor
+  z-index: 10
+  width: 90%
+  margin: auto
+  padding: 100px
+  padding-bottom: 0
+  box-sizing: border-box
+  border-radius: 20px
+  box-shadow: 0 0 30px rgba(0,0,0,.5)
+  .bio-header
+    transform: translateY(-150px)
+    background: $bgColor
+    padding: 30px 50px
+    border-radius: 20px
+    box-shadow: 0 0 30px rgba(0,0,0,.5)
+    color: $myDarkCol
+    text-align: center
+    font-size: 1.3em
+    a
+      text-decoration: none
+      border: 2px solid $myDarkCol
+      color: $myDarkCol
+      padding: 8px
+      border-radius: 5px
+      transition: all 300ms ease-in-out
+      box-shadow: 0 5px 15px -5px rgba(0,0,0,.5)
+      i
+        font-size: 1.5em
+        padding-right: 10px
+      &:hover
+        background: $myDarkCol
+        color: $bgColor
+
+  .bio-content
+    transform: translateY(-100px)
+
+    h2
+      color: $myColor
+      padding-top: 30px
+      font-size: 2em
+    h3
+      text-align: center
+      padding: 30px
+      font-size: 2em
+      color: $myDarkCol
+      box-shadow: 0 0 10px rgba(0,0,0,.5)inset
+      border-radius: 20px
+    .subject
+      padding: 2em 4em
+      box-shadow: 0 0 10px rgba(0,0,0,.5)
+      border-radius: 10px
+      color: $myDarkCol
+      line-height: 1.5em
+      font-size: 1em
+#home
+  position: absolute
+  bottom: -50px
+  left: 50%
+  transform: translate(-50%)
+  padding: 30px
+  color: $bgColor
+  background: $myDarkCol
+  border-radius: 10px
+  border: 2px solid $bgColor
+  font-size: 1.3em
+  text-decoration: none
+  box-shadow: 0 0 20px rgba(0,0,0,.5)
+  transition: all 300ms ease-in-out
+  &:hover
+    background: $bgColor
+    color: $myDarkCol
+    border: 2px solid $myDarkCol
+
+
+
+.footer-img
+  position: relative
+  height: 70vh
+  width: 100%
+  overflow: hidden
+  box-shadow: 0 0 30px rgba(0,0,0,.5)
+  z-index: -1
+  .bottom-img
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,.3)
+    background-image: url(images/about-imgs/ahmad2.jpg)
+    background-position: bottom center
+    background-attachment: fixed
+    background-size: contain
+    background-repeat: no-repeat
+    background-blend-mode: multiply
+    filter: blur(5px)
+
+  .copy-right
+    position: absolute
+    background: $bgColor
+    padding-top: 5px
+    bottom: 0
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    box-shadow: 0px -4px 6px -1px rgba($myDarkCol, .5)
+    color: $myDarkCol
+    font-family: $myfont
+    font-size: .8em
+    opacity: .9
+    span
+      font-style: italic

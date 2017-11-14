@@ -469,7 +469,7 @@ header {
     background: white;
     height: 1px; }
   #inner-circle div {
-    padding: 3% 10%; }
+    padding: 3% 5%; }
   #inner-circle.show-cir {
     animation: slide-down 3s ease-in-out 500ms forwards normal; }
   #inner-circle #circle-logo {

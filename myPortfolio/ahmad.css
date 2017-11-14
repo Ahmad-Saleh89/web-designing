@@ -1,3 +1,141 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Marko One", sans-serif; }
 
+* {
+  box-sizing: border-box; }
+
+.photo-wrapper {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  z-index: -1; }
+  .photo-wrapper .my-photo {
+    width: 100%;
+    height: 100%;
+    background-image: url(images/about-imgs/ahmad1.jpg);
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat; }
+
+#about-me {
+  position: relative;
+  background: #f8eee7;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  padding-bottom: 100px; }
+
+.biography {
+  transform: translateY(-50px);
+  background: #f8eee7;
+  z-index: 10;
+  width: 90%;
+  margin: auto;
+  padding: 100px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); }
+  .biography .bio-header {
+    transform: translateY(-150px);
+    background: #f8eee7;
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    color: #49274a;
+    text-align: center;
+    font-size: 1.3em; }
+    .biography .bio-header a {
+      text-decoration: none;
+      border: 2px solid #49274a;
+      color: #49274a;
+      padding: 8px;
+      border-radius: 5px;
+      transition: all 300ms ease-in-out;
+      box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5); }
+      .biography .bio-header a i {
+        font-size: 1.5em;
+        padding-right: 10px; }
+      .biography .bio-header a:hover {
+        background: #49274a;
+        color: #f8eee7; }
+  .biography .bio-content {
+    transform: translateY(-100px); }
+    .biography .bio-content h2 {
+      color: #94618e;
+      padding-top: 30px;
+      font-size: 2em; }
+    .biography .bio-content h3 {
+      text-align: center;
+      padding: 30px;
+      font-size: 2em;
+      color: #49274a;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;
+      border-radius: 20px; }
+    .biography .bio-content .subject {
+      padding: 2em 4em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      color: #49274a;
+      line-height: 1.5em;
+      font-size: 1em; }
+
+#home {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 30px;
+  color: #f8eee7;
+  background: #49274a;
+  border-radius: 10px;
+  border: 2px solid #f8eee7;
+  font-size: 1.3em;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transition: all 300ms ease-in-out; }
+  #home:hover {
+    background: #f8eee7;
+    color: #49274a;
+    border: 2px solid #49274a; }
+
+.footer-img {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  z-index: -1; }
+  .footer-img .bottom-img {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    background-image: url(images/about-imgs/ahmad2.jpg);
+    background-position: bottom center;
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    filter: blur(5px); }
+  .footer-img .copy-right {
+    position: absolute;
+    background: #f8eee7;
+    padding-top: 5px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px -4px 6px -1px rgba(73, 39, 74, 0.5);
+    color: #49274a;
+    font-family: "Marko One", sans-serif;
+    font-size: 0.8em;
+    opacity: 0.9; }
+    .footer-img .copy-right span {
+      font-style: italic; }
 
 /*# sourceMappingURL=ahmad.css.map */
