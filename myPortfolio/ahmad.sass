@@ -7,6 +7,7 @@ body, html
   margin: 0
   padding: 0
   font-family: $myfont
+  background: $bgColor
 *
   box-sizing: border-box
 
@@ -14,12 +15,14 @@ body, html
   position: relative
   height: 70vh
   width: 100%
+  max-width: 1500px
+  margin: auto
   overflow: hidden
-  box-shadow: 0 0 30px rgba(0,0,0,.5)
-  z-index: -1
+  z-index: 0
   .my-photo
     width: 100%
     height: 100%
+    background: $bgColor
     background-image: url(images/about-imgs/ahmad1.jpg)
     background-position: top center
     background-attachment: fixed
@@ -30,8 +33,10 @@ body, html
 #about-me
   position: relative
   background: $bgColor
-  box-shadow: 0 0 30px rgba(0,0,0,.5)
   padding-bottom: 100px
+  box-shadow: 0 20px 10px -5px rgba(0,0,0,.5)
+  max-width: 1500px
+  margin: auto
 .biography
   transform: translateY(-50px)
   background: $bgColor
@@ -77,7 +82,7 @@ body, html
     h3
       text-align: center
       padding: 30px
-      font-size: 2em
+      font-size: 1.7em
       color: $myDarkCol
       box-shadow: 0 0 10px rgba(0,0,0,.5)inset
       border-radius: 20px
@@ -88,12 +93,15 @@ body, html
       color: $myDarkCol
       line-height: 1.5em
       font-size: 1em
+
+// Home Icon at the bottom of the page:
 #home
   position: absolute
   bottom: -50px
   left: 50%
   transform: translate(-50%)
   padding: 30px
+  text-align: center
   color: $bgColor
   background: $myDarkCol
   border-radius: 10px
@@ -102,30 +110,30 @@ body, html
   text-decoration: none
   box-shadow: 0 0 20px rgba(0,0,0,.5)
   transition: all 300ms ease-in-out
+  z-index: 1
   &:hover
     background: $bgColor
     color: $myDarkCol
     border: 2px solid $myDarkCol
 
 
-
 .footer-img
   position: relative
-  height: 70vh
+  height: 50vh
   width: 100%
+  max-width: 1500px
+  margin: auto
   overflow: hidden
   box-shadow: 0 0 30px rgba(0,0,0,.5)
-  z-index: -1
+  z-index: 0
   .bottom-img
     width: 100%
     height: 100%
-    background: rgba(0,0,0,.3)
+    background: $bgColor
     background-image: url(images/about-imgs/ahmad2.jpg)
     background-position: bottom center
-    background-attachment: fixed
     background-size: contain
-    background-repeat: no-repeat
-    background-blend-mode: multiply
+    background-repeat: repeat-x
     filter: blur(5px)
 
   .copy-right
@@ -145,3 +153,195 @@ body, html
     opacity: .9
     span
       font-style: italic
+
+@media only screen and (max-width: 320px)
+  .photo-wrapper
+    height: 20vh
+    min-height: 150px
+  #about-me
+    padding-bottom: 40px
+  .biography
+    transform: translateY(-50px)
+    width: 100%
+    padding: 5px
+    .bio-header
+      transform: translateY(-20px)
+      font-size: .6em
+      padding: 20px
+      padding-top: 10px
+    .bio-content
+      transform: translateY(-20px)
+      h2
+        padding-top: 15px
+        font-size: .8em
+      h3
+        font-size: .8em
+        padding: 20px
+      .subject
+        padding: 1em
+        font-size: .6em
+  #home
+    bottom: 10px
+    font-size: 1em
+    padding: 10px
+  .footer-img
+    height: 40vh
+    max-height: 300px
+    .bottom-img
+      background-size: cover
+      filter: blur(1px)
+    .copy-right
+      font-size: .4em
+      display: block
+      padding: 0
+
+@media only screen and (min-width: 320px) and (max-width: 560px)
+  .photo-wrapper
+    height: 20vh
+  #about-me
+    padding-bottom: 50px
+  .biography
+    transform: translateY(-15px)
+    width: 100%
+    padding: 20px
+    .bio-header
+      transform: translateY(-50px)
+      font-size: .6em
+      padding: 20px
+      padding-top: 10px
+    .bio-content
+      transform: translateY(-40px)
+      h2
+        padding-top: 15px
+        font-size: 1.1em
+      h3
+        font-size: 1.1em
+        padding: 20px
+      .subject
+        padding: 1em
+        font-size: .7em
+  #home
+    bottom: -10px
+    font-size: 1em
+    padding: 10px
+  .footer-img
+    height: 40vh
+    max-height: 400px
+    .bottom-img
+      background-size: cover
+      filter: blur(2px)
+    .copy-right
+      font-size: .4em
+
+
+@media only screen and (min-width: 560px) and (max-width: 740px)
+  .photo-wrapper
+    height: 30vh
+  #about-me
+    padding-bottom: 60px
+  .biography
+    transform: translateY(-15px)
+    width: 100%
+    padding: 30px
+    .bio-header
+      transform: translateY(-60px)
+      font-size: .9em
+      padding: 30px
+      padding-top: 10px
+    .bio-content
+      transform: translateY(-60px)
+      h2
+        padding-top: 20px
+        font-size: 1.4em
+      h3
+        font-size: 1.3em
+        padding: 30px
+      .subject
+        padding: 2em
+        font-size: .8em
+  #home
+    bottom: -20px
+    font-size: 1.3em
+    padding: 20px
+  .footer-img
+    height: 40vh
+    max-height: 500px
+    .bottom-img
+      background-size: cover
+      filter: blur(3px)
+    .copy-right
+      font-size: .5em
+
+@media only screen and (min-width: 740px) and (max-width: 920px)
+  .photo-wrapper
+    height: 40vh
+  #about-me
+    padding-bottom: 70px
+  .biography
+    transform: translateY(-30px)
+    width: 100%
+    padding: 60px
+    .bio-header
+      transform: translateY(-110px)
+      font-size: 1em
+      padding: 30px
+      padding-top: 10px
+    .bio-content
+      transform: translateY(-90px)
+      h2
+        padding-top: 20px
+        font-size: 1.7em
+      h3
+        font-size: 1.5em
+        padding: 30px
+      .subject
+        padding: 2em
+        font-size: .9em
+  #home
+    bottom: -20px
+    font-size: 1.3em
+    padding: 20px
+  .footer-img
+    height: 40vh
+    max-height: 500px
+    .bottom-img
+      background-size: cover
+      filter: blur(3px)
+    .copy-right
+      font-size: .5em
+
+@media only screen and (min-width: 920px) and (max-width: 1290px)
+  .photo-wrapper
+    height: 50vh
+  #about-me
+    padding-bottom: 70px
+  .biography
+    width: 95%
+    padding: 50px
+    .bio-header
+      transform: translateY(-105px)
+      font-size: 1.1em
+      padding: 30px
+      padding-top: 10px
+    .bio-content
+      h2
+        padding-top: 30px
+        font-size: 1.9em
+      h3
+        font-size: 1.4em
+        padding: 30px
+      .subject
+        padding: 2em 3em
+        font-size: 1em
+  #home
+    bottom: -20px
+    font-size: 1.4em
+    padding: 20px
+  .footer-img
+    height: 40vh
+    max-height: 500px
+    .bottom-img
+      background-size: contain
+      filter: blur(3px)
+    .copy-right
+      font-size: .6em
