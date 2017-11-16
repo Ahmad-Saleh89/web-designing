@@ -2,9 +2,12 @@ $myfont: 'Marko One', sans-serif
 $myColor: #94618e
 $myDarkCol: #49274a
 $bgColor: #f8eee7
-body
+html
   background: $bgColor
-  margin: 0
+body
+  margin: auto
+  max-width: 1700px
+  background: $bgColor
   padding: 0
 
 header
@@ -18,15 +21,6 @@ header
   left: 0
   box-shadow: 0px 5px 15px -3px rgba(0,0,0,.9)
 
-
-.header-img
-  width: 100%
-  height: 100%
-  overflow: hidden
-  img
-    width: 100%
-    height: 100%
-
 // Nav bar
 .nav-section
   position: absolute
@@ -34,12 +28,13 @@ header
   z-index: 100
   transform-origin: top
   transition: all 500ms ease-in-out
+  // initial scrolling down:
   &.fixed-nav
     .navbar-nav
       height: 55px
       position: fixed
       top: -5px
-
+  // scrolling further than header
   &.styled-nav
     .navbar-nav
       border-bottom-right-radius: 10px
@@ -90,6 +85,14 @@ header
           transform: rotateY(20deg) skewX(6deg) skewY(-6deg)
           color: white
 
+.header-img
+  width: 100%
+  height: 100%
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+
 // Greeting Message:
 #greeting-sec
   margin: 0
@@ -99,6 +102,7 @@ header
   display: flex
   justify-content: center
   align-items: center
+  text-align: center
   font-size: 2em
   font-family: $myfont
   color: $myDarkCol
@@ -178,11 +182,92 @@ header
     i
       color: white
 
+@media only screen and (max-width: 320px)
+  header
+    min-height: 300px
+  .header-img
+    min-height: 300px
+
+@media only screen and (min-width: 320px) and (max-width: 560px)
+  #greeting-sec
+    height: 15vh
+    min-height: 100px
+    font-size: .9em
+    letter-spacing: 1px
+  .parallax-bg
+    height: 180px
+    .parallax-img
+      height: 180px
+    h3, h4
+      font-size: 1em
+      letter-spacing: .5px
+    .arrow-wrapper
+      bottom: 5px
+      height: 60px
+      width: 50px
+      .arrow-down
+        i
+          font-size: 2em
+
+@media only screen and (min-width: 560px) and (max-width: 740px)
+  #greeting-sec
+    height: 20vh
+    min-height: 150px
+    font-size: 1.3em
+  .parallax-bg
+    height: 270px
+    .parallax-img
+      height: 270px
+    h3, h4
+      font-size: 1.5em
+      letter-spacing: 1px
+    .arrow-wrapper
+      bottom: 15px
+      height: 70px
+      width: 70px
+      .arrow-down
+        i
+          font-size: 3em
+
+@media only screen and (min-width: 740px) and (max-width: 920px)
+  #greeting-sec
+    height: 25vh
+    min-height: 150px
+    font-size: 1.5em
+  .parallax-bg
+    height: 310px
+    .parallax-img
+      height: 310px
+    h3, h4
+      font-size: 1.7em
+      letter-spacing: 1px
+    .arrow-wrapper
+      bottom: 15px
+      height: 70px
+      width: 70px
+      .arrow-down
+        i
+          font-size: 3em
+
+@media only screen and (min-width: 920px) and (max-width: 1290px)
+  #greeting-sec
+    height: 30vh
+    min-height: 200px
+    font-size: 1.7em
+  .parallax-bg
+    height: 400px
+    .parallax-img
+      height: 400px
+    h3, h4
+      font-size: 2em
+      letter-spacing: 1px
+
+
 // Projects section
 #portfolio
-  height: 900px
+  // height: 900px
   width: 100%
-  margin: 100px 0
+  margin: 60px 0
   .project-sign
     position: relative
     img
@@ -244,6 +329,75 @@ header
         img
           transform: scale(1.2)
 
+@media only screen and (max-width: 320px)
+
+@media only screen and (min-width: 320px) and (max-width: 560px)
+  #portfolio
+    margin: 30px 0
+    .project-sign
+      img
+        height: 100px
+        transform: scaleX(.6)
+    .projects-wrapper
+      width: 95%
+      .projects
+        margin-top: 10px
+        li
+          height: 140px
+          width: 140px
+          p
+            font-size: .8em
+
+@media only screen and (min-width: 560px) and (max-width: 740px)
+  #portfolio
+    margin: 30px 0
+    .project-sign
+      img
+        height: 120px
+        transform: scaleX(.7)
+    .projects-wrapper
+      width: 95%
+      .projects
+        margin-top: 20px
+        li
+          height: 140px
+          width: 140px
+          p
+            font-size: .7em
+
+@media only screen and (min-width: 740px) and (max-width: 920px)
+  #portfolio
+    margin: 40px 0
+    .project-sign
+      img
+        height: 150px
+        transform: scaleX(.9)
+    .projects-wrapper
+      width: 95%
+      .projects
+        margin-top: 30px
+        li
+          height: 170px
+          width: 190px
+          p
+            font-size: 1.1em
+
+@media only screen and (min-width: 920px) and (max-width: 1290px)
+  #portfolio
+    margin: 70px 0
+    .project-sign
+      img
+        height: 180px
+        transform: scaleX(1)
+    .projects
+      margin-top: 40px
+      li
+        height: 210px
+        width: 240px
+        p
+          font-size: 1.3em
+
+
 // About section:
 .side-tag
   position: absolute
@@ -299,6 +453,7 @@ header
     font-family: $myfont
     font-size: 1em
     text-indent: 20px
+    text-align: center
   p:last-child
     font-size: 1.2em
     a
@@ -308,7 +463,7 @@ header
   max-width: 1200px
   margin: auto
 .education
-  height: 900px
+  // height: 900px
   position: relative
   display: flex
   flex-direction: column
@@ -330,9 +485,10 @@ header
       text-align: center
 
 .edu-content
-  margin-top: 75px
+  margin-top: 40px
   ul
     position: relative
+    padding: 0
     list-style: none
     display: grid
     grid-template-columns: repeat(6, 15%)
@@ -364,6 +520,7 @@ header
         color: $myColor
         font-size: 1.4em
       p
+        text-align: center
         position: relative
         font-size: 1em
         padding-bottom: 10px
@@ -410,7 +567,7 @@ header
         border: transparent
     li:nth-child(7)
       grid-column: 1/4
-      grid-row: 5/8
+      grid-row: 5/ 8
       margin-right: 15%
     li:nth-child(8)
       grid-column: 4/7
@@ -428,6 +585,173 @@ header
   81%, 100%
     opacity: 0
     transform: translateX(400%)
+
+@media only screen and (max-width: 320px)
+
+@media only screen and (min-width: 320px) and (max-width: 560px)
+  .about-sign
+    img
+      height: 100px
+      width: 130px
+  .brief
+    width: 90%
+    margin-top: 15px
+    margin-bottom: 20px
+    h3
+      font-size: 1.1em
+      padding-bottom: 1px
+    p
+      font-size: .7em
+    p:last-child
+      font-size: .8em
+  .side-tag
+    h2
+      padding: 8px 30px
+      font-size: .8em
+  .education
+    margin-bottom: 20px
+    #edu-intro
+      p
+        padding-top: 15px
+        font-size: .7em
+    .edu-content
+      margin-top: 10px
+      ul
+        grid-template-columns: repeat(2, 45%)
+        grid-template-rows: repeat(5, 80px)
+        grid-gap: .5em
+        li
+          grid-column: span 1
+          grid-row: span 1
+          padding: 10px
+          h5
+            margin-top: 20px
+            font-size: .7em
+          p
+            font-size: .5em
+            padding-bottom: 10px
+        li:nth-child(7)
+          grid-column: 1/2
+          grid-row: 4/ 6
+          margin-bottom: 15%
+        li:nth-child(8)
+          grid-column: 2/3
+          grid-row: 4/6
+          margin-bottom: 15%
+
+@media only screen and (min-width: 560px) and (max-width: 740px)
+  .about-sign
+    img
+      height: 120px
+      width: 160px
+  .brief
+    width: 88%
+    margin-top: 20px
+    margin-bottom: 30px
+    h3
+      font-size: 1.3em
+      padding-bottom: 5px
+    p
+      font-size: .7em
+    p:last-child
+      font-size: .8em
+  .side-tag
+    h2
+      padding: 10px 35px
+      font-size: 1em
+  .education
+    margin-bottom: 25px
+    #edu-intro
+      p
+        padding-top: 20px
+        font-size: .9em
+    .edu-content
+      margin-top: 15px
+      ul
+        grid-template-rows: repeat(7, 35px)
+        grid-gap: .5em
+        li
+          padding: 10px
+          h5
+            font-size: .8em
+          p
+            margin-bottom: 5px
+            font-size: .6em
+
+@media only screen and (min-width: 740px) and (max-width: 920px)
+  .about-sign
+    img
+      height: 150px
+      width: 220px
+  .brief
+    width: 85%
+    margin-top: 25px
+    margin-bottom: 35px
+    h3
+      font-size: 1.5em
+      padding-bottom: 10px
+    p
+      font-size: .8em
+    p:last-child
+      font-size: .9em
+  .side-tag
+    h2
+      padding: 10px 40px
+      font-size: 1.2em
+  .education
+    margin-bottom: 30px
+    #edu-intro
+      p
+        padding-top: 20px
+        font-size: 1em
+  .edu-content
+    margin-top: 20px
+    ul
+      grid-template-rows: repeat(7, 45px)
+      li
+        padding: 25px
+        h5
+          font-size: 1em
+        p
+          font-size: .7em
+
+@media only screen and (min-width: 920px) and (max-width: 1290px)
+  .about-sign
+    img
+      height: 170px
+      width: 250px
+  .brief
+    width: 80%
+    margin-top: 30px
+    margin-bottom: 40px
+    p
+      font-size: .9em
+    p:last-child
+      font-size: 1em
+  .side-tag
+    h2
+      padding: 12px 50px
+      font-size: 1.4em
+  .education
+    margin-bottom: 40px
+    #edu-intro
+      p
+        padding-top: 20px
+        font-size: 1.1em
+  .edu-content
+    margin-top: 35px
+    ul
+      grid-template-rows: repeat(7, 50px)
+      li
+        padding: 25px
+        h5
+          font-size: 1.2em
+        p
+          font-size: .9em
+
+
+
+
 
 .skills
   position: relative
