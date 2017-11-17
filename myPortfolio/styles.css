@@ -454,20 +454,20 @@ header {
   margin-top: 40px; }
   .edu-content ul {
     position: relative;
-    padding: 0;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(6, 15%);
     grid-template-rows: repeat(7, 70px);
     grid-gap: 1em;
-    font-family: "Marko One", sans-serif; }
+    font-family: "Marko One", sans-serif;
+    z-index: 10; }
     .edu-content ul li {
       grid-column: span 2;
       grid-row: span 2;
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
       padding: 30px;
       background: #f8eee7;
@@ -546,6 +546,9 @@ header {
     opacity: 0;
     transform: translateX(400%); } }
 @media only screen and (min-width: 320px) and (max-width: 560px) {
+  .arrow-wrapper {
+    display: none; }
+
   .about-sign img {
     height: 100px;
     width: 130px; }
@@ -574,6 +577,7 @@ header {
     .education .edu-content {
       margin-top: 10px; }
       .education .edu-content ul {
+        padding-left: 25px;
         grid-template-columns: repeat(2, 45%);
         grid-template-rows: repeat(5, 80px);
         grid-gap: 0.5em; }
@@ -582,7 +586,7 @@ header {
           grid-row: span 1;
           padding: 10px; }
           .education .edu-content ul li h5 {
-            margin-top: 20px;
+            padding-top: 10px;
             font-size: 0.7em; }
           .education .edu-content ul li p {
             font-size: 0.5em;
@@ -590,12 +594,21 @@ header {
         .education .edu-content ul li:nth-child(7) {
           grid-column: 1/2;
           grid-row: 4/6;
-          margin-bottom: 15%; }
+          margin-right: auto;
+          margin-bottom: 20%; }
         .education .edu-content ul li:nth-child(8) {
           grid-column: 2/3;
           grid-row: 4/6;
-          margin-bottom: 15%; } }
+          margin-bottom: 20%;
+          margin-left: auto; } }
 @media only screen and (min-width: 560px) and (max-width: 740px) {
+  .arrow-wrapper {
+    bottom: 15px;
+    height: 70px;
+    width: 70px; }
+    .arrow-wrapper .arrow-down i {
+      font-size: 3em; }
+
   .about-sign img {
     height: 120px;
     width: 160px; }
@@ -624,6 +637,7 @@ header {
     .education .edu-content {
       margin-top: 15px; }
       .education .edu-content ul {
+        padding-left: 15px;
         grid-template-rows: repeat(7, 35px);
         grid-gap: 0.5em; }
         .education .edu-content ul li {
@@ -634,6 +648,9 @@ header {
             margin-bottom: 5px;
             font-size: 0.6em; } }
 @media only screen and (min-width: 740px) and (max-width: 920px) {
+  .arrow-wrapper .arrow-down i {
+    font-size: 3em; }
+
   .about-sign img {
     height: 150px;
     width: 220px; }
@@ -663,6 +680,7 @@ header {
   .edu-content {
     margin-top: 20px; }
     .edu-content ul {
+      padding: 0;
       grid-template-rows: repeat(7, 45px); }
       .edu-content ul li {
         padding: 25px; }
@@ -671,6 +689,9 @@ header {
         .edu-content ul li p {
           font-size: 0.7em; } }
 @media only screen and (min-width: 920px) and (max-width: 1290px) {
+  .arrow-wrapper .arrow-down i {
+    font-size: 4em; }
+
   .about-sign img {
     height: 170px;
     width: 250px; }
@@ -697,6 +718,7 @@ header {
   .edu-content {
     margin-top: 35px; }
     .edu-content ul {
+      padding: 0;
       grid-template-rows: repeat(7, 50px); }
       .edu-content ul li {
         padding: 25px; }
@@ -707,7 +729,6 @@ header {
 .skills {
   position: relative;
   height: 1000px;
-  max-height: 1100px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -768,7 +789,7 @@ header {
     width: 50%;
     background: white;
     height: 1px; }
-  #inner-circle div {
+  #inner-circle #circle-content {
     padding: 3% 5%; }
   #inner-circle.show-cir {
     animation: slide-down 3s ease-in-out 500ms forwards normal; }
@@ -782,6 +803,7 @@ header {
   padding: 30px;
   list-style: none;
   width: 100%;
+  max-width: 1150px;
   height: 80%;
   position: relative;
   display: grid;
@@ -827,7 +849,7 @@ header {
     font-size: 1em; }
   .skill-content .small-h3 {
     font-size: 0.8em; }
-  .skill-content .level, .skill-content .about-skill {
+  .skill-content .about-skill {
     display: none; }
   .skill-content .skill-logo {
     display: none; }
@@ -938,7 +960,7 @@ header {
 #ux {
   grid-column: 3/5;
   grid-row: 10/12;
-  transform: translate(20px); }
+  transform: translateX(20px); }
   #ux .skill-content {
     width: 75%; }
 
@@ -946,6 +968,285 @@ header {
   grid-column: 12/13;
   grid-row: 11/12; }
 
+@media only screen and (min-width: 320px) and (max-width: 560px) {
+  .skills {
+    height: 700px; }
+
+  #skills-intro {
+    padding-top: 100px;
+    width: 85%; }
+    #skills-intro p {
+      font-size: 0.7em; }
+
+  #big-circle {
+    height: 230px;
+    width: 300px;
+    top: 300px; }
+
+  #inner-circle {
+    padding-top: 25px;
+    padding-bottom: 25px; }
+    #inner-circle hr {
+      display: none; }
+    #inner-circle h3 {
+      font-size: 1em;
+      transform: scaleY(1);
+      max-width: 60%; }
+    #inner-circle #circle-content {
+      font-size: 0.65em; }
+    #inner-circle #circle-logo {
+      max-height: 40px;
+      max-width: 60px; }
+
+  .skills-wrapper {
+    min-width: 560px;
+    grid-template-rows: repeat(15, 1fr); }
+    .skills-wrapper #html {
+      grid-column: 4/8;
+      grid-row: 1/4; }
+    .skills-wrapper #css {
+      grid-column: 10/14;
+      grid-row: 1/4; }
+    .skills-wrapper #js {
+      grid-row: 3/6; }
+      .skills-wrapper #js .skill-content {
+        height: 85%; }
+    .skills-wrapper #jquery {
+      grid-row: 5/8; }
+      .skills-wrapper #jquery .skill-content {
+        height: 90%; }
+    .skills-wrapper #sass {
+      grid-row: 3/5; }
+      .skills-wrapper #sass .skill-content {
+        width: 100%; }
+    .skills-wrapper #responsive {
+      grid-row: 1/3; }
+      .skills-wrapper #responsive .skill-content {
+        width: 100%; }
+    .skills-wrapper #bootstrap {
+      grid-column: 13/16; }
+      .skills-wrapper #bootstrap .skill-content {
+        height: 75%;
+        width: 90%; }
+    .skills-wrapper #wordpress {
+      grid-row: 4/7; }
+      .skills-wrapper #wordpress .skill-content {
+        height: 70%;
+        width: 85%; }
+    .skills-wrapper #git .skill-content {
+      height: 70%;
+      margin-top: 10px; }
+    .skills-wrapper #php {
+      grid-column: 1/3;
+      grid-row: 8/10; }
+    .skills-wrapper #photoshop {
+      grid-column: 14/16; }
+      .skills-wrapper #photoshop .skill-content {
+        height: 65%; }
+    .skills-wrapper #angular {
+      grid-row: 10/11; }
+    .skills-wrapper #ux {
+      grid-row: 11/13; }
+      .skills-wrapper #ux .skill-content {
+        height: 75%; }
+
+  .skill-content {
+    letter-spacing: 1px;
+    font-weight: 400; }
+    .skill-content.clicked-skill {
+      border: 2px solid #49274a; }
+    .skill-content h3 {
+      font-size: 0.8em; }
+    .skill-content .medium-h3 {
+      font-size: 0.6em; }
+    .skill-content .small-h3 {
+      font-size: 0.4em; } }
+@media only screen and (min-width: 560px) and (max-width: 740px) {
+  .skills {
+    height: 700px; }
+
+  #skills-intro {
+    padding-top: 100px;
+    width: 85%; }
+    #skills-intro p {
+      font-size: 0.7em; }
+
+  #big-circle {
+    height: 230px;
+    width: 300px;
+    top: 300px; }
+
+  #inner-circle {
+    padding-top: 25px;
+    padding-bottom: 25px; }
+    #inner-circle hr {
+      display: none; }
+    #inner-circle h3 {
+      font-size: 1em;
+      transform: scaleY(1);
+      max-width: 60%; }
+    #inner-circle #circle-content {
+      font-size: 0.65em; }
+    #inner-circle #circle-logo {
+      max-height: 40px;
+      max-width: 60px; }
+
+  .skills-wrapper {
+    min-width: 560px;
+    grid-template-rows: repeat(15, 1fr); }
+    .skills-wrapper #html {
+      grid-column: 4/8;
+      grid-row: 1/4; }
+    .skills-wrapper #css {
+      grid-column: 10/14;
+      grid-row: 1/4; }
+    .skills-wrapper #js {
+      grid-row: 3/6; }
+      .skills-wrapper #js .skill-content {
+        height: 85%; }
+    .skills-wrapper #jquery {
+      grid-row: 5/8; }
+      .skills-wrapper #jquery .skill-content {
+        height: 90%; }
+    .skills-wrapper #sass {
+      grid-row: 3/5; }
+      .skills-wrapper #sass .skill-content {
+        width: 100%; }
+    .skills-wrapper #responsive {
+      grid-row: 1/3; }
+      .skills-wrapper #responsive .skill-content {
+        width: 100%; }
+    .skills-wrapper #bootstrap {
+      grid-column: 13/16; }
+      .skills-wrapper #bootstrap .skill-content {
+        height: 75%;
+        width: 90%; }
+    .skills-wrapper #wordpress {
+      grid-row: 4/7; }
+      .skills-wrapper #wordpress .skill-content {
+        height: 70%;
+        width: 85%; }
+    .skills-wrapper #git .skill-content {
+      height: 70%;
+      margin-top: 10px; }
+    .skills-wrapper #php {
+      grid-column: 1/3;
+      grid-row: 8/10; }
+    .skills-wrapper #photoshop {
+      grid-column: 14/16; }
+      .skills-wrapper #photoshop .skill-content {
+        height: 65%; }
+    .skills-wrapper #angular {
+      grid-row: 10/11; }
+    .skills-wrapper #ux {
+      grid-row: 11/13; }
+      .skills-wrapper #ux .skill-content {
+        height: 75%; }
+
+  .skill-content {
+    letter-spacing: 1px;
+    font-weight: 400; }
+    .skill-content.clicked-skill {
+      border: 2px solid #49274a; }
+    .skill-content h3 {
+      font-size: 0.8em; }
+    .skill-content .medium-h3 {
+      font-size: 0.6em; }
+    .skill-content .small-h3 {
+      font-size: 0.4em; } }
+@media only screen and (min-width: 740px) and (max-width: 920px) {
+  .skills {
+    height: 800px; }
+
+  #skills-intro {
+    padding-top: 110px;
+    width: 85%; }
+    #skills-intro p {
+      font-size: 0.8em; }
+
+  #big-circle {
+    height: 320px;
+    width: 320px;
+    top: 340px; }
+
+  #inner-circle {
+    padding-top: 30px;
+    padding-bottom: 25px; }
+    #inner-circle h3 {
+      font-size: 1.2em;
+      transform: scaleY(1.1);
+      max-width: 60%; }
+    #inner-circle #circle-content {
+      font-size: 0.75em; }
+    #inner-circle #circle-logo {
+      max-height: 50px;
+      max-width: 70px; }
+
+  .skills-wrapper {
+    min-width: 735px;
+    grid-template-rows: repeat(15, 1fr); }
+
+  .skill-content {
+    letter-spacing: 1px;
+    font-weight: 400; }
+    .skill-content.clicked-skill {
+      border: 3px solid #49274a; }
+    .skill-content h3 {
+      font-size: 1em; }
+    .skill-content .medium-h3 {
+      font-size: 0.7em; }
+    .skill-content .small-h3 {
+      font-size: 0.5em; }
+
+  #ux {
+    transform: translateY(30px); } }
+@media only screen and (min-width: 920px) and (max-width: 1290px) {
+  .skills {
+    height: 900px; }
+
+  #skills-intro {
+    padding-top: 150px;
+    width: 80%; }
+    #skills-intro p {
+      font-size: 1em; }
+
+  #big-circle {
+    height: 380px;
+    width: 380px;
+    top: 370px; }
+
+  #inner-circle {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+    #inner-circle h3 {
+      font-size: 1.5em;
+      transform: scaleY(1.2);
+      max-width: 60%; }
+    #inner-circle #circle-content {
+      font-size: 0.85em; }
+    #inner-circle #circle-logo {
+      max-height: 70px;
+      max-width: 110px; }
+
+  .skills-wrapper {
+    min-width: 900px;
+    max-width: 950px;
+    grid-template-rows: repeat(15, 1fr); }
+
+  .skill-content {
+    letter-spacing: 1px;
+    font-weight: 600; }
+    .skill-content.clicked-skill {
+      border: 4px solid #49274a; }
+    .skill-content h3 {
+      font-size: 1.2em; }
+    .skill-content .medium-h3 {
+      font-size: 0.8em; }
+    .skill-content .small-h3 {
+      font-size: 0.6em; }
+
+  #ux {
+    transform: translateY(30px); } }
 .cirtificates {
   position: relative;
   margin-top: 100px;
