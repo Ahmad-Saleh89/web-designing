@@ -974,7 +974,7 @@ header {
     height: 560px; }
 
   #skills-intro {
-    padding-top: 85px;
+    padding-top: 90px;
     width: 95%; }
     #skills-intro p {
       font-size: 0.7em;
@@ -1278,8 +1278,7 @@ header {
     transform: translateY(30px); } }
 .cirtificates {
   position: relative;
-  margin-top: 100px;
-  height: 800px;
+  margin-top: 50px;
   width: 100%; }
   .cirtificates #cirtif-intro {
     text-transform: uppercase;
@@ -1294,7 +1293,7 @@ header {
   .cirtificates .cirt-imgs {
     width: 100%;
     margin: auto;
-    margin-top: 4em;
+    margin-top: 2em;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; }
@@ -1370,6 +1369,109 @@ header {
       height: 100%;
       border-radius: 10px; }
 
+@media only screen and (min-width: 360px) and (max-width: 560px) {
+  .cirtificates {
+    min-height: 380px;
+    margin-top: 10px; }
+    .cirtificates #cirtif-intro {
+      height: 110px; }
+      .cirtificates #cirtif-intro p {
+        font-size: 0.6em; }
+    .cirtificates .cirt-imgs {
+      margin-top: 1em; }
+      .cirtificates .cirt-imgs figure {
+        width: 40%;
+        border-radius: 5px; }
+        .cirtificates .cirt-imgs figure img {
+          border-radius: 5px; }
+        .cirtificates .cirt-imgs figure figcaption {
+          top: 4px;
+          bottom: 4px;
+          right: 4px;
+          left: 4px;
+          border-radius: 5px;
+          font-size: 0.8em; }
+
+  .popup .img-show {
+    width: 250px;
+    height: 180px; }
+    .popup .img-show span {
+      top: 5px;
+      font-size: 1em; } }
+@media only screen and (min-width: 560px) and (max-width: 740px) {
+  .cirtificates {
+    min-height: 380px;
+    margin-top: -15px; }
+    .cirtificates #cirtif-intro {
+      height: 110px; }
+      .cirtificates #cirtif-intro p {
+        font-size: 0.8em; }
+    .cirtificates .cirt-imgs {
+      margin-top: 1em; }
+      .cirtificates .cirt-imgs figure {
+        width: 26%;
+        border-radius: 5px; }
+        .cirtificates .cirt-imgs figure img {
+          border-radius: 5px; }
+        .cirtificates .cirt-imgs figure figcaption {
+          top: 4px;
+          bottom: 4px;
+          right: 4px;
+          left: 4px;
+          border-radius: 5px;
+          font-size: 0.8em; }
+
+  .popup .img-show {
+    width: 350px;
+    height: 250px; }
+    .popup .img-show span {
+      top: 5px;
+      font-size: 1.1em; } }
+@media only screen and (min-width: 740px) and (max-width: 920px) {
+  .cirtificates {
+    min-height: 480px;
+    margin-top: 0px; }
+    .cirtificates #cirtif-intro {
+      height: 120px; }
+      .cirtificates #cirtif-intro p {
+        font-size: 1.1em; }
+    .cirtificates .cirt-imgs {
+      margin-top: 1em; }
+      .cirtificates .cirt-imgs figure {
+        width: 25%;
+        border-radius: 7px; }
+        .cirtificates .cirt-imgs figure img {
+          border-radius: 7px; }
+        .cirtificates .cirt-imgs figure figcaption {
+          top: 5px;
+          bottom: 5px;
+          right: 5px;
+          left: 5px;
+          border-radius: 5px;
+          font-size: 1em; }
+
+  .popup .img-show {
+    width: 450px;
+    height: 350px; } }
+@media only screen and (min-width: 920px) and (max-width: 1290px) {
+  .cirtificates {
+    min-height: 580px;
+    margin-top: 30px; }
+    .cirtificates .cirt-imgs {
+      margin-top: 1em; }
+      .cirtificates .cirt-imgs figure {
+        width: 27%; }
+        .cirtificates .cirt-imgs figure figcaption {
+          top: 7px;
+          bottom: 7px;
+          right: 7px;
+          left: 7px;
+          border-radius: 7px;
+          font-size: 1.1em; }
+
+  .popup .img-show {
+    width: 530px;
+    height: 400px; } }
 .courses-container {
   width: 100%;
   margin-top: 100px;
