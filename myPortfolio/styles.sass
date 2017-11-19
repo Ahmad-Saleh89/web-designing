@@ -467,7 +467,6 @@ header
   max-width: 1200px
   margin: auto
 .education
-  // height: 900px
   position: relative
   display: flex
   flex-direction: column
@@ -490,11 +489,12 @@ header
 
 .edu-content
   margin-top: 40px
+  overflow: hidden
   ul
     position: relative
     list-style: none
     display: grid
-    grid-template-columns: repeat(6, 15%)
+    grid-template-columns: repeat(6, 1fr)
     grid-template-rows: repeat(7, 70px)
     grid-gap: 1em
     font-family: $myfont
@@ -625,7 +625,7 @@ header
       margin-top: 10px
       ul
         padding-left: 25px
-        grid-template-columns: repeat(2, 45%)
+        grid-template-columns: repeat(2, 1fr)
         grid-template-rows: repeat(5, 80px)
         grid-gap: .5em
         li
@@ -729,7 +729,7 @@ header
   .edu-content
     margin-top: 20px
     ul
-      padding: 0
+      padding: 5px
       grid-template-rows: repeat(7, 45px)
       li
         padding: 25px
@@ -1125,10 +1125,8 @@ header
         box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, .3)
         h3
           font-size: .6em
-        .medium-h3
-          font-size: .5em
-        .small-h3
-          font-size: .3em
+          &.medium-h3, &.small-h3
+            font-size: .5em
         &.clicked-skill
           border: 1px solid $myDarkCol
         &:hover

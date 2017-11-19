@@ -451,12 +451,13 @@ header {
       text-align: center; }
 
 .edu-content {
-  margin-top: 40px; }
+  margin-top: 40px;
+  overflow: hidden; }
   .edu-content ul {
     position: relative;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(6, 15%);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(7, 70px);
     grid-gap: 1em;
     font-family: "Marko One", sans-serif;
@@ -578,7 +579,7 @@ header {
       margin-top: 10px; }
       .education .edu-content ul {
         padding-left: 25px;
-        grid-template-columns: repeat(2, 45%);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 80px);
         grid-gap: 0.5em; }
         .education .edu-content ul li {
@@ -680,7 +681,7 @@ header {
   .edu-content {
     margin-top: 20px; }
     .edu-content ul {
-      padding: 0;
+      padding: 5px;
       grid-template-rows: repeat(7, 45px); }
       .edu-content ul li {
         padding: 25px; }
@@ -1083,10 +1084,8 @@ header {
     box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.3); }
     .skill-content h3 {
       font-size: 0.6em; }
-    .skill-content .medium-h3 {
-      font-size: 0.5em; }
-    .skill-content .small-h3 {
-      font-size: 0.3em; }
+      .skill-content h3.medium-h3, .skill-content h3.small-h3 {
+        font-size: 0.5em; }
     .skill-content.clicked-skill {
       border: 1px solid #49274a; }
     .skill-content:hover {
