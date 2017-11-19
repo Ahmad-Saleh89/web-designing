@@ -546,7 +546,7 @@ header {
   81%, 100% {
     opacity: 0;
     transform: translateX(400%); } }
-@media only screen and (min-width: 320px) and (max-width: 560px) {
+@media only screen and (min-width: 360px) and (max-width: 560px) {
   .arrow-wrapper {
     display: none; }
 
@@ -593,15 +593,15 @@ header {
             font-size: 0.5em;
             padding-bottom: 10px; }
         .education .edu-content ul li:nth-child(7) {
-          grid-column: 1/2;
-          grid-row: 4/6;
-          margin-right: auto;
+          grid-column: 1/span 1;
+          grid-row: 4/span 2;
+          margin-right: 4px;
           margin-bottom: 20%; }
         .education .edu-content ul li:nth-child(8) {
-          grid-column: 2/3;
-          grid-row: 4/6;
+          grid-column: 2/span 1;
+          grid-row: 4/span 2;
           margin-bottom: 20%;
-          margin-left: auto; } }
+          margin-left: 4px; } }
 @media only screen and (min-width: 560px) and (max-width: 740px) {
   .arrow-wrapper {
     bottom: 15px;

@@ -591,9 +591,9 @@ header
     transform: translateX(400%)
 
 // About sign, about brief, education sec responsive:
-@media only screen and (max-width: 320px)
+@media only screen and (max-width: 360px)
 
-@media only screen and (min-width: 320px) and (max-width: 560px)
+@media only screen and (min-width: 360px) and (max-width: 560px)
   .arrow-wrapper
     display: none
   .about-sign
@@ -639,15 +639,15 @@ header
             font-size: .5em
             padding-bottom: 10px
         li:nth-child(7)
-          grid-column: 1/2
-          grid-row: 4/ 6
-          margin-right: auto
+          grid-column: 1/ span 1
+          grid-row: 4/ span 2
+          margin-right: 4px
           margin-bottom: 20%
         li:nth-child(8)
-          grid-column: 2/3
-          grid-row: 4/6
+          grid-column: 2/ span 1
+          grid-row: 4/ span 2
           margin-bottom: 20%
-          margin-left: auto
+          margin-left: 4px
 
 @media only screen and (min-width: 560px) and (max-width: 740px)
   .arrow-wrapper
