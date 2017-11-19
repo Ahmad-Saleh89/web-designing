@@ -9,23 +9,23 @@ $(document).ready(function(){
     }, 800);
   });
 
-  // nav-section offset variable:
-  var navOffset = $('.nav-section').offset().top;
-  // Header image height:
-  var headerImgHeight = $('.header-img').outerHeight();
-  // about-sign offset:
-  var $aboutSignOffset = $('.about-sign').offset().top;
-  // education section offset variable:
-  var $eduOffset = $('.education').offset().top;
-  // skills section offset variable:
-  var $skillOffset = $('.skills').offset().top;
-  // cirtificates section offset variable:
-  var $cirtOffset = $('.cirtificates').offset().top;
-
-
   // window scrolling effects:
   $(window).scroll(function(){
     var scrollPos = $(this).scrollTop();
+
+    // nav-section offset variable:
+    var navOffset = $('.nav-section').offset().top;
+    // Header image height:
+    var headerImgHeight = $('.header-img').outerHeight();
+    // about-sign offset:
+    var $aboutSignOffset = $('.about-sign').offset().top;
+    // education section offset variable:
+    var $eduOffset = $('.education').offset().top;
+    // skills section offset variable:
+    var $skillOffset = $('.skills').offset().top;
+    // cirtificates section offset variable:
+    var $cirtOffset = $('.cirtificates').offset().top;
+
     // sticky navbar effect:
     if(scrollPos > navOffset){
       $('.nav-section').addClass('fixed-nav');
