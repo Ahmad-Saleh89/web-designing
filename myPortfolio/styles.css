@@ -1683,15 +1683,16 @@ header {
         border-radius: 10px;
         border: 0.4em solid #49274a; }
         .courses-container #courses-wrapper .course-content h3 {
-          font-size: 0.8em; }
+          font-size: 1em; }
         .courses-container #courses-wrapper .course-content p {
-          font-size: 0.5em; }
+          font-size: 0.8em; }
         .courses-container #courses-wrapper .course-content ul {
           padding-top: 0.5em;
           font-size: 0.5em; }
         .courses-container #courses-wrapper .course-content:nth-child(1) ul {
           padding-left: 1em; }
         .courses-container #courses-wrapper .course-content:nth-child(2) {
+          justify-content: center;
           grid-row: 2/6;
           transform: translate(40px, 20px); }
         .courses-container #courses-wrapper .course-content:nth-child(3) {
