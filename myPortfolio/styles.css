@@ -152,7 +152,7 @@ header {
     position: absolute;
     height: 500px;
     width: 100%;
-    background-image: url(images/ahmad1.jpg);
+    background-image: url(images/about-imgs/ahmad-bg.jpg);
     background-position: top center;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -1685,10 +1685,10 @@ header {
         .courses-container #courses-wrapper .course-content h3 {
           font-size: 1em; }
         .courses-container #courses-wrapper .course-content p {
-          font-size: 0.8em; }
+          font-size: 0.7em; }
         .courses-container #courses-wrapper .course-content ul {
           padding-top: 0.5em;
-          font-size: 0.5em; }
+          font-size: 0.8em; }
         .courses-container #courses-wrapper .course-content:nth-child(1) ul {
           padding-left: 1em; }
         .courses-container #courses-wrapper .course-content:nth-child(2) {
