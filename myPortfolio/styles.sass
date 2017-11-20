@@ -332,9 +332,9 @@ header
           transform: scale(1.2)
 
 // projects section responsive:
-@media only screen and (max-width: 320px)
+@media only screen and (max-width: 319px)
 
-@media only screen and (min-width: 320px) and (max-width: 560px)
+@media only screen and (min-width: 320px) and (max-width: 559px)
   #portfolio
     margin: 30px 0
     .project-sign
@@ -351,7 +351,7 @@ header
           p
             font-size: .8em
 
-@media only screen and (min-width: 560px) and (max-width: 740px)
+@media only screen and (min-width: 560px) and (max-width: 739px)
   #portfolio
     margin: 30px 0
     .project-sign
@@ -368,7 +368,7 @@ header
           p
             font-size: .7em
 
-@media only screen and (min-width: 740px) and (max-width: 920px)
+@media only screen and (min-width: 740px) and (max-width: 919px)
   #portfolio
     margin: 40px 0
     .project-sign
@@ -462,6 +462,14 @@ header
     font-size: 1.2em
     a
       color: $myColor
+      border: 2px solid $myColor
+      padding: 5px 10px
+      text-decoration: none
+      border-radius: 2px
+      transition: all 200ms ease-in-out
+      &:hover
+        color: $bgColor
+        background: $myColor
 .about
   width: 90%
   max-width: 1200px
@@ -591,9 +599,9 @@ header
     transform: translateX(400%)
 
 // About sign, about brief, education sec responsive:
-@media only screen and (max-width: 360px)
+@media only screen and (max-width: 359px)
 
-@media only screen and (min-width: 360px) and (max-width: 560px)
+@media only screen and (min-width: 360px) and (max-width: 559px)
   .arrow-wrapper
     display: none
   .about-sign
@@ -611,6 +619,9 @@ header
       font-size: .7em
     p:last-child
       font-size: .8em
+      a
+        border: 1px solid $myColor
+        padding: 1px 5px
   .side-tag
     h2
       padding: 8px 30px
@@ -649,7 +660,7 @@ header
           margin-bottom: 20%
           margin-left: 4px
 
-@media only screen and (min-width: 560px) and (max-width: 740px)
+@media only screen and (min-width: 560px) and (max-width: 739px)
   .arrow-wrapper
     bottom: 15px
     height: 70px
@@ -672,6 +683,10 @@ header
       font-size: .7em
     p:last-child
       font-size: .8em
+      line-height: 2em
+      a
+        border: 1px solid $myColor
+        padding: 2px 5px
   .side-tag
     h2
       padding: 10px 35px
@@ -696,7 +711,7 @@ header
             margin-bottom: 5px
             font-size: .6em
 
-@media only screen and (min-width: 740px) and (max-width: 920px)
+@media only screen and (min-width: 740px) and (max-width: 919px)
   .arrow-wrapper
     .arrow-down
       i
@@ -1012,9 +1027,9 @@ header
   grid-column: 12/13
   grid-row: 11/12
 
-@media only screen and (max-width: 360px)
+@media only screen and (max-width: 359px)
 
-@media only screen and (min-width: 360px) and (max-width: 560px)
+@media only screen and (min-width: 360px) and (max-width: 559px)
       .skills
         height: 560px
       #skills-intro
@@ -1132,7 +1147,7 @@ header
         &:hover
           box-shadow: 0px 15px 10px -6px rgba(0, 0, 0, .5)
 
-@media only screen and (min-width: 560px) and (max-width: 740px)
+@media only screen and (min-width: 560px) and (max-width: 739px)
       .skills
         height: 700px
       #skills-intro
@@ -1222,7 +1237,7 @@ header
         .small-h3
           font-size: .4em
 
-@media only screen and (min-width: 740px) and (max-width: 920px)
+@media only screen and (min-width: 740px) and (max-width: 919px)
     .skills
       height: 800px
     #skills-intro
@@ -1311,6 +1326,7 @@ header
   position: relative
   margin-top: 50px
   width: 100%
+  min-height: 700px
   #cirtif-intro
     text-transform: uppercase
     height: 140px
@@ -1404,12 +1420,12 @@ header
       // left: 0
       border-radius: 10px
 
-@media only screen and (max-width: 360px)
+@media only screen and (max-width: 359px)
 
-@media only screen and (min-width: 360px) and (max-width: 560px)
+@media only screen and (min-width: 360px) and (max-width: 559px)
   .cirtificates
     min-height: 380px
-    margin-top: 10px
+    margin-top: 25px
     #cirtif-intro
       height: 110px
       p
@@ -1436,10 +1452,10 @@ header
         top: 5px
         font-size: 1em
 
-@media only screen and (min-width: 560px) and (max-width: 740px)
+@media only screen and (min-width: 560px) and (max-width: 739px)
   .cirtificates
     min-height: 380px
-    margin-top: -15px
+    margin-top: 0px
     #cirtif-intro
       height: 110px
       p
@@ -1466,10 +1482,10 @@ header
         top: 5px
         font-size: 1.1em
 
-@media only screen and (min-width: 740px) and (max-width: 920px)
+@media only screen and (min-width: 740px) and (max-width: 919px)
   .cirtificates
     min-height: 480px
-    margin-top: 0px
+    margin-top: 10px
     #cirtif-intro
       height: 120px
       p
@@ -1533,8 +1549,10 @@ header
     font-family: $myfont
     color: $myDarkCol
 #courses-wrapper
+  padding-left: 0
   height: 80%
   width: 100%
+  margin: auto
   display: grid
   grid-template-columns: repeat(8, 1fr)
   grid-template-rows: repeat(6, 1fr)
@@ -1573,8 +1591,12 @@ header
         flex-direction: column
         align-items: flex-end
         list-style: none
-      a
-        color: $myColor
+        li
+          text-align: right
+      P
+        text-align: right
+        a
+          color: $myColor
     &:nth-child(3)
       justify-content: center
       transform: translate(0px,-40px)
@@ -1596,6 +1618,149 @@ header
         align-items: flex-end
         list-style: none
         text-align: right
+
+@media only screen and (max-width: 359px)
+
+@media only screen and (min-width: 360px) and (max-width: 559px)
+        .courses-container
+          margin-top: 50px
+          height: 600px
+          #courses-intro
+            height: 100px
+            p
+              font-size: .6em
+          #courses-wrapper
+            max-width: 500px
+            .course-content
+              padding: .7em
+              border-radius: 7px
+              border: .2em solid $myDarkCol
+              h3
+                font-size: .7em
+              p
+                font-size: .4em
+              ul
+                padding-top: .3em
+                font-size: .3em
+                li
+                  padding-bottom: 4px
+              &:nth-child(1)
+                ul
+                  padding-left: .8em
+                  max-width: 80%
+              &:nth-child(2)
+                padding-left: 2px
+                grid-row: 3/7
+                transform: translate(40px,-10px)
+                ul
+                  padding-left: 20px
+              &:nth-child(3)
+                grid-column: 1 / span 4
+                margin-right: 1em
+                transform: translate(20px,-25px)
+                ul
+                  list-style: none
+                  padding-left: 3px
+              &:nth-child(4)
+                margin: 0 .6em
+                grid-column: 4/ span 4
+                grid-row: 1/3
+                transform: translate(40px,30px)
+
+@media only screen and (min-width: 560px) and (max-width: 739px)
+      .courses-container
+        margin-top: 50px
+        height: 600px
+        #courses-intro
+          height: 120px
+          p
+            font-size: .8em
+        #courses-wrapper
+          max-width: 625px
+          .course-content
+            padding: 1em
+            border-radius: 10px
+            border: .4em solid $myDarkCol
+            h3
+              font-size: .8em
+            p
+              font-size: .5em
+            ul
+              padding-top: .5em
+              font-size: .5em
+            &:nth-child(1)
+              ul
+                padding-left: 1em
+            &:nth-child(2)
+              grid-row: 2/6
+              transform: translate(40px,20px)
+            &:nth-child(3)
+              grid-column: 1 / span 4
+              margin-right: 1em
+              transform: translate(30px,-40px)
+              ul
+                padding-left: 2em
+            &:nth-child(4)
+              max-width: 250px
+              margin: 1em
+              grid-column: 4/ span 4
+              grid-row: 2/4
+              transform: translate(40px,-60px)
+
+@media only screen and (min-width: 740px) and (max-width: 919px)
+    .courses-container
+      margin-top: 50px
+      height: 700px
+      #courses-intro
+        height: 130px
+        p
+          font-size: 1em
+      #courses-wrapper
+        max-width: 850px
+        .course-content
+          padding: 1.1em
+          border-radius: 15px
+          border: .7em solid $myDarkCol
+          h3
+            font-size: 1em
+          p
+            font-size: .7em
+          ul
+            padding-top: .8em
+            font-size: .67em
+          &:nth-child(2)
+            margin-bottom: -1em
+          &:nth-child(3)
+            grid-column: 2 / span 4
+            margin-right: 2em
+            transform: translate(0px,-40px)
+            ul
+              padding-left: 2.5em
+          &:nth-child(4)
+            transform: translate(40px,-60px)
+
+@media only screen and (min-width: 920px) and (max-width: 1290px)
+  .courses-container
+    margin-top: 70px
+    height: 750px
+    #courses-intro
+      p
+        font-size: 1.1em
+    #courses-wrapper
+      max-width: 1000px
+      .course-content
+        padding: 1.3em
+        border: .8em solid $myDarkCol
+        h3
+          font-size: 1.4em
+        p
+          font-size: .9em
+        ul
+          padding-top: 1em
+          font-size: .8em
+        &:nth-child(3)
+          transform: translate(40px,-40px)
+
 
 // Added Only for scrolling effect:
 #contact
