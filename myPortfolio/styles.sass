@@ -1668,54 +1668,57 @@ header
 @media only screen and (min-width: 360px) and (max-width: 559px)
   .courses-container
     margin-top: 50px
-    height: 600px
+    height: 750px
     #courses-intro
       height: 100px
       p
         font-size: .6em
     #courses-wrapper
-      max-width: 500px
+      max-width: 450px
       .course-content
         padding: .7em
         border-radius: 7px
         border: .2em solid $myDarkCol
         h3
-          font-size: .9em
+          font-size: .8em
         p
           font-size: .6em
         ul
           padding-top: .3em
-          font-size: .3em
-          li
-            padding-bottom: 4px
+          font-size: 10px
         &:nth-child(1)
-          ul
+          grid-row: 1/4
+          ul, h3
             padding-left: .8em
             max-width: 80%
         &:nth-child(2)
           justify-content: center
           padding-left: 2px
-          grid-row: 3/7
-          transform: translate(40px,-10px)
+          grid-column: 2/ span 7
+          grid-row: 3/6
+          transform: translate(0px,0px)
+          margin: 30px
           ul
             padding-left: 20px
         &:nth-child(3)
-          grid-column: 1 / span 4
-          margin-right: 1em
-          transform: translate(20px,-25px)
+          grid-column: 1 / span 7
+          grid-row: 5/7
+          transform: translate(0px, 0px)
+          margin-top: 40px
           ul
             list-style: none
             padding-left: 3px
         &:nth-child(4)
-          margin: 0 .6em
+          margin: .6em
+          margin-top: 0
           grid-column: 4/ span 4
           grid-row: 1/3
-          transform: translate(40px,30px)
+          transform: translate(30px,20px)
 
 @media only screen and (min-width: 560px) and (max-width: 739px)
   .courses-container
     margin-top: 50px
-    height: 600px
+    height: 700px
     #courses-intro
       height: 120px
       p
@@ -1732,14 +1735,17 @@ header
           font-size: .7em
         ul
           padding-top: .5em
-          font-size: .8em
+          font-size: 10px
         &:nth-child(1)
-          ul
+          ul, h3
             padding-left: 1em
+            max-width: 80%
         &:nth-child(2)
           justify-content: center
           grid-row: 2/6
           transform: translate(40px,20px)
+          p
+            max-width: 80%
         &:nth-child(3)
           grid-column: 1 / span 4
           margin-right: 1em
@@ -1750,8 +1756,8 @@ header
           max-width: 250px
           margin: 1em
           grid-column: 4/ span 4
-          grid-row: 2/4
-          transform: translate(40px,-60px)
+          grid-row: 1/3
+          transform: translate(40px,0px)
 
 @media only screen and (min-width: 740px) and (max-width: 919px)
   .courses-container
