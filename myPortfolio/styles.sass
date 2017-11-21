@@ -1857,6 +1857,7 @@ footer
   p
     font-family: $myfont
     color: $myColor
+    padding-left: 1em
 
   form
     color: $myDarkCol
@@ -1899,7 +1900,7 @@ footer
     content: ''
     position: absolute
     height: 150%
-    width: 250%
+    width: 257%
     background: $myDarkCol
     transform: translateX(-20%) translateY(15%) rotate(-40deg)
     box-shadow: 0px 5px 15px rgba(0,0,0, .8)inset
@@ -1944,3 +1945,124 @@ footer
   opacity: .9
   span
     font-style: italic
+
+
+@media only screen and (max-width: 359px)
+
+
+@media only screen and (min-width: 360px) and (max-width: 559px)
+  footer
+    height: 650px
+    margin-top: 00px
+    .footer-upper-margin
+      display: none
+    #contact
+      height: 650px
+    .footer-content
+      flex-direction: column
+      height: 650px
+      .contact
+        margin-top: 10px
+        width: 100%
+        height: 75%
+        h3
+          font-size: 1em
+        p
+          text-align: center
+          font-size: .6em
+      .follow-me
+        width: 100%
+        height: 25%
+        &::before
+          display: none
+        ul
+          flex-direction: row
+          align-items: center
+          justify-content: center
+          width: 90%
+          height: 100%
+          li
+            font-size: .7em
+            a
+              color: $myDarkCol
+              i
+              font-size: .8em
+              color: $myDarkCol
+
+    .copy-right
+      font-size: .5em
+
+@media only screen and (min-width: 560px) and (max-width: 739px)
+  footer
+    height: 700px
+    margin-top: 00px
+    .footer-upper-margin
+      display: none
+    #contact
+      height: 700px
+    .footer-content
+      flex-direction: column
+      height: 700px
+      .contact
+        margin-top: 10px
+        width: 100%
+        height: 75%
+        h3
+          font-size: 1.2em
+        p
+          text-align: center
+          font-size: .7em
+      .follow-me
+        width: 100%
+        height: 25%
+        &::before
+          display: none
+        ul
+          flex-direction: row
+          align-items: center
+          justify-content: center
+          width: 90%
+          height: 100%
+          li
+            font-size: .8em
+            a
+              color: $myDarkCol
+              i
+              font-size: 1em
+              color: $myDarkCol
+
+    .copy-right
+      font-size: .6em
+
+@media only screen and (min-width: 740px) and (max-width: 919px)
+  footer
+    .footer-content
+      height: 550px
+      .contact
+        width: 70%
+        h3
+          font-size: 1.2em
+        p
+          font-size: .7em
+      .follow-me
+        &::before
+          transform: translateX(5%) translateY(10%) rotate(-57deg)
+        ul li
+          font-size: .8em
+          a i
+            font-size: 1.7em
+    .copy-right
+      font-size: .6em
+
+@media only screen and (min-width: 920px) and (max-width: 1290px)
+  footer
+    .footer-content
+      height: 600px
+      .contact
+        p
+          font-size: .8em
+      .follow-me
+        &::before
+          transform: translateX(-10%) translateY(15%) rotate(-50deg)
+    .copy-right
+      font-size: .7em

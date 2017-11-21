@@ -1809,7 +1809,8 @@ footer {
     text-transform: uppercase; }
   .contact p {
     font-family: "Marko One", sans-serif;
-    color: #94618e; }
+    color: #94618e;
+    padding-left: 1em; }
   .contact form {
     color: #49274a;
     width: 80%; }
@@ -1851,7 +1852,7 @@ footer {
     content: "";
     position: absolute;
     height: 150%;
-    width: 250%;
+    width: 257%;
     background: #49274a;
     transform: translateX(-20%) translateY(15%) rotate(-40deg);
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8) inset; }
@@ -1896,5 +1897,110 @@ footer {
   opacity: 0.9; }
   .copy-right span {
     font-style: italic; }
+
+@media only screen and (min-width: 360px) and (max-width: 559px) {
+  footer {
+    height: 650px;
+    margin-top: 0px; }
+    footer .footer-upper-margin {
+      display: none; }
+    footer #contact {
+      height: 650px; }
+    footer .footer-content {
+      flex-direction: column;
+      height: 650px; }
+      footer .footer-content .contact {
+        margin-top: 10px;
+        width: 100%;
+        height: 75%; }
+        footer .footer-content .contact h3 {
+          font-size: 1em; }
+        footer .footer-content .contact p {
+          text-align: center;
+          font-size: 0.6em; }
+      footer .footer-content .follow-me {
+        width: 100%;
+        height: 25%; }
+        footer .footer-content .follow-me::before {
+          display: none; }
+        footer .footer-content .follow-me ul {
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          width: 90%;
+          height: 100%; }
+          footer .footer-content .follow-me ul li {
+            font-size: 0.7em; }
+            footer .footer-content .follow-me ul li a {
+              color: #49274a;
+              font-size: 0.8em;
+              color: #49274a; }
+    footer .copy-right {
+      font-size: 0.5em; } }
+@media only screen and (min-width: 560px) and (max-width: 739px) {
+  footer {
+    height: 700px;
+    margin-top: 0px; }
+    footer .footer-upper-margin {
+      display: none; }
+    footer #contact {
+      height: 700px; }
+    footer .footer-content {
+      flex-direction: column;
+      height: 700px; }
+      footer .footer-content .contact {
+        margin-top: 10px;
+        width: 100%;
+        height: 75%; }
+        footer .footer-content .contact h3 {
+          font-size: 1.2em; }
+        footer .footer-content .contact p {
+          text-align: center;
+          font-size: 0.7em; }
+      footer .footer-content .follow-me {
+        width: 100%;
+        height: 25%; }
+        footer .footer-content .follow-me::before {
+          display: none; }
+        footer .footer-content .follow-me ul {
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          width: 90%;
+          height: 100%; }
+          footer .footer-content .follow-me ul li {
+            font-size: 0.8em; }
+            footer .footer-content .follow-me ul li a {
+              color: #49274a;
+              font-size: 1em;
+              color: #49274a; }
+    footer .copy-right {
+      font-size: 0.6em; } }
+@media only screen and (min-width: 740px) and (max-width: 919px) {
+  footer .footer-content {
+    height: 550px; }
+    footer .footer-content .contact {
+      width: 70%; }
+      footer .footer-content .contact h3 {
+        font-size: 1.2em; }
+      footer .footer-content .contact p {
+        font-size: 0.7em; }
+    footer .footer-content .follow-me::before {
+      transform: translateX(5%) translateY(10%) rotate(-57deg); }
+    footer .footer-content .follow-me ul li {
+      font-size: 0.8em; }
+      footer .footer-content .follow-me ul li a i {
+        font-size: 1.7em; }
+  footer .copy-right {
+    font-size: 0.6em; } }
+@media only screen and (min-width: 920px) and (max-width: 1290px) {
+  footer .footer-content {
+    height: 600px; }
+    footer .footer-content .contact p {
+      font-size: 0.8em; }
+    footer .footer-content .follow-me::before {
+      transform: translateX(-10%) translateY(15%) rotate(-50deg); }
+  footer .copy-right {
+    font-size: 0.7em; } }
 
 /*# sourceMappingURL=styles.css.map */
