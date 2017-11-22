@@ -771,7 +771,7 @@ header {
   position: absolute;
   height: 450px;
   width: 450px;
-  border-radius: 50%;
+  border-radius: 100%;
   top: 400px;
   left: 50%;
   box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.2);
@@ -780,7 +780,7 @@ header {
 #inner-circle {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
   display: flex;
@@ -1002,7 +1002,7 @@ header {
     top: 290px; }
 
   #inner-circle {
-    padding-top: 20px; }
+    padding: 20px 30px; }
     #inner-circle hr {
       display: none; }
     #inner-circle h3 {
@@ -1010,7 +1010,8 @@ header {
       transform: scaleY(1);
       max-width: 60%; }
     #inner-circle #circle-content {
-      font-size: 0.65em; }
+      font-size: 0.65em;
+      padding: 0; }
     #inner-circle #circle-logo {
       max-height: 30px;
       max-width: 40px; }
@@ -1021,7 +1022,8 @@ header {
     padding: 0;
     min-width: 360px;
     max-width: 460px;
-    grid-template-rows: repeat(15, 1fr); }
+    grid-template-rows: repeat(15, 1fr);
+    overflow: hidden; }
     .skills-wrapper #html {
       grid-column: 4/8;
       grid-row: 1/4; }
@@ -1048,13 +1050,14 @@ header {
       .skills-wrapper #sass .skill-content {
         width: 100%; }
     .skills-wrapper #responsive {
-      grid-row: 1/3; }
+      grid-row: 1/3;
+      transform: translateY(33%) rotate(-35deg); }
       .skills-wrapper #responsive .skill-content {
         width: 100%; }
     .skills-wrapper #bootstrap {
       margin-left: 10px;
-      grid-column: 13/16;
-      grid-row: 6/8; }
+      grid-column: 6/9;
+      grid-row: 14/16; }
       .skills-wrapper #bootstrap .skill-content {
         height: 75%;
         width: 100%; }
@@ -1072,13 +1075,13 @@ header {
         height: 65%;
         margin-top: 10px; }
     .skills-wrapper #php {
-      grid-column: 8/11;
+      grid-column: 10/13;
       grid-row: 14/16; }
     .skills-wrapper #photoshop {
       grid-column: 13/16;
-      grid-row: 4/6; }
+      grid-row: 5/7; }
       .skills-wrapper #photoshop .skill-content {
-        height: 65%;
+        height: 70%;
         width: 95%; }
     .skills-wrapper #angular {
       margin: -5px;
@@ -1090,7 +1093,7 @@ header {
         width: 85%; }
     .skills-wrapper #seo {
       margin: -5px;
-      grid-column: 13/14;
+      grid-column: 14/15;
       grid-row: 13/14; }
 
   .skill-content {
@@ -1305,7 +1308,8 @@ header {
     .cirtificates #cirtif-intro p {
       font-size: 1.3em;
       font-family: "Marko One", sans-serif;
-      color: #49274a; }
+      color: #49274a;
+      text-align: center; }
   .cirtificates .cirt-imgs {
     width: 100%;
     margin: auto;
@@ -1823,8 +1827,10 @@ footer {
       height: 3em;
       border: none;
       background: transparent;
+      -webkit-box-shadow: 0 0px 2px #94618e;
       box-shadow: 0 0px 2px #94618e; }
       .contact form input:focus, .contact form textarea:focus {
+        -webkit-box-shadow: 0 0px 5px #49274a inset;
         box-shadow: 0 0px 5px #49274a inset;
         background: transparent; }
     .contact form textarea {
@@ -1916,25 +1922,27 @@ footer {
         footer .footer-content .contact h3 {
           font-size: 1em; }
         footer .footer-content .contact p {
+          width: 90%;
           text-align: center;
-          font-size: 0.6em; }
+          font-size: 0.7em; }
       footer .footer-content .follow-me {
         width: 100%;
         height: 25%; }
         footer .footer-content .follow-me::before {
           display: none; }
         footer .footer-content .follow-me ul {
+          padding-left: 0;
           flex-direction: row;
           align-items: center;
           justify-content: center;
           width: 90%;
           height: 100%; }
           footer .footer-content .follow-me ul li {
+            text-align: center;
             font-size: 0.7em; }
             footer .footer-content .follow-me ul li a {
               color: #49274a;
-              font-size: 0.8em;
-              color: #49274a; }
+              font-size: 1em; }
     footer .copy-right {
       font-size: 0.5em; } }
 @media only screen and (min-width: 560px) and (max-width: 739px) {
@@ -1963,17 +1971,19 @@ footer {
         footer .footer-content .follow-me::before {
           display: none; }
         footer .footer-content .follow-me ul {
+          padding: 0;
           flex-direction: row;
           align-items: center;
           justify-content: center;
           width: 90%;
           height: 100%; }
           footer .footer-content .follow-me ul li {
-            font-size: 0.8em; }
+            font-size: 0.8em;
+            text-align: center; }
             footer .footer-content .follow-me ul li a {
+              text-align: center;
               color: #49274a;
-              font-size: 1em;
-              color: #49274a; }
+              font-size: 1.2em; }
     footer .copy-right {
       font-size: 0.6em; } }
 @media only screen and (min-width: 740px) and (max-width: 919px) {

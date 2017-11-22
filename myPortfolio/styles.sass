@@ -820,7 +820,7 @@ header
   position: absolute
   height: 450px
   width: 450px
-  border-radius: 50%
+  border-radius: 100%
   top: 400px
   left: 50%
   box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, .2)
@@ -828,7 +828,7 @@ header
 #inner-circle
   width: 100%
   height: 100%
-  border-radius: 50%
+  border-radius: 100%
   padding-top: 50px
   padding-bottom: 50px
   display: flex
@@ -1030,253 +1030,256 @@ header
 @media only screen and (max-width: 359px)
 
 @media only screen and (min-width: 360px) and (max-width: 559px)
-      .skills
-        height: 560px
-      #skills-intro
-        padding-top: 90px
-        width: 95%
-        p
-          font-size: .7em
-          font-weight: 100
-          margin-bottom: 0
-      #big-circle
-        height: 200px
-        width: 350px
-        top: 290px
-      #inner-circle
-        padding-top: 20px
-        hr
-          display: none
-        h3
-          font-size: 1em
-          transform: scaleY(1)
-          max-width: 60%
-        #circle-content
-          font-size: .65em
-        #circle-logo
-          max-height: 30px
-          max-width: 40px
-      .skills-wrapper
-        margin: 4px
-        margin-top: 15px
-        padding: 0
-        min-width: 360px
-        max-width: 460px
-        grid-template-rows: repeat(15, 1fr)
-        #html
-          grid-column: 4/8
-          grid-row: 1/4
-        #css
-          grid-column: 8/12
-          grid-row: 3/6
-        #js
-          margin-left: -15px
-          grid-column: 3/6
-          grid-row: 3/6
-          .skill-content
-            height: 65%
-            width: 85%
-        #jquery
-          grid-row: 4/7
-          grid-column: 1/3
-          .skill-content
-            height: 70%
-            width: 100%
-        #sass
-          margin-left: 7px
-          grid-column: 10/13
-          grid-row: 3/5
-          .skill-content
-            width: 100%
-        #responsive
-          grid-row: 1/3
-          .skill-content
-            width: 100%
-        #bootstrap
-          margin-left: 10px
-          grid-column: 13/16
-          grid-row: 6/8
-          .skill-content
-            height: 75%
-            width: 100%
-        #wordpress
-          grid-row: 1/4
-          grid-column: 13/16
-          .skill-content
-            height: 60%
-            width: 90%
-        #git
-          margin: -6px
-          grid-column: 9/11
-          grid-row: 1/3
-          .skill-content
-            height: 65%
-            margin-top: 10px
-        #php
-          grid-column: 8/11
-          grid-row: 14/16
-        #photoshop
-          grid-column: 13/16
-          grid-row: 4/6
-          .skill-content
-            height: 65%
-            width: 95%
-        #angular
-          margin: -5px
-          grid-row: 12/13
-        #ux
-          grid-row: 14/16
-          .skill-content
-            height: 70%
-            width: 85%
-        #seo
-          margin: -5px
-          grid-column: 13/14
-          grid-row: 13/14
-
+  .skills
+    height: 560px
+  #skills-intro
+    padding-top: 90px
+    width: 95%
+    p
+      font-size: .7em
+      font-weight: 100
+      margin-bottom: 0
+  #big-circle
+    height: 200px
+    width: 350px
+    top: 290px
+  #inner-circle
+    padding: 20px 30px
+    hr
+      display: none
+    h3
+      font-size: 1em
+      transform: scaleY(1)
+      max-width: 60%
+    #circle-content
+      font-size: .65em
+      padding: 0
+    #circle-logo
+      max-height: 30px
+      max-width: 40px
+  .skills-wrapper
+    margin: 4px
+    margin-top: 15px
+    padding: 0
+    min-width: 360px
+    max-width: 460px
+    grid-template-rows: repeat(15, 1fr)
+    overflow: hidden
+    #html
+      grid-column: 4/8
+      grid-row: 1/4
+    #css
+      grid-column: 8/12
+      grid-row: 3/6
+    #js
+      margin-left: -15px
+      grid-column: 3/6
+      grid-row: 3/6
       .skill-content
-        letter-spacing: 1px
-        font-weight: 200
-        box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, .3)
-        h3
-          font-size: .6em
-          &.medium-h3, &.small-h3
-            font-size: .5em
-        &.clicked-skill
-          border: 1px solid $myDarkCol
-        &:hover
-          box-shadow: 0px 15px 10px -6px rgba(0, 0, 0, .5)
+        height: 65%
+        width: 85%
+    #jquery
+      grid-row: 4/7
+      grid-column: 1/3
+      .skill-content
+        height: 70%
+        width: 100%
+    #sass
+      margin-left: 7px
+      grid-column: 10/13
+      grid-row: 3/5
+      .skill-content
+        width: 100%
+    #responsive
+      grid-row: 1/3
+      transform: translateY(33%) rotate(-35deg)
+      .skill-content
+        width: 100%
+    #bootstrap
+      margin-left: 10px
+      grid-column: 6/9
+      grid-row: 14/16
+      .skill-content
+        height: 75%
+        width: 100%
+    #wordpress
+      grid-row: 1/4
+      grid-column: 13/16
+      .skill-content
+        height: 60%
+        width: 90%
+    #git
+      margin: -6px
+      grid-column: 9/11
+      grid-row: 1/3
+      .skill-content
+        height: 65%
+        margin-top: 10px
+    #php
+      grid-column: 10/13
+      grid-row: 14/16
+    #photoshop
+      grid-column: 13/16
+      grid-row: 5/7
+      .skill-content
+        height: 70%
+        width: 95%
+    #angular
+      margin: -5px
+      grid-row: 12/13
+    #ux
+      grid-row: 14/16
+      .skill-content
+        height: 70%
+        width: 85%
+    #seo
+      margin: -5px
+      grid-column: 14/15
+      grid-row: 13/14
+
+  .skill-content
+    letter-spacing: 1px
+    font-weight: 200
+    box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, .3)
+    h3
+      font-size: .6em
+      &.medium-h3, &.small-h3
+        font-size: .5em
+    &.clicked-skill
+      border: 1px solid $myDarkCol
+    &:hover
+      box-shadow: 0px 15px 10px -6px rgba(0, 0, 0, .5)
 
 @media only screen and (min-width: 560px) and (max-width: 739px)
-      .skills
-        height: 700px
-      #skills-intro
-        padding-top: 100px
-        width: 85%
-        p
-          font-size: .7em
-      #big-circle
-        height: 230px
-        width: 300px
-        top: 300px
-      #inner-circle
-        padding-top: 25px
-        padding-bottom: 25px
-        hr
-          display: none
-        h3
-          font-size: 1em
-          transform: scaleY(1)
-          max-width: 60%
-        #circle-content
-          font-size: .65em
-        #circle-logo
-          max-height: 40px
-          max-width: 60px
-      .skills-wrapper
-        min-width: 560px
-        grid-template-rows: repeat(15, 1fr)
-        #html
-          grid-column: 4/8
-          grid-row: 1/4
-        #css
-          grid-column: 10/14
-          grid-row: 1/4
-        #js
-          grid-row: 3/6
-          .skill-content
-            height: 85%
-        #jquery
-          grid-row: 5/8
-          .skill-content
-            height: 90%
-        #sass
-          grid-row: 3/5
-          .skill-content
-            width: 100%
-        #responsive
-          grid-row: 1/3
-          .skill-content
-            width: 100%
-        #bootstrap
-          grid-column: 13/16
-          .skill-content
-            height: 75%
-            width: 90%
-        #wordpress
-          grid-row: 4/7
-          .skill-content
-            height: 70%
-            width: 85%
-        #git
-          .skill-content
-            height: 70%
-            margin-top: 10px
-        #php
-          grid-column: 1/3
-          grid-row: 8/10
-        #photoshop
-          grid-column: 14/16
-          .skill-content
-            height: 65%
-        #angular
-          grid-row: 10/11
-        #ux
-          grid-row: 11/13
-          .skill-content
-            height: 75%
+  .skills
+    height: 700px
+  #skills-intro
+    padding-top: 100px
+    width: 85%
+    p
+      font-size: .7em
+  #big-circle
+    height: 230px
+    width: 300px
+    top: 300px
+  #inner-circle
+    padding-top: 25px
+    padding-bottom: 25px
+    hr
+      display: none
+    h3
+      font-size: 1em
+      transform: scaleY(1)
+      max-width: 60%
+    #circle-content
+      font-size: .65em
+    #circle-logo
+      max-height: 40px
+      max-width: 60px
+  .skills-wrapper
+    min-width: 560px
+    grid-template-rows: repeat(15, 1fr)
+    #html
+      grid-column: 4/8
+      grid-row: 1/4
+    #css
+      grid-column: 10/14
+      grid-row: 1/4
+    #js
+      grid-row: 3/6
       .skill-content
-        letter-spacing: 1px
-        font-weight: 400
-        &.clicked-skill
-          border: 2px solid $myDarkCol
-        h3
-          font-size: .8em
-        .medium-h3
-          font-size: .6em
-        .small-h3
-          font-size: .4em
+        height: 85%
+    #jquery
+      grid-row: 5/8
+      .skill-content
+        height: 90%
+    #sass
+      grid-row: 3/5
+      .skill-content
+        width: 100%
+    #responsive
+      grid-row: 1/3
+      .skill-content
+        width: 100%
+    #bootstrap
+      grid-column: 13/16
+      .skill-content
+        height: 75%
+        width: 90%
+    #wordpress
+      grid-row: 4/7
+      .skill-content
+        height: 70%
+        width: 85%
+    #git
+      .skill-content
+        height: 70%
+        margin-top: 10px
+    #php
+      grid-column: 1/3
+      grid-row: 8/10
+    #photoshop
+      grid-column: 14/16
+      .skill-content
+        height: 65%
+    #angular
+      grid-row: 10/11
+    #ux
+      grid-row: 11/13
+      .skill-content
+        height: 75%
+  .skill-content
+    letter-spacing: 1px
+    font-weight: 400
+    &.clicked-skill
+      border: 2px solid $myDarkCol
+    h3
+      font-size: .8em
+    .medium-h3
+      font-size: .6em
+    .small-h3
+      font-size: .4em
 
 @media only screen and (min-width: 740px) and (max-width: 919px)
-    .skills
-      height: 800px
-    #skills-intro
-      padding-top: 110px
-      width: 85%
-      p
-        font-size: .8em
-    #big-circle
-      height: 320px
-      width: 320px
-      top: 340px
-    #inner-circle
-      padding-top: 30px
-      padding-bottom: 25px
-      h3
-        font-size: 1.2em
-        transform: scaleY(1.1)
-        max-width: 60%
-      #circle-content
-        font-size: .75em
-      #circle-logo
-        max-height: 50px
-        max-width: 70px
-    .skills-wrapper
-      min-width: 735px
-      grid-template-rows: repeat(15, 1fr)
-    .skill-content
-      letter-spacing: 1px
-      font-weight: 400
-      &.clicked-skill
-        border: 3px solid $myDarkCol
-      h3
-        font-size: 1em
-      .medium-h3
-        font-size: .7em
-      .small-h3
-        font-size: .5em
-    #ux
-      transform: translateY(30px)
+  .skills
+    height: 800px
+  #skills-intro
+    padding-top: 110px
+    width: 85%
+    p
+      font-size: .8em
+  #big-circle
+    height: 320px
+    width: 320px
+    top: 340px
+  #inner-circle
+    padding-top: 30px
+    padding-bottom: 25px
+    h3
+      font-size: 1.2em
+      transform: scaleY(1.1)
+      max-width: 60%
+    #circle-content
+      font-size: .75em
+    #circle-logo
+      max-height: 50px
+      max-width: 70px
+  .skills-wrapper
+    min-width: 735px
+    grid-template-rows: repeat(15, 1fr)
+  .skill-content
+    letter-spacing: 1px
+    font-weight: 400
+    &.clicked-skill
+      border: 3px solid $myDarkCol
+    h3
+      font-size: 1em
+    .medium-h3
+      font-size: .7em
+    .small-h3
+      font-size: .5em
+  #ux
+    transform: translateY(30px)
 
 @media only screen and (min-width: 920px) and (max-width: 1290px)
   .skills
@@ -1337,6 +1340,7 @@ header
       font-size: 1.3em
       font-family: $myfont
       color: $myDarkCol
+      text-align: center
   .cirt-imgs
     width: 100%
     margin: auto
@@ -1871,8 +1875,10 @@ footer
       height: 3em
       border: none
       background: transparent
+      -webkit-box-shadow: 0 0px 2px $myColor
       box-shadow: 0 0px 2px $myColor
       &:focus
+        -webkit-box-shadow: 0 0px 5px $myDarkCol inset
         box-shadow: 0 0px 5px $myDarkCol inset
         background: transparent
     textarea
@@ -1953,7 +1959,7 @@ footer
 @media only screen and (min-width: 360px) and (max-width: 559px)
   footer
     height: 650px
-    margin-top: 00px
+    margin-top: 0px
     .footer-upper-margin
       display: none
     #contact
@@ -1968,26 +1974,27 @@ footer
         h3
           font-size: 1em
         p
+          width: 90%
           text-align: center
-          font-size: .6em
+          font-size: .7em
       .follow-me
         width: 100%
         height: 25%
         &::before
           display: none
         ul
+          padding-left: 0
           flex-direction: row
           align-items: center
           justify-content: center
           width: 90%
           height: 100%
           li
+            text-align: center
             font-size: .7em
             a
               color: $myDarkCol
-              i
-              font-size: .8em
-              color: $myDarkCol
+              font-size: 1em
 
     .copy-right
       font-size: .5em
@@ -2018,6 +2025,7 @@ footer
         &::before
           display: none
         ul
+          padding: 0
           flex-direction: row
           align-items: center
           justify-content: center
@@ -2025,11 +2033,11 @@ footer
           height: 100%
           li
             font-size: .8em
+            text-align: center
             a
+              text-align: center
               color: $myDarkCol
-              i
-              font-size: 1em
-              color: $myDarkCol
+              font-size: 1.2em
 
     .copy-right
       font-size: .6em
