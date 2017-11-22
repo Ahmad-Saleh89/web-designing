@@ -45,6 +45,9 @@ header {
   background: transparent;
   color: white;
   transform-origin: top; }
+  .navbar button {
+    border: 3px solid #49274a !important;
+    cursor: pointer; }
   .navbar .navbar-brand img {
     max-height: 65px;
     margin-left: 50px; }
@@ -76,6 +79,41 @@ header {
           transform: rotateY(20deg) skewX(6deg) skewY(-6deg);
           color: white; }
 
+@media only screen and (min-width: 375px) and (max-width: 991px) {
+  header {
+    overflow: visible; }
+
+  .navbar {
+    position: relative;
+    height: 55px; }
+    .navbar .navbar-brand img {
+      max-height: 55px;
+      margin-left: 0px; }
+    .navbar .collapse, .navbar .navbar-collapse {
+      position: relative;
+      margin-right: 0px;
+      justify-content: center; }
+      .navbar .collapse .navbar-nav, .navbar .navbar-collapse .navbar-nav {
+        transform: translate(0);
+        position: absolute;
+        height: auto;
+        width: 25%;
+        min-width: 250px;
+        padding: 20px;
+        right: 0px;
+        top: 0px;
+        border-radius: 20px;
+        border: 2px solid white;
+        background: rgba(148, 97, 142, 0.5);
+        z-index: 100; }
+        .navbar .collapse .navbar-nav a, .navbar .navbar-collapse .navbar-nav a {
+          text-align: center;
+          transform-origin: top; }
+          .navbar .collapse .navbar-nav a:hover, .navbar .collapse .navbar-nav a.active, .navbar .navbar-collapse .navbar-nav a:hover, .navbar .navbar-collapse .navbar-nav a.active {
+            transform: scale(1.03);
+            padding-right: 10px;
+            background: #49274a;
+            border-radius: 5px; } }
 .header-img {
   width: 100%;
   height: 100%;
@@ -140,17 +178,18 @@ header {
     opacity: 0;
     transform: translateY(-110%); } }
 .parallax-bg {
-  height: 500px;
+  height: 400px;
   position: relative;
   box-shadow: 0px -3px 15px -3px rgba(0, 0, 0, 0.9), 0px 5px 15px -3px rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #49274a;
   overflow: hidden; }
   .parallax-bg .parallax-img {
     position: absolute;
-    height: 500px;
+    height: 400px;
     width: 100%;
     background-image: url(images/about-imgs/ahmad-bg.jpg);
     background-position: top center;
@@ -183,11 +222,11 @@ header {
     letter-spacing: 1px; }
 
   .parallax-bg {
-    height: 180px; }
+    height: 150px; }
     .parallax-bg .parallax-img {
-      height: 180px; }
+      display: none; }
     .parallax-bg h3, .parallax-bg h4 {
-      font-size: 1em;
+      font-size: 0.9em;
       letter-spacing: 0.5px; }
     .parallax-bg .arrow-wrapper {
       bottom: 5px;
@@ -202,9 +241,9 @@ header {
     font-size: 1.3em; }
 
   .parallax-bg {
-    height: 270px; }
+    height: 220px; }
     .parallax-bg .parallax-img {
-      height: 270px; }
+      display: none; }
     .parallax-bg h3, .parallax-bg h4 {
       font-size: 1.5em;
       letter-spacing: 1px; }
@@ -221,9 +260,9 @@ header {
     font-size: 1.5em; }
 
   .parallax-bg {
-    height: 310px; }
+    height: 270px; }
     .parallax-bg .parallax-img {
-      height: 310px; }
+      height: 270px; }
     .parallax-bg h3, .parallax-bg h4 {
       font-size: 1.7em;
       letter-spacing: 1px; }
@@ -240,9 +279,9 @@ header {
     font-size: 1.7em; }
 
   .parallax-bg {
-    height: 400px; }
+    height: 320px; }
     .parallax-bg .parallax-img {
-      height: 400px; }
+      height: 320px; }
     .parallax-bg h3, .parallax-bg h4 {
       font-size: 2em;
       letter-spacing: 1px; } }

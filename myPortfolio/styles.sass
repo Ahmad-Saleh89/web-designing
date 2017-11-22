@@ -53,6 +53,9 @@ header
   background: transparent
   color: white
   transform-origin: top
+  button
+    border: 3px solid $myDarkCol !important
+    cursor: pointer
   .navbar-brand
     img
       max-height: 65px
@@ -84,6 +87,44 @@ header
         &.active
           transform: rotateY(20deg) skewX(6deg) skewY(-6deg)
           color: white
+
+@media only screen and (min-width: 375px) and (max-width: 991px)
+  header
+    overflow: visible
+  .navbar
+    position: relative
+    height: 55px
+    .navbar-brand
+      img
+        max-height: 55px
+        margin-left: 0px
+    .collapse, .navbar-collapse
+      position: relative
+      margin-right: 0px
+      justify-content: center
+      .navbar-nav
+        transform: translate(0)
+        position: absolute
+        height: auto
+        width: 25%
+        min-width: 250px
+        padding: 20px
+        right: 0px
+        top: 0px
+        border-radius: 20px
+        border: 2px solid white
+        background: rgba($myColor, .5)
+        z-index: 100
+        a
+          text-align: center
+          transform-origin: top
+          &:hover, &.active
+            transform: scale(1.03)
+            padding-right: 10px
+            background: $myDarkCol
+            border-radius: 5px
+
+
 
 .header-img
   width: 100%
@@ -152,17 +193,18 @@ header
 
 // parallax backgorund effect
 .parallax-bg
-  height: 500px
+  height: 400px
   position: relative
   box-shadow: 0px -3px 15px -3px rgba(0,0,0,.9),0px 5px 15px -3px rgba(0,0,0,.9)
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
+  background: $myDarkCol
   overflow: hidden
   .parallax-img
     position: absolute
-    height: 500px
+    height: 400px
     width: 100%
     background-image: url(images/about-imgs/ahmad-bg.jpg)
     background-position: top center
@@ -197,11 +239,11 @@ header
     font-size: .9em
     letter-spacing: 1px
   .parallax-bg
-    height: 180px
+    height: 150px
     .parallax-img
-      height: 180px
+      display: none
     h3, h4
-      font-size: 1em
+      font-size: .9em
       letter-spacing: .5px
     .arrow-wrapper
       bottom: 5px
@@ -217,9 +259,9 @@ header
     min-height: 150px
     font-size: 1.3em
   .parallax-bg
-    height: 270px
+    height: 220px
     .parallax-img
-      height: 270px
+      display: none
     h3, h4
       font-size: 1.5em
       letter-spacing: 1px
@@ -237,9 +279,9 @@ header
     min-height: 150px
     font-size: 1.5em
   .parallax-bg
-    height: 310px
+    height: 270px
     .parallax-img
-      height: 310px
+      height: 270px
     h3, h4
       font-size: 1.7em
       letter-spacing: 1px
@@ -257,9 +299,9 @@ header
     min-height: 200px
     font-size: 1.7em
   .parallax-bg
-    height: 400px
+    height: 320px
     .parallax-img
-      height: 400px
+      height: 320px
     h3, h4
       font-size: 2em
       letter-spacing: 1px

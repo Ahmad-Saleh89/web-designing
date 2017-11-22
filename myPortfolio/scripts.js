@@ -1,4 +1,11 @@
 $(document).ready(function(){
+  // disappear nav list when click out:
+  // Note: show class is a bootstrap class @@@@
+  var $menuBtn = $('.navbar-toggler');
+  $menuBtn.focusout(function(){
+    $('.collapse').removeClass('show')
+  });
+
   // smooth scrolling:
   var $scrollLink = $('.scroll');
   $scrollLink.click(function(e){
