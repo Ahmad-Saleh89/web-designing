@@ -1,5 +1,7 @@
 $(document).ready(function(){
   // disappear nav list when click out:
+  /* here I am using collapse plugin via bootstrap.
+    review bootstrap 4 documentations */
   $('.navbar-toggler').blur(function(event){
     var screenWidth = window.innerWidth;
     if(screenWidth < 992){
