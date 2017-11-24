@@ -318,161 +318,6 @@ header
       letter-spacing: 1px
 
 
-// Projects section
-#portfolio
-  // height: 900px
-  width: 100%
-  margin: 60px 0
-  .project-sign
-    position: relative
-    img
-      height: 220px
-      transform: scaleX(1.2)
-      transform-origin: left
-.projects-wrapper
-  position: relative
-  width: 90%
-  max-width: 1200px
-  height: 100%
-  margin: auto
-
-.projects
-  width: 100%
-  list-style: none
-  padding: 0
-  margin: auto
-  margin-top: 50px
-  display: flex
-  flex-direction: row
-  justify-content: center
-  flex-wrap: wrap
-
-  li
-    position: relative
-    margin: 1em
-    height: 280px
-    width: 320px
-    box-shadow: 0 8px 10px -5px rgba(0,0,0,.5)
-    border-radius: 5px
-    overflow: hidden
-    a
-      position: relative
-      width: 100%
-      height: 100%
-      display: flex
-      justify-content: center
-      align-items: flex-end
-      overflow: hidden
-      img
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        transition: all 1s ease-in-out
-        transform-origin: top
-      p
-        border: 2px solid white
-        text-align: center
-        color: white
-        font-family: $myfont
-        font-size: 1.5em
-        padding: 10px
-        z-index: 20
-      &:hover
-        text-decoration: none
-        img
-          transform: scale(1.2)
-
-// projects section responsive:
-@media only screen and (max-width: 319px)
-  #portfolio
-    margin: 20px 0
-    .project-sign
-      img
-        height: 80px
-        transform: scaleX(.5)
-    .projects-wrapper
-      width: 100%
-      .projects
-        margin-top: 8px
-        li
-          height: 85px
-          width: 95px
-          margin: .5em
-          p
-            font-size: .6em
-@media only screen and (min-width: 320px) and (max-width: 559px)
-  #portfolio
-    margin: 30px 0
-    .project-sign
-      img
-        height: 100px
-        transform: scaleX(.6)
-    .projects-wrapper
-      width: 95%
-      .projects
-        margin-top: 10px
-        li
-          width: 40%
-          max-width: 150px
-          margin: .8em
-          max-height: 120px
-          p
-            font-size: .8em
-
-@media only screen and (min-width: 560px) and (max-width: 739px)
-  #portfolio
-    margin: 30px 0
-    .project-sign
-      img
-        height: 120px
-        transform: scaleX(.7)
-    .projects-wrapper
-      width: 95%
-      .projects
-        margin-top: 20px
-        li
-          height: 145px
-          width: 150px
-          margin: .8em
-          p
-            font-size: .7em
-
-@media only screen and (min-width: 740px) and (max-width: 919px)
-  #portfolio
-    margin: 40px 0
-    .project-sign
-      img
-        height: 150px
-        transform: scaleX(.9)
-    .projects-wrapper
-      width: 95%
-      .projects
-        margin-top: 30px
-        li
-          height: 170px
-          width: 190px
-          p
-            font-size: 1.1em
-
-@media only screen and (min-width: 920px) and (max-width: 1290px)
-  #portfolio
-    margin: 70px 0
-    .project-sign
-      img
-        height: 180px
-        transform: scaleX(1)
-    .projects
-      max-width: 1080px
-      margin-top: 40px
-      li
-        height: 210px
-        width: 240px
-        p
-          font-size: 1.3em
-
-
 // About section:
 .side-tag
   position: absolute
@@ -497,6 +342,7 @@ header
     border-bottom-right-radius: 15px
 
 .about-container
+  margin-top: 70px
   width: 100%
   position: relative
   display: flex
@@ -572,6 +418,7 @@ header
   overflow: hidden
   ul
     position: relative
+    padding-left: 0
     list-style: none
     display: grid
     grid-template-columns: repeat(6, 1fr)
@@ -672,6 +519,8 @@ header
 
 // About sign, about brief, education sec responsive:
 @media only screen and (max-width: 559px)
+  .about-container
+    margin-top: 30px
   .arrow-wrapper
     display: none
   .about-sign
@@ -731,6 +580,8 @@ header
           margin-left: 4px
 
 @media only screen and (min-width: 560px) and (max-width: 739px)
+  .about-container
+    margin-top: 40px
   .arrow-wrapper
     bottom: 15px
     height: 70px
@@ -782,6 +633,8 @@ header
             font-size: .6em
 
 @media only screen and (min-width: 740px) and (max-width: 919px)
+  .about-container
+    margin-top: 50px
   .arrow-wrapper
     .arrow-down
       i
@@ -1942,19 +1795,202 @@ header
           transform: translate(40px,-40px)
 
 
+// Projects section
+#portfolio
+  // height: 900px
+  width: 100%
+  margin: 50px 0 0
+  .project-sign
+    position: relative
+    img
+      height: 220px
+      transform: scaleX(1.1)
+      transform-origin: left
+.projects-wrapper
+  position: relative
+  width: 90%
+  max-width: 1200px
+  height: 100%
+  margin: auto
+
+.projects-intro
+    padding-top: 30px
+    margin: auto
+    width: 90%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    p
+      color: $myDarkCol
+      font-size: 1.2em
+      font-family: $myfont
+      text-align: center
+      &:last-child , span
+        color: $myColor
+.projects
+  width: 100%
+  list-style: none
+  padding: 0
+  margin: auto
+  margin-top: 50px
+  display: flex
+  flex-direction: row
+  justify-content: center
+  flex-wrap: wrap
+
+  li
+    position: relative
+    margin: 1em
+    height: 280px
+    width: 320px
+    box-shadow: 0 8px 10px -5px rgba(0,0,0,.5)
+    border-radius: 5px
+    overflow: hidden
+    a
+      position: relative
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: flex-end
+      overflow: hidden
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        transition: all 1s ease-in-out
+        transform-origin: top
+      p
+        border: 2px solid white
+        text-align: center
+        color: white
+        font-family: $myfont
+        font-size: 1.5em
+        padding: 10px
+        z-index: 20
+      &:hover
+        text-decoration: none
+        img
+          transform: scale(1.2)
+
+// projects section responsive:
+@media only screen and (max-width: 319px)
+  #portfolio
+    margin: 20px 0 50px
+    .project-sign
+      img
+        height: 80px
+        transform: scaleX(1)
+    .projects-wrapper
+      width: 100%
+      .projects-intro
+          padding-top: 20px
+          p
+            font-size: .5em
+      .projects
+        margin-top: 8px
+        li
+          height: 85px
+          width: 95px
+          margin: .5em
+          p
+            font-size: .6em
+@media only screen and (min-width: 320px) and (max-width: 559px)
+  #portfolio
+    margin: 30px 0 60px
+    .project-sign
+      img
+        height: 100px
+    .projects-wrapper
+      width: 95%
+      .projects-intro
+          padding-top: 20px
+          p
+            font-size: .7em
+      .projects
+        margin-top: 10px
+        li
+          width: 40%
+          max-width: 150px
+          margin: .8em
+          max-height: 120px
+          p
+            font-size: .8em
+
+@media only screen and (min-width: 560px) and (max-width: 739px)
+  #portfolio
+    margin: 30px 0 60px
+    .project-sign
+      img
+        height: 120px
+    .projects-wrapper
+      width: 95%
+      .projects-intro
+          padding-top: 25px
+          p
+            font-size: .8em
+      .projects
+        margin-top: 20px
+        li
+          height: 145px
+          width: 150px
+          margin: .8em
+          p
+            font-size: .7em
+
+@media only screen and (min-width: 740px) and (max-width: 919px)
+  #portfolio
+    margin-top: 40px
+    .project-sign
+      img
+        height: 150px
+    .projects-wrapper
+      width: 95%
+      .projects-intro
+          padding-top: 20px
+          p
+            font-size: 1em
+      .projects
+        margin-top: 30px
+        li
+          height: 170px
+          width: 190px
+          p
+            font-size: 1.1em
+
+@media only screen and (min-width: 920px) and (max-width: 1290px)
+  #portfolio
+    .project-sign
+      img
+        height: 180px
+    .projects-intro
+        padding-top: 20px
+        p
+          font-size: 1.1em
+    .projects
+      max-width: 1080px
+      margin-top: 40px
+      li
+        height: 210px
+        width: 240px
+        p
+          font-size: 1.3em
+
 // Added Only for scrolling effect:
 #contact
   position: absolute
   bottom: 0
   right: 0
-  height: 900px
+  height: 1000px
 
 footer
   position: relative
   margin: 0
-  margin-top: -250px
   padding: 0
-  height: 900px
+  height: 800px
   width: 100%
   background: transparent
   display: flex
@@ -1962,7 +1998,7 @@ footer
   overflow: hidden
   z-index: 70
 .footer-upper-margin
-  height: 300px
+  height: 160px
   width: 100%
   background: transparent
 .footer-content

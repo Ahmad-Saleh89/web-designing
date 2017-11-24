@@ -3,11 +3,14 @@ $(document).ready(function(){
   /* here I am using collapse plugin via bootstrap.
     review bootstrap 4 documentations */
   $('.navbar-toggler').blur(function(event){
-    var screenWidth = window.innerWidth;
-    if(screenWidth < 992){
-      $('.collapse').collapse('hide');
-    }
+    setTimeout(function(){
+      var screenWidth = window.innerWidth;
+      if(screenWidth < 992){
+        $('.collapse').collapse('hide');
+      }
+    }, 200);
   });
+
   // smooth scrolling:
   var $scrollLink = $('.scroll');
   $scrollLink.click(function(e){

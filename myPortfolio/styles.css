@@ -288,148 +288,6 @@ header {
     .parallax-bg h3, .parallax-bg h4 {
       font-size: 2em;
       letter-spacing: 1px; } }
-#portfolio {
-  width: 100%;
-  margin: 60px 0; }
-  #portfolio .project-sign {
-    position: relative; }
-    #portfolio .project-sign img {
-      height: 220px;
-      transform: scaleX(1.2);
-      transform-origin: left; }
-
-.projects-wrapper {
-  position: relative;
-  width: 90%;
-  max-width: 1200px;
-  height: 100%;
-  margin: auto; }
-
-.projects {
-  width: 100%;
-  list-style: none;
-  padding: 0;
-  margin: auto;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap; }
-  .projects li {
-    position: relative;
-    margin: 1em;
-    height: 280px;
-    width: 320px;
-    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    overflow: hidden; }
-    .projects li a {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      overflow: hidden; }
-      .projects li a img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transition: all 1s ease-in-out;
-        transform-origin: top; }
-      .projects li a p {
-        border: 2px solid white;
-        text-align: center;
-        color: white;
-        font-family: "Marko One", sans-serif;
-        font-size: 1.5em;
-        padding: 10px;
-        z-index: 20; }
-      .projects li a:hover {
-        text-decoration: none; }
-        .projects li a:hover img {
-          transform: scale(1.2); }
-
-@media only screen and (max-width: 319px) {
-  #portfolio {
-    margin: 20px 0; }
-    #portfolio .project-sign img {
-      height: 80px;
-      transform: scaleX(0.5); }
-    #portfolio .projects-wrapper {
-      width: 100%; }
-      #portfolio .projects-wrapper .projects {
-        margin-top: 8px; }
-        #portfolio .projects-wrapper .projects li {
-          height: 85px;
-          width: 95px;
-          margin: 0.5em; }
-          #portfolio .projects-wrapper .projects li p {
-            font-size: 0.6em; } }
-@media only screen and (min-width: 320px) and (max-width: 559px) {
-  #portfolio {
-    margin: 30px 0; }
-    #portfolio .project-sign img {
-      height: 100px;
-      transform: scaleX(0.6); }
-    #portfolio .projects-wrapper {
-      width: 95%; }
-      #portfolio .projects-wrapper .projects {
-        margin-top: 10px; }
-        #portfolio .projects-wrapper .projects li {
-          width: 40%;
-          max-width: 150px;
-          margin: 0.8em;
-          max-height: 120px; }
-          #portfolio .projects-wrapper .projects li p {
-            font-size: 0.8em; } }
-@media only screen and (min-width: 560px) and (max-width: 739px) {
-  #portfolio {
-    margin: 30px 0; }
-    #portfolio .project-sign img {
-      height: 120px;
-      transform: scaleX(0.7); }
-    #portfolio .projects-wrapper {
-      width: 95%; }
-      #portfolio .projects-wrapper .projects {
-        margin-top: 20px; }
-        #portfolio .projects-wrapper .projects li {
-          height: 145px;
-          width: 150px;
-          margin: 0.8em; }
-          #portfolio .projects-wrapper .projects li p {
-            font-size: 0.7em; } }
-@media only screen and (min-width: 740px) and (max-width: 919px) {
-  #portfolio {
-    margin: 40px 0; }
-    #portfolio .project-sign img {
-      height: 150px;
-      transform: scaleX(0.9); }
-    #portfolio .projects-wrapper {
-      width: 95%; }
-      #portfolio .projects-wrapper .projects {
-        margin-top: 30px; }
-        #portfolio .projects-wrapper .projects li {
-          height: 170px;
-          width: 190px; }
-          #portfolio .projects-wrapper .projects li p {
-            font-size: 1.1em; } }
-@media only screen and (min-width: 920px) and (max-width: 1290px) {
-  #portfolio {
-    margin: 70px 0; }
-    #portfolio .project-sign img {
-      height: 180px;
-      transform: scaleX(1); }
-    #portfolio .projects {
-      max-width: 1080px;
-      margin-top: 40px; }
-      #portfolio .projects li {
-        height: 210px;
-        width: 240px; }
-        #portfolio .projects li p {
-          font-size: 1.3em; } }
 .side-tag {
   position: absolute;
   top: 0;
@@ -453,6 +311,7 @@ header {
     border-bottom-right-radius: 15px; }
 
 .about-container {
+  margin-top: 70px;
   width: 100%;
   position: relative;
   display: flex;
@@ -525,6 +384,7 @@ header {
   overflow: hidden; }
   .edu-content ul {
     position: relative;
+    padding-left: 0;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -617,6 +477,9 @@ header {
     opacity: 0;
     transform: translateX(400%); } }
 @media only screen and (max-width: 559px) {
+  .about-container {
+    margin-top: 30px; }
+
   .arrow-wrapper {
     display: none; }
 
@@ -676,6 +539,9 @@ header {
           margin-bottom: 20%;
           margin-left: 4px; } }
 @media only screen and (min-width: 560px) and (max-width: 739px) {
+  .about-container {
+    margin-top: 40px; }
+
   .arrow-wrapper {
     bottom: 15px;
     height: 70px;
@@ -726,6 +592,9 @@ header {
             margin-bottom: 5px;
             font-size: 0.6em; } }
 @media only screen and (min-width: 740px) and (max-width: 919px) {
+  .about-container {
+    margin-top: 50px; }
+
   .arrow-wrapper .arrow-down i {
     font-size: 3em; }
 
@@ -1892,18 +1761,189 @@ header {
           font-size: 0.8em; }
         .courses-container #courses-wrapper .course-content:nth-child(3) {
           transform: translate(40px, -40px); } }
+#portfolio {
+  width: 100%;
+  margin: 50px 0 0; }
+  #portfolio .project-sign {
+    position: relative; }
+    #portfolio .project-sign img {
+      height: 220px;
+      transform: scaleX(1.1);
+      transform-origin: left; }
+
+.projects-wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  margin: auto; }
+
+.projects-intro {
+  padding-top: 30px;
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .projects-intro p {
+    color: #49274a;
+    font-size: 1.2em;
+    font-family: "Marko One", sans-serif;
+    text-align: center; }
+    .projects-intro p:last-child, .projects-intro p span {
+      color: #94618e; }
+
+.projects {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .projects li {
+    position: relative;
+    margin: 1em;
+    height: 280px;
+    width: 320px;
+    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    overflow: hidden; }
+    .projects li a {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      overflow: hidden; }
+      .projects li a img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 1s ease-in-out;
+        transform-origin: top; }
+      .projects li a p {
+        border: 2px solid white;
+        text-align: center;
+        color: white;
+        font-family: "Marko One", sans-serif;
+        font-size: 1.5em;
+        padding: 10px;
+        z-index: 20; }
+      .projects li a:hover {
+        text-decoration: none; }
+        .projects li a:hover img {
+          transform: scale(1.2); }
+
+@media only screen and (max-width: 319px) {
+  #portfolio {
+    margin: 20px 0 50px; }
+    #portfolio .project-sign img {
+      height: 80px;
+      transform: scaleX(1); }
+    #portfolio .projects-wrapper {
+      width: 100%; }
+      #portfolio .projects-wrapper .projects-intro {
+        padding-top: 20px; }
+        #portfolio .projects-wrapper .projects-intro p {
+          font-size: 0.5em; }
+      #portfolio .projects-wrapper .projects {
+        margin-top: 8px; }
+        #portfolio .projects-wrapper .projects li {
+          height: 85px;
+          width: 95px;
+          margin: 0.5em; }
+          #portfolio .projects-wrapper .projects li p {
+            font-size: 0.6em; } }
+@media only screen and (min-width: 320px) and (max-width: 559px) {
+  #portfolio {
+    margin: 30px 0 60px; }
+    #portfolio .project-sign img {
+      height: 100px; }
+    #portfolio .projects-wrapper {
+      width: 95%; }
+      #portfolio .projects-wrapper .projects-intro {
+        padding-top: 20px; }
+        #portfolio .projects-wrapper .projects-intro p {
+          font-size: 0.7em; }
+      #portfolio .projects-wrapper .projects {
+        margin-top: 10px; }
+        #portfolio .projects-wrapper .projects li {
+          width: 40%;
+          max-width: 150px;
+          margin: 0.8em;
+          max-height: 120px; }
+          #portfolio .projects-wrapper .projects li p {
+            font-size: 0.8em; } }
+@media only screen and (min-width: 560px) and (max-width: 739px) {
+  #portfolio {
+    margin: 30px 0 60px; }
+    #portfolio .project-sign img {
+      height: 120px; }
+    #portfolio .projects-wrapper {
+      width: 95%; }
+      #portfolio .projects-wrapper .projects-intro {
+        padding-top: 25px; }
+        #portfolio .projects-wrapper .projects-intro p {
+          font-size: 0.8em; }
+      #portfolio .projects-wrapper .projects {
+        margin-top: 20px; }
+        #portfolio .projects-wrapper .projects li {
+          height: 145px;
+          width: 150px;
+          margin: 0.8em; }
+          #portfolio .projects-wrapper .projects li p {
+            font-size: 0.7em; } }
+@media only screen and (min-width: 740px) and (max-width: 919px) {
+  #portfolio {
+    margin-top: 40px; }
+    #portfolio .project-sign img {
+      height: 150px; }
+    #portfolio .projects-wrapper {
+      width: 95%; }
+      #portfolio .projects-wrapper .projects-intro {
+        padding-top: 20px; }
+        #portfolio .projects-wrapper .projects-intro p {
+          font-size: 1em; }
+      #portfolio .projects-wrapper .projects {
+        margin-top: 30px; }
+        #portfolio .projects-wrapper .projects li {
+          height: 170px;
+          width: 190px; }
+          #portfolio .projects-wrapper .projects li p {
+            font-size: 1.1em; } }
+@media only screen and (min-width: 920px) and (max-width: 1290px) {
+  #portfolio .project-sign img {
+    height: 180px; }
+  #portfolio .projects-intro {
+    padding-top: 20px; }
+    #portfolio .projects-intro p {
+      font-size: 1.1em; }
+  #portfolio .projects {
+    max-width: 1080px;
+    margin-top: 40px; }
+    #portfolio .projects li {
+      height: 210px;
+      width: 240px; }
+      #portfolio .projects li p {
+        font-size: 1.3em; } }
 #contact {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 900px; }
+  height: 1000px; }
 
 footer {
   position: relative;
   margin: 0;
-  margin-top: -250px;
   padding: 0;
-  height: 900px;
+  height: 800px;
   width: 100%;
   background: transparent;
   display: flex;
@@ -1912,7 +1952,7 @@ footer {
   z-index: 70; }
 
 .footer-upper-margin {
-  height: 300px;
+  height: 160px;
   width: 100%;
   background: transparent; }
 
