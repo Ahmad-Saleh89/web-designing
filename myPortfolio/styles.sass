@@ -9,6 +9,7 @@ body
   max-width: 1700px
   background: $bgColor
   padding: 0
+  font-family: $myfont
 
 header
   box-sizing: border-box
@@ -54,12 +55,13 @@ header
   color: white
   transform-origin: top
   button
-    border: 3px solid $myDarkCol !important
+    border: 3px solid $bgColor !important
     cursor: pointer
   .navbar-brand
     img
       max-height: 65px
       margin-left: 50px
+      opacity: .1
   .collapse
     margin-right: 100px
     justify-content: flex-end
@@ -92,13 +94,16 @@ header
 
 @media only screen and (max-width: 991px)
   header
-    overflow: visible
   .navbar
     position: relative
     height: 55px
     padding: 5px
     button
       margin-top: 5px
+      span
+        display: none
+      .fa-bars
+        color: $bgColor
     .navbar-brand
       img
         max-height: 55px
@@ -106,7 +111,7 @@ header
         margin-top: -10px
     .collapse, .navbar-collapse
       position: relative
-      margin-right: 0px
+      margin-right: 50px
       justify-content: center
       .navbar-nav
         transform: translate(0)
@@ -130,15 +135,36 @@ header
             background: $myDarkCol
             border-radius: 5px
 
-
-
 .header-img
   width: 100%
   height: 100%
+  max-height: 750px
   overflow: hidden
+  background: $myDarkCol
   img
     width: 100%
     height: 100%
+    max-height: 750px
+    opacity: .7
+
+#header-intro
+  bottom: 50px
+  left: 50px
+  position: absolute
+  margin: 4em 2em
+  color: $bgColor
+  opacity: 0
+  animation: drop-down 500ms ease-in-out 2s forwards normal
+  h1
+    text-shadow: 0px 4px 6px $myDarkCol
+
+@keyframes drop-down
+  0%
+    opacity: 0
+    transform: translateY(-200%)
+  100%
+    opacity: .8
+    transform: translateY(0)
 
 // Greeting Message:
 #greeting-sec
@@ -217,9 +243,7 @@ header
     background-repeat: repeat
     background-attachment: fixed
     background-size: contain
-    background-color: rgba(0,0,0,.8)
-    background-blend-mode: multiply
-    filter: blur(2px)
+    opacity: .09
   h3, h4
     color: $bgColor
     z-index: 5
@@ -231,17 +255,6 @@ header
       color: $bgColor
 
 
-// greeting sec, parallax-bg responsive:
-// @media only screen and (max-width: 320px)
-//   header
-//     min-height: 180px
-//     border-bottom-right-radius: 5px
-//     border-bottom-left-radius: 5px
-//     box-shadow: 0px 3px 10px -3px rgba(0,0,0,.5)
-//     .header-img img
-//       min-width: 320px
-//       min-height: 180px
-
 @media only screen and (max-width: 560px)
   header
     border-bottom-right-radius: 5px
@@ -250,6 +263,12 @@ header
     .header-img img
       min-width: 320px
       min-height: 180px
+    #header-intro
+      bottom: 0px
+      left: 0px
+      margin: 2em 1em
+      h1
+        font-size: 1em
   #greeting-sec
     height: 15vh
     min-height: 100px
@@ -267,6 +286,15 @@ header
       display: none
 
 @media only screen and (min-width: 560px) and (max-width: 740px)
+  .header-img
+    max-height: 500px
+    img
+      max-height: 500px
+  #header-intro
+    bottom: 0px
+    left: 0px
+    h1
+      font-size: 1.4em
   #greeting-sec
     height: 20vh
     min-height: 150px
@@ -287,6 +315,15 @@ header
           font-size: 3em
 
 @media only screen and (min-width: 740px) and (max-width: 920px)
+  .header-img
+    max-height: 630px
+    img
+      max-height: 630px
+  #header-intro
+    bottom: 10px
+    left: 0px
+    h1
+      font-size: 1.7em
   #greeting-sec
     height: 25vh
     min-height: 150px
@@ -307,6 +344,15 @@ header
           font-size: 3em
 
 @media only screen and (min-width: 920px) and (max-width: 1290px)
+  .header-img
+    max-height: 700px
+    img
+      max-height: 700px
+  #header-intro
+    bottom: 0px
+    left: 0px
+    h1
+      font-size: 2em
   #greeting-sec
     height: 30vh
     min-height: 200px
@@ -730,7 +776,7 @@ header
 #skills-intro
   padding-top: 170px
   height: 20%
-  width: 60%
+  width: 85%
   display: flex
   flex-direction: column
   justify-content: center
@@ -1095,7 +1141,6 @@ header
     height: 700px
   #skills-intro
     padding-top: 100px
-    width: 85%
     p
       font-size: .7em
   #big-circle
@@ -1185,7 +1230,6 @@ header
     height: 800px
   #skills-intro
     padding-top: 110px
-    width: 85%
     p
       font-size: .8em
   #big-circle
@@ -1226,7 +1270,6 @@ header
     height: 900px
   #skills-intro
     padding-top: 150px
-    width: 80%
     p
       font-size: 1em
   #big-circle
@@ -1844,12 +1887,12 @@ header
   li
     position: relative
     margin: 1em
-    height: 280px
+    height: 170px
     width: 320px
     box-shadow: 0 8px 10px -5px rgba(0,0,0,.5)
-    border-radius: 5px
+    border-radius: 7px
     overflow: hidden
-    background: $myColor
+    background: $myDarkCol
     a
       position: relative
       width: 100%
@@ -1863,11 +1906,11 @@ header
         top: 0
         left: 0
         width: 100%
-        height: 100%
-        transition: all 1s ease-in-out
+        height: 130%
+        transition: all 2s ease-in-out
         transform-origin: top
-        opacity: .5
-        border-radius: 5px
+        opacity: .3
+        border-radius: 7px
       p
         border: 3px solid $bgColor
         text-align: center
@@ -1880,10 +1923,12 @@ header
       &:hover
         text-decoration: none
         p
-          transform: translateY(-50%)
+          transform: translateY(-35%)
         img
           transform: scale(1.2)
-          opacity: 1
+          opacity: .8
+      &:visited
+        text-decoration: none
 
 // projects section responsive:
 @media only screen and (max-width: 319px)
@@ -1902,7 +1947,7 @@ header
       .projects
         margin-top: 8px
         li
-          height: 85px
+          height: 75px
           width: 95px
           margin: .5em
           p
@@ -1925,7 +1970,7 @@ header
           width: 40%
           max-width: 150px
           margin: .8em
-          max-height: 120px
+          max-height: 100px
           p
             font-size: .8em
 
@@ -1944,7 +1989,7 @@ header
       .projects
         margin-top: 20px
         li
-          height: 145px
+          height: 90px
           width: 150px
           margin: .8em
           p
@@ -1965,7 +2010,7 @@ header
       .projects
         margin-top: 30px
         li
-          height: 170px
+          height: 120px
           width: 190px
           p
             font-size: 1.1em
@@ -1983,7 +2028,7 @@ header
       max-width: 1080px
       margin-top: 40px
       li
-        height: 210px
+        height: 140px
         width: 240px
         p
           font-size: 1.3em
