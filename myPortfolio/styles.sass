@@ -72,21 +72,23 @@ header
       transition: all 300ms ease-in-out
       transform: translate(25%)
       a
-        color: white
+        color: $bgColor
         text-shadow: 0px 4px 2px rgba(96, 96, 96, .6)
         transition: all 300ms ease-in-out
         transform-origin: bottom left
         &:hover
-          transform: rotateY(20deg) skewX(6deg) skewY(-6deg)
-          color: white
+          border-radius: 5px
+          background: $myColor
+          color: $bgColor
           text-shadow: 0px 6px 2px rgba(96, 96, 96, .6)
         &:visited
-          color: white
+          color: $bgColor
         &:focus
-          color: white
+          color: $bgColor
         &.active
-          transform: rotateY(20deg) skewX(6deg) skewY(-6deg)
-          color: white
+          border-radius: 5px
+          background: $myColor
+          color: $bgColor
 
 @media only screen and (max-width: 991px)
   header
@@ -116,7 +118,7 @@ header
         right: 0px
         top: 0px
         border-radius: 20px
-        border: 2px solid white
+        border: 2px solid $bgColor
         background: rgba($myColor, .5)
         z-index: 100
         a
@@ -210,7 +212,7 @@ header
     position: absolute
     height: 400px
     width: 100%
-    background-image: url(images/about-imgs/ahmad-bg.jpg)
+    background-image: url(images/ahmad-bg.jpg)
     background-position: top center
     background-repeat: repeat
     background-attachment: fixed
@@ -219,14 +221,14 @@ header
     background-blend-mode: multiply
     filter: blur(2px)
   h3, h4
-    color: white
+    color: $bgColor
     z-index: 5
     font-family: $myfont
     letter-spacing: 2px
     font-size: 3em
   .arrow-wrapper
     i
-      color: white
+      color: $bgColor
 
 
 // greeting sec, parallax-bg responsive:
@@ -334,7 +336,7 @@ header
     padding: 15px 80px
     vertical-align: middle
     border: 2px dashed white
-    color: white
+    color: $bgColor
     font-family: $myfont
     letter-spacing: 2px
     font-size: 1.7em
@@ -760,7 +762,7 @@ header
   align-items: center
   text-align: center
   background: $myColor
-  color: white
+  color: $bgColor
   font-family: $myfont
   box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, .5)
   border: 3px solid #49274a
@@ -774,7 +776,7 @@ header
     transition: all 300ms ease-in-out
   hr
     width: 50%
-    background: white
+    background: $bgColor
     height: 1px
   #circle-content
     padding: 3% 5%
@@ -815,7 +817,7 @@ header
   letter-spacing: 2px
   font-weight: 800
   background: #49274a
-  color: white
+  color: $bgColor
   cursor: pointer
   transition: all 400ms ease-in-out
   &.bubble-l
@@ -1308,7 +1310,7 @@ header
         align-items: center
         text-align: center
         font-family: $myfont
-        color: white
+        color: $bgColor
         font-size: 2em
         letter-spacing: 2px
         background: rgba($myColor,.4)
@@ -1799,7 +1801,7 @@ header
 #portfolio
   // height: 900px
   width: 100%
-  margin: 50px 0 0
+  margin: 0
   .project-sign
     position: relative
     img
@@ -1847,6 +1849,7 @@ header
     box-shadow: 0 8px 10px -5px rgba(0,0,0,.5)
     border-radius: 5px
     overflow: hidden
+    background: $myColor
     a
       position: relative
       width: 100%
@@ -1863,18 +1866,24 @@ header
         height: 100%
         transition: all 1s ease-in-out
         transform-origin: top
+        opacity: .5
+        border-radius: 5px
       p
-        border: 2px solid white
+        border: 3px solid $bgColor
         text-align: center
-        color: white
+        color: $bgColor
         font-family: $myfont
         font-size: 1.5em
         padding: 10px
+        transition: all 400ms ease-in-out
         z-index: 20
       &:hover
         text-decoration: none
+        p
+          transform: translateY(-50%)
         img
           transform: scale(1.2)
+          opacity: 1
 
 // projects section responsive:
 @media only screen and (max-width: 319px)
@@ -2085,7 +2094,7 @@ footer
       font-size: 1em
       transition: all 200ms ease-in-out
       a
-        color: white
+        color: $bgColor
         text-decoration: none
         i
           font-size: 2em

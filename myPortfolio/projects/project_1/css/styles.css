@@ -1,0 +1,133 @@
+body {
+    background:url(../images/upperBackground.jpg);
+}
+.intro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 20px auto;
+  border-bottom: 2px solid white;
+  text-align: center;
+}
+#logo-img{
+  margin-top: 35px;
+  margin-left: 30px;
+  background-color: #FFFFFF;
+  background-image: url(../images/ahmadLogo.png);
+  border-radius: 30px;
+  height: 110px;
+  width: 160px;
+  border:2px solid #FAB92B;
+}
+
+#head-info {
+    margin: 13px 0 0 40px;
+    padding-left: 10px;
+}
+h1 {
+  text-shadow: 2px 3px 6px #666, 0 0 25px #FF731F, 0 0 5px #F0C842;
+  font-size: 4em;
+  color: #DEEBD6;
+
+}
+
+#head-info p {
+    color: #EAF7FF;
+    font-family: 'Macondo', cursive;
+    line-height: 130%;
+    text-shadow: 1px 3px 5px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+#head-info p span{
+  font-size: 50px;
+  margin: 20px;
+  line-height: 150%;
+}
+
+#ahmadPhoto {
+    margin: 30px;
+    margin-left: 0;
+}
+#ahmadPhoto img {
+    border: 2px solid orange;
+}
+
+#portfolio {
+    margin-top: 30px;
+}
+#portfolio h2{
+  font-size: 4em;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px #E6E6E6;
+}
+
+#portfolio p {
+  margin-bottom: 0;
+}
+ #portfolio, #navbar-div{
+  background-image: url(../images/Floorboard.jpg);
+  border: 3px solid #696970;
+}
+.thumbnail {
+  background-image: url(../images/upperBackground.jpg);
+}
+
+.caption {
+  padding: 2px !important;
+}
+.caption p {
+  color: #FFFFFF;
+}
+
+#about p {
+  font-family: 'Droid Sans', sans-serif;
+  line-height: 200%;
+}
+
+#about, #contact, footer{
+    color: #EAF7FF;
+}
+#collapsable-nav li {
+  border: 2px solid #696970;
+  border-right: 4px solid #696970;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+ul li {
+  list-style: none;
+}
+
+
+footer p{
+  margin-bottom: 15px;
+}
+
+hr {
+  width: 90%;
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+}
+
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  h1 {
+    font-size: 3em;
+  }
+   #head-info {
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+}

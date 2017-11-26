@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ahmad's Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+  </head>
+
+<body>
+<header>
+  <div class="intro">
+    <p>This was my very first Portfolio web page, I built it only for practice purpose.</p>
+    <p>Bootstrap classes and Grid system is widely used in this page.</p>
+    <p>The images in the portfolio section are just placeholders!</p>
+  </div>
+  <div id="top" class="container-fluid" style="height:250">
+      <a href="index.html" class="pull-left visible-lg visible-md">
+        <div id="logo-img" class="pull-left"></div>
+      </a>
+   <div id="head" class="container">
+      <div id="head-info" class="pull-left">
+        <h1>Ahmad Saleh</h1>
+        <p class="h4">Front-End web developer / Web&nbsp;designer.</p>
+        <p class="h2">Proud to transform your ideas into<br><span>SUCCESS!</span> </p>
+      </div>
+      <div id="ahmadPhoto" class="pull-right visible-md visible-lg visible-sm hidden-xs">
+          <img class="img-circle" src="images/ahmadPhoto.jpg" height="200" width="200" alt="Ahmad in San Diego">
+      </div>
+
+    </div> <!-- End #head-->
+  </div> <!-- End container-fluid -->
+
+
+  <nav id="navbar-div" class="navbar navbar-inverse">
+      <div  class="container">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active text-center"><a href="index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Home</a></li>
+            <li class="text-center"><a href="#portfolio">Portfolio</a></li>
+            <li class="text-center"><a href="#about">About</a></li>
+            <li class="text-center"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav> <!-- End navbar-div -->
+</header>
+
+<div class="container">
+    <div id="portfolio" class="jumbotron">
+        <div  class="row">
+           <h2 class="text-center">Portfolio</h2>
+            <div class="col-md-6">
+              <div class="thumbnail">
+                <a href="#" target="_blank">
+                  <img src="images/Umayyad.jpg" alt="placeHolder1" style="width:100%">
+                  <div class="caption">
+                    <p class="text-center">Link number # 1</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="thumbnail">
+                <a href="#" target="_blank">
+                  <img src="images/Umayyad0.jpg" alt="placeHolder2" style="width:100%">
+                  <div class="caption">
+                    <p class="text-center">Link number # 2</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="thumbnail">
+                <a href="#" target="_blank">
+                  <img src="images/oldcity.jpg" alt="placeHolder3" style="width:100%">
+                  <div class="caption">
+                    <p class="text-center">Link number # 3</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="thumbnail">
+                <a href="#" target="_blank">
+                  <img src="images/Hamadiya.jpg" alt="placeHolder4" style="width:100%">
+                  <div class="caption">
+                    <p class="text-center">Link number # 4</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div> <!-- End Portfolio -->
+
+     </div> <!-- End Jumbotron -->
+
+</div> <!-- End Container -->
+
+<div class="container">
+    <div class="row">
+        <div id="about" class="col-md-6">
+        <h2>About Ahmad Saleh</h2>
+        <hr>
+        <p class="h4">
+          It all started in the early 2016 when I enrolled in the CS50 course,
+          introduction to Computer Science (Harvard University) via Edx.org Platform.
+          I learned the basics of C programming language. Later on, I learned the
+          basics of Java via Lynda.com. At that point, I got a decent understanding
+          of how a computer thinks.
+          And I’ve gotten hooked to the programming world ever since.
+        </p>
+        <p class="h4">
+          I still remember the moment when I uploaded my photo to a blank HTML page
+          and linked it to my Facebook page by a click. It was the best feeling ever. Since that moment on,
+          I have been certain that web development will be, for sure, my future career.
+        </p>
+        </div>
+        <hr class="visible-sm visible-xs">
+
+        <div id="contact" class="col-md-6">
+            <h2>Contact Ahmad</h2>
+            <hr>
+              <form>
+                <div class="form-group">
+                  <label for="usr-input">Name:</label>
+                  <input type="text" class="form-control" placeholder="Type your name" id="usr-input">
+                </div>
+                <div class="form-group">
+                  <label for="email-input">Email:</label>
+                  <input type="email" class="form-control" placeholder="Type your email" id="email-input">
+                  <small id="emailPrivate" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="phone-input">Phone Number:</label>
+                  <input type="tel" class="form-control" placeholder="Example: (402)-xxx-xxxx" id="phone-input">
+                  <small id="phonePrivate" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+                </div>
+                 <div class="form-group">
+                    <label for="subject-input">Subject</label>
+                    <textarea class="form-control" id="subject-input" rows="3"></textarea>
+                 </div>
+                 <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+
+    </div>
+</div>
+
+<br>
+<hr>
+
+<div class="container-fluid">
+  <div class="row">
+    <div id="followAhmad" class="col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-4 col-lg-offset-5">
+      <ul>
+        <li class="pull-left">
+          <a  href="https://www.facebook.com/abohoooooomed" target="_blank">
+            <i class="fa fa-facebook-square fa-3x fa-pull-left" aria-hidden="true" style="color: #3B5998"></i>
+          </a>
+        </li>
+        <li class="pull-left">
+          <a href="https://twitter.com/ahmadsaleh1989?lang=en" target="_blank">
+            <i class="fa fa-twitter fa-3x fa-pull-left" aria-hidden="true" style="color: #4099FF"></i>
+          </a>
+        </li>
+        <li  class="pull-left">
+          <a href="https://www.linkedin.com/in/ahmad-saleh-0b941a111/" target="_blank">
+            <i class="fa fa-linkedin-square fa-3x fa-pull-left" aria-hidden="true" style="color: #0077B5"></i>
+          </a>
+        </li>
+        <li  class="pull-left">
+          <a href="https://github.com/Ahmad-Saleh89" target="_blank">
+            <i class="fa fa-github fa-3x fa-pull-left" aria-hidden="true" style="color: #6e5494"></i>
+          </a>
+        </li>
+        <li  class="pull-left">
+          <a href="https://www.freecodecamp.com/ahmad-saleh89" target="_blank">
+            <i class="fa fa-free-code-camp fa-3x fa-pull-left" aria-hidden="true" style="color: #086B02"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr>
+<footer class="text-center"><p>Coded and designed by Ahmad Saleh, 2017.</p>
+</footer>
+
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

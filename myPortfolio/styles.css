@@ -63,21 +63,23 @@ header {
       transition: all 300ms ease-in-out;
       transform: translate(25%); }
       .navbar .collapse .navbar-nav a {
-        color: white;
+        color: #f8eee7;
         text-shadow: 0px 4px 2px rgba(96, 96, 96, 0.6);
         transition: all 300ms ease-in-out;
         transform-origin: bottom left; }
         .navbar .collapse .navbar-nav a:hover {
-          transform: rotateY(20deg) skewX(6deg) skewY(-6deg);
-          color: white;
+          border-radius: 5px;
+          background: #94618e;
+          color: #f8eee7;
           text-shadow: 0px 6px 2px rgba(96, 96, 96, 0.6); }
         .navbar .collapse .navbar-nav a:visited {
-          color: white; }
+          color: #f8eee7; }
         .navbar .collapse .navbar-nav a:focus {
-          color: white; }
+          color: #f8eee7; }
         .navbar .collapse .navbar-nav a.active {
-          transform: rotateY(20deg) skewX(6deg) skewY(-6deg);
-          color: white; }
+          border-radius: 5px;
+          background: #94618e;
+          color: #f8eee7; }
 
 @media only screen and (max-width: 991px) {
   header {
@@ -107,7 +109,7 @@ header {
         right: 0px;
         top: 0px;
         border-radius: 20px;
-        border: 2px solid white;
+        border: 2px solid #f8eee7;
         background: rgba(148, 97, 142, 0.5);
         z-index: 100; }
         .navbar .collapse .navbar-nav a, .navbar .navbar-collapse .navbar-nav a {
@@ -195,7 +197,7 @@ header {
     position: absolute;
     height: 400px;
     width: 100%;
-    background-image: url(images/about-imgs/ahmad-bg.jpg);
+    background-image: url(images/ahmad-bg.jpg);
     background-position: top center;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -204,13 +206,13 @@ header {
     background-blend-mode: multiply;
     filter: blur(2px); }
   .parallax-bg h3, .parallax-bg h4 {
-    color: white;
+    color: #f8eee7;
     z-index: 5;
     font-family: "Marko One", sans-serif;
     letter-spacing: 2px;
     font-size: 3em; }
   .parallax-bg .arrow-wrapper i {
-    color: white; }
+    color: #f8eee7; }
 
 @media only screen and (max-width: 560px) {
   header {
@@ -303,7 +305,7 @@ header {
     padding: 15px 80px;
     vertical-align: middle;
     border: 2px dashed white;
-    color: white;
+    color: #f8eee7;
     font-family: "Marko One", sans-serif;
     letter-spacing: 2px;
     font-size: 1.7em;
@@ -720,7 +722,7 @@ header {
   align-items: center;
   text-align: center;
   background: #94618e;
-  color: white;
+  color: #f8eee7;
   font-family: "Marko One", sans-serif;
   box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.5);
   border: 3px solid #49274a;
@@ -734,7 +736,7 @@ header {
     transition: all 300ms ease-in-out; }
   #inner-circle hr {
     width: 50%;
-    background: white;
+    background: #f8eee7;
     height: 1px; }
   #inner-circle #circle-content {
     padding: 3% 5%; }
@@ -775,7 +777,7 @@ header {
   letter-spacing: 2px;
   font-weight: 800;
   background: #49274a;
-  color: white;
+  color: #f8eee7;
   cursor: pointer;
   transition: all 400ms ease-in-out; }
   .skill-content.bubble-l {
@@ -1288,7 +1290,7 @@ header {
         align-items: center;
         text-align: center;
         font-family: "Marko One", sans-serif;
-        color: white;
+        color: #f8eee7;
         font-size: 2em;
         letter-spacing: 2px;
         background: rgba(148, 97, 142, 0.4);
@@ -1763,7 +1765,7 @@ header {
           transform: translate(40px, -40px); } }
 #portfolio {
   width: 100%;
-  margin: 50px 0 0; }
+  margin: 0; }
   #portfolio .project-sign {
     position: relative; }
     #portfolio .project-sign img {
@@ -1811,7 +1813,8 @@ header {
     width: 320px;
     box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    overflow: hidden; }
+    overflow: hidden;
+    background: #94618e; }
     .projects li a {
       position: relative;
       width: 100%;
@@ -1827,19 +1830,25 @@ header {
         width: 100%;
         height: 100%;
         transition: all 1s ease-in-out;
-        transform-origin: top; }
+        transform-origin: top;
+        opacity: 0.5;
+        border-radius: 5px; }
       .projects li a p {
-        border: 2px solid white;
+        border: 3px solid #f8eee7;
         text-align: center;
-        color: white;
+        color: #f8eee7;
         font-family: "Marko One", sans-serif;
         font-size: 1.5em;
         padding: 10px;
+        transition: all 400ms ease-in-out;
         z-index: 20; }
       .projects li a:hover {
         text-decoration: none; }
+        .projects li a:hover p {
+          transform: translateY(-50%); }
         .projects li a:hover img {
-          transform: scale(1.2); }
+          transform: scale(1.2);
+          opacity: 1; }
 
 @media only screen and (max-width: 319px) {
   #portfolio {
@@ -2040,7 +2049,7 @@ footer {
       font-size: 1em;
       transition: all 200ms ease-in-out; }
       .follow-me ul li a {
-        color: white;
+        color: #f8eee7;
         text-decoration: none; }
         .follow-me ul li a i {
           font-size: 2em;
