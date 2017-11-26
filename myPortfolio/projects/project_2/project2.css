@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #d0d0d0; }
+
+.img-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  overflow: hidden; }
+  .img-slider .next-icon {
+    left: 30px; }
+  .img-slider .prev-icon {
+    right: 30px; }
+  .img-slider .next-icon, .img-slider .prev-icon {
+    position: absolute;
+    top: 30vh;
+    z-index: 100;
+    cursor: pointer;
+    transition: all 500ms ease-in-out; }
+    .img-slider .next-icon svg, .img-slider .prev-icon svg {
+      transform: scale(3);
+      color: #c6c6c6;
+      opacity: 0.5;
+      transition: all 100ms ease-in; }
+      .img-slider .next-icon svg:hover, .img-slider .prev-icon svg:hover {
+        transform: scale(3.2);
+        opacity: 0.8; }
+  .img-slider .slides-wrapper {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    max-height: 550px;
+    overflow: hidden; }
+    .img-slider .slides-wrapper .slides {
+      position: relative;
+      overflow: hidden;
+      width: 4000px;
+      height: 95%;
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      .img-slider .slides-wrapper .slides li {
+        position: absolute;
+        display: inline-block;
+        left: 100vw;
+        float: left;
+        width: 100vw;
+        min-height: 300px;
+        max-height: 550px;
+        height: 100%; }
+        .img-slider .slides-wrapper .slides li img {
+          width: 100%;
+          height: 100%; }
+        .img-slider .slides-wrapper .slides li.current {
+          z-index: 10;
+          left: 0; }
+        .img-slider .slides-wrapper .slides li.slide-current-left {
+          z-index: -10;
+          animation: slideCurrentLeft 1000ms ease-in-out forwards normal; }
+        .img-slider .slides-wrapper .slides li.slide-left {
+          z-index: 11;
+          left: 100vw;
+          animation: slideLeft 1000ms ease-in-out forwards normal; }
+        .img-slider .slides-wrapper .slides li.slide-current-right {
+          z-index: -10;
+          animation: slideCurrentRight 1000ms ease-in-out forwards normal; }
+        .img-slider .slides-wrapper .slides li.slide-right {
+          z-index: 11;
+          left: -100vw;
+          animation: slideRight 1000ms ease-in-out forwards normal; }
+    .img-slider .slides-wrapper .slider-dots {
+      position: relative;
+      z-index: 20;
+      height: 30px;
+      background: rgba(60, 15, 13, 0.37);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      box-shadow: 0 5px 8px -3px #9e9e9e; }
+      .img-slider .slides-wrapper .slider-dots span {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        margin: auto 10px;
+        border: 2px solid #3c0f0d;
+        cursor: pointer;
+        box-shadow: 0 6px 2px 0px #9e9e9e;
+        transition: all 200ms ease-in-out; }
+        .img-slider .slides-wrapper .slider-dots span:hover {
+          background: rgba(60, 15, 13, 0.75); }
+        .img-slider .slides-wrapper .slider-dots span.is-active {
+          background: #3c0f0d; }
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0.5;
+    left: 100vw; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+@keyframes slideCurrentLeft {
+  0% {
+    left: 0;
+    opacity: 1; }
+  40% {
+    opacity: 1; }
+  99% {
+    left: -100vw;
+    opacity: 0.5; }
+  100% {
+    left: 95vw;
+    opacity: 0; } }
+@keyframes slideRight {
+  0% {
+    opacity: 0.5;
+    left: -100vw; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+@keyframes slideCurrentRight {
+  0% {
+    left: 0;
+    opacity: 1; }
+  40% {
+    opacity: 1; }
+  99% {
+    left: 100vw;
+    opacity: 0.5; }
+  100% {
+    left: 100vw;
+    opacity: 0; } }
+.about-this {
+  max-width: 1400px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .about-this p {
+    text-align: center;
+    font-size: 2em; }
+  .about-this a {
+    font-size: 1em; }
+
+/*# sourceMappingURL=project2.css.map */

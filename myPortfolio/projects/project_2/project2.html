@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>slide show1</title>
+    <link rel="stylesheet" href="project2.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="img-slider">
+      <div class="slides-wrapper">
+        <div class="prev-icon">
+          <svg fill="#000000" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <div class="next-icon">
+          <svg fill="#000000" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <ul class="slides">
+          <li class="current"><img src="images/img1.jpg"></li>
+          <li><img src="images/img2.jpg"></li>
+          <li><img src="images/img3.jpg"></li>
+          <li><img src="images/img4.jpeg"></li>
+          <li><img src="images/img5.jpeg"></li>
+        </ul>
+
+        <div class="slider-dots">
+          <span class="is-active"></span>
+          <span></span><span></span>
+          <span></span><span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-this">
+      <p>I know that displaying images could be done in much easier way by applying display: none or display: block properties.
+      however, I wanted to build an Image Slider that actually slides.</p>
+      <p>I aslo made sure that the slides do not overlap when you resize the browser.</p>
+      <p>This slider is only for practice purpose!</p>
+      <a href="https://github.com/Ahmad-Saleh89/web-designing/tree/master/myPortfolio/projects/project_2">See code source here!</a>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="project2.js"></script>
+  </body>
+</html>
