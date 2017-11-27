@@ -151,7 +151,7 @@ body, html {
     height: 20vh;
     min-height: 150px; }
     .photo-wrapper .my-photo {
-      background-image: url(images/about-imgs/ahmad-sm.jpg); }
+      background-image: url(about-imgs/ahmad-sm.jpg); }
 
   #about-me {
     padding-bottom: 40px; }
@@ -199,7 +199,7 @@ body, html {
     height: 25vh;
     min-height: 200px; }
     .photo-wrapper .my-photo {
-      background-image: url(images/about-imgs/ahmad-sm.jpg); }
+      background-image: url(about-imgs/ahmad-sm.jpg); }
 
   #about-me {
     padding-bottom: 50px; }
@@ -242,7 +242,7 @@ body, html {
     height: 35vh;
     min-height: 250px; }
     .photo-wrapper .my-photo {
-      background-image: url(images/about-imgs/ahmad-sm.jpg); }
+      background-image: url(about-imgs/ahmad-sm.jpg); }
 
   #about-me {
     padding-bottom: 60px; }
@@ -285,7 +285,7 @@ body, html {
     height: 40vh;
     min-height: 330px; }
     .photo-wrapper .my-photo {
-      background-image: url(images/about-imgs/ahmad-sm.jpg); }
+      background-image: url(about-imgs/ahmad-sm.jpg); }
 
   #about-me {
     padding-bottom: 70px; }
