@@ -111,6 +111,7 @@ body, html {
 
 .footer-img {
   position: relative;
+  background: #49274a;
   height: 50vh;
   width: 100%;
   max-width: 1500px;
@@ -126,7 +127,7 @@ body, html {
     background-position: bottom center;
     background-size: contain;
     background-repeat: repeat-x;
-    filter: blur(5px); }
+    opacity: 0.3; }
   .footer-img .copy-right {
     position: absolute;
     background: #f8eee7;
@@ -188,8 +189,7 @@ body, html {
     height: 40vh;
     max-height: 300px; }
     .footer-img .bottom-img {
-      background-size: cover;
-      filter: blur(1px); }
+      background-size: cover; }
     .footer-img .copy-right {
       font-size: 0.4em;
       display: block;
@@ -234,8 +234,7 @@ body, html {
     height: 40vh;
     max-height: 400px; }
     .footer-img .bottom-img {
-      background-size: cover;
-      filter: blur(2px); }
+      background-size: cover; }
     .footer-img .copy-right {
       font-size: 0.4em; } }
 @media only screen and (min-width: 560px) and (max-width: 740px) {
@@ -278,8 +277,7 @@ body, html {
     height: 40vh;
     max-height: 500px; }
     .footer-img .bottom-img {
-      background-size: cover;
-      filter: blur(3px); }
+      background-size: cover; }
     .footer-img .copy-right {
       font-size: 0.5em; } }
 @media only screen and (min-width: 740px) and (max-width: 920px) {
@@ -322,8 +320,7 @@ body, html {
     height: 40vh;
     max-height: 500px; }
     .footer-img .bottom-img {
-      background-size: cover;
-      filter: blur(3px); }
+      background-size: cover; }
     .footer-img .copy-right {
       font-size: 0.5em; } }
 @media only screen and (min-width: 920px) and (max-width: 1290px) {
@@ -361,8 +358,7 @@ body, html {
     height: 40vh;
     max-height: 500px; }
     .footer-img .bottom-img {
-      background-size: contain;
-      filter: blur(3px); }
+      background-size: contain; }
     .footer-img .copy-right {
       font-size: 0.6em; } }
 
