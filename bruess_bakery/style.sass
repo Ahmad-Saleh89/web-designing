@@ -1,0 +1,378 @@
+$bg-color: #FAFAFA
+$main-color: #f49390
+$font-color: #6a7578
+$font-family: 'Playfair Display', serif
+
+body
+    max-width: 1200px
+    margin: auto
+    font-family: $font-family
+
+/* ------  Header & Navbar -------  */
+header
+    max-width: 1200px
+    margin: auto
+    height: 650px
+    background-image: url(images/featured_imgs/img1.jpeg)
+    background-position: top center
+    background-size: contain
+    background-attachment: fixed
+    background-repeat: no-repeat
+    text-transform: uppercase
+      
+.navbar
+    background-color: transparent !important
+    position: fixed
+    width: 100%
+    max-width: 1200px
+    transition: all 400ms ease-in-out
+    z-index: 100
+    &.shrink-nav
+        background-color: rgba(250,250,250,.8) !important
+        box-shadow: 0 0 5px -2px gray
+        .navbar-brand h1
+            font-size: 1.2em
+            letter-spacing: 3px
+            margin-bottom: 0
+
+.navbar-brand h1
+    color: $main-color
+    letter-spacing: 8px
+    font-size: 1.5em
+    transition: all 400ms ease-in-out
+
+/* Navbar toggler button */
+.navbar-toggler
+    border: none
+    padding: 0
+    width: 40px
+    height: 40px
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    /* horizontal lines inside nav button: */
+    span 
+        border: 3px solid $main-color
+        border-radius: 4px
+        width: 40px
+        margin: 3px 0
+    &:hover span
+        box-shadow: 0 0 1px 1px rgba(0,0,0,.1)
+
+.navbar-collapse 
+    background-color: $main-color
+    .nav-item
+        text-align: center
+
+/* Navbar Items */
+.navbar-light .navbar-nav .nav-link
+    color: $bg-color
+    letter-spacing: 4px
+    transition: all 300ms ease-in-out
+    &:hover
+        text-shadow: 0 1px 2px rgba(0,0,0,.2)
+
+/* Media Query - Responsive header design */
+@media only screen and (min-width : 991px)
+    .navbar
+        -webkit-box-orient: vertical
+        -webkit-box-direction: normal
+        -ms-flex-direction: column
+        flex-direction: column
+    .navbar-collapse 
+        background-color: transparent
+    .navbar-light .navbar-nav .nav-link
+        color: $main-color
+        letter-spacing: 1px
+
+@media only screen and (min-width : 768px) and (max-width : 991px)
+    header
+        height: 500px
+    .navbar-brand
+        padding-left: 50px
+        h1
+            letter-spacing: 5px
+            font-size: 1.3em
+
+@media only screen and (min-width : 576px) and (max-width : 768px)
+    header
+        height: 370px
+        background-size: auto 500px
+    .navbar-brand
+        padding-left: 50px
+        h1
+            letter-spacing: 4px
+            font-size: 1.2em
+
+@media only screen and (max-width : 576px)
+    header
+        height: 300px
+        background-size: auto 450px
+    .navbar
+        background-color: rgba(250,250,250,.8) !important
+    .navbar-brand
+        padding-left: 5px
+        h1
+            letter-spacing: 1px
+            font-size: .8em
+
+/* **************************************/
+/* ------------ Page Body --------------*/
+/* **************************************/
+#home-body
+    max-width: 1400px
+    overflow: hidden
+    margin: auto
+
+/* centralized flag on top of each section */
+.flag-center
+    position: absolute
+    left: 50%
+    -webkit-transform: translate(-50%, 15%)
+    -ms-transform: translate(-50%, 15%)
+    transform: translate(-50%, 15%)
+    background-color: #ffffff
+    padding: 10px 30px
+    text-transform: uppercase
+    text-align: center
+    color: $main-color
+    -webkit-box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.2)
+    box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.2)
+    font-size: 1.3em
+    letter-spacing: 2px
+    opacity: 0
+
+.slide-up
+        animation: slide-up 1s ease-in-out forwards normal
+@keyframes slide-up
+    0%
+        opacity: 0
+        -webkit-transform: translate(-50%, 15%)
+        -ms-transform: translate(-50%, 15%)
+        transform: translate(-50%, 15%)
+    100%
+        opacity: 1
+        -webkit-transform: translate(-50%, -50%)
+        -ms-transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%) 
+
+/**** HOME GROWN  ***/
+#homegrown
+    height: 300px
+    background-color: $bg-color
+
+/*Homegrown content*/
+.sec-content
+    width: 500px
+    margin: auto
+    padding-top: 80px
+    text-align: center
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    h3
+        color: $main-color
+        text-transform: uppercase
+        letter-spacing: 3px
+    hr
+        width: 20%
+        border: 1px solid $main-color
+    p
+        color: $font-color       
+
+/* Media Query - Responsive Design - Home Grown section */
+@media only screen and (min-width : 768px) and (max-width : 991px)
+    .flag-center
+        font-size: 1.1em
+    
+@media only screen and (min-width : 576px) and (max-width : 768px)
+    .flag-center
+        width: 60%
+        font-size: 1em
+        padding: 8px 15px
+        letter-spacing: 1.5px
+@media only screen and (max-width : 576px)
+    .flag-center
+        width: 80%
+        font-size: .8em
+        padding: 5px 10px
+        letter-spacing: 1px
+    .sec-content
+        width: 80%
+        h3
+            font-size: 1em
+        p
+            font-size: .7em
+
+/**** Feature of the day  ***/
+#feature
+    height: 450px
+    padding-left: 150px
+    background-image: url(images/featured_imgs/img02.jpeg)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    #feature-content
+        display: none
+        width: 200px
+        padding-top: 100px
+        color: $main-color
+        hr
+            border: 1px solid $main-color
+        h4
+            font-size: 1em
+            padding: 5px
+            max-width: 80px
+            color: $bg-color
+            background-color: rgba(244, 147, 144,.6)
+        p
+            font-size: 1.3em
+            font-weight: 600
+
+/* Media Query - Responsive design - Feature of the day */ 
+@media only screen and (min-width : 576px) and (max-width : 768px)
+    #feature
+        padding-left: 80px
+        p
+            padding: 15px
+            background-color: rgba(244, 147, 144,.6)
+            color: $bg-color
+@media only screen and (max-width : 576px)
+    #feature
+        height: 400px
+        padding-left: 50px
+        p
+            font-size: 1.1em
+            padding: 10px
+            background-color: rgba(244, 147, 144,.6)
+            color: $bg-color
+
+
+/**** Services  ***/
+#services-container  
+    height: 450px
+    background-color: $bg-color
+    padding-bottom: 50px
+.services .services-list
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+    -ms-flex-pack: distribute
+    justify-content: space-around
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    padding-left: 0
+    list-style: none
+.service-item figure
+    img
+        max-width: 200px
+    figcaption
+        text-align: center
+        margin-top: -40px
+        color: $main-color
+
+/* Catering Item Animation */
+.service-item:first-child
+    opacity: 0
+    transform: translateX(50%)
+    &.slide-left
+        animation: slide-left 2.5s ease-in-out forwards normal
+@keyframes slide-left
+    0%
+        opacity: 0
+        transform: translateX(50%)
+    100%
+        opacity: 1
+        transform: translateX(0)
+
+/* Event Space Item Animation */
+.service-item:last-child
+    opacity: 0
+    transform: translateX(-50%)
+    &.slide-right
+        animation: slide-right 2.5s ease-in-out forwards normal
+@keyframes slide-right
+    0%
+        opacity: 0
+        transform: translateX(-50%)
+    100%
+        opacity: 1
+        transform: translateX(0)
+
+/* Media Query - Responsive design - Services */ 
+@media only screen and (min-width : 480px ) and (max-width : 576px)
+    .service-item figure
+        img
+            max-width: 150px
+
+@media only screen and (max-width : 479px)
+    #services-container  
+        height: auto
+    .services .services-list
+        -webkit-box-orient: vertical
+        -webkit-box-direction: normal
+        -ms-flex-direction: column
+        flex-direction: column
+
+/* -------- FOOTER ------- */
+footer ul
+    height: 80px
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+    -ms-flex-pack: distribute
+    justify-content: space-around
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    list-style: none
+    text-align: center
+    padding-left: 0
+    color: $main-color
+
+/* Media Query - Responsive FOOTER design */   
+@media only screen and (min-width : 576px) and (max-width : 768px)
+    footer ul
+        height: 130px
+        -webkit-box-orient: vertical
+        -webkit-box-direction: normal
+        -ms-flex-direction: column
+        flex-direction: column
+        font-size: .9em
+@media only screen and (max-width : 576px)
+    footer ul
+        height: 100px
+        -webkit-box-orient: vertical
+        -webkit-box-direction: normal
+        -ms-flex-direction: column
+        flex-direction: column
+        font-size: .8em
